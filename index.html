@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interpol Check — International Database Verification | Status Law</title>
+<link rel="canonical" href="https://interpol-check.me/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://interpol-check.me/">
+<meta property="og:title" content="Interpol Check — International Database Verification | Status Law">
+<meta property="og:description" content="Professional legal verification of your status across all INTERPOL notice types, international wanted persons lists, and law enforcement databases. Confidential. Legally certified.">
+<meta property="og:image" content="https://interpol-check.me/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Interpol Check — International Database Verification | Status Law">
+<meta name="twitter:description" content="Professional legal verification of your status across all INTERPOL notice types, wanted persons lists, and international law enforcement databases.">
+<meta name="description" content="Professional legal verification of your status in Interpol, wanted persons lists, and international law enforcement databases. Confidential. Legally certified.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%230D1B2A'/><text x='1' y='25' font-family='Arial Black,Arial,sans-serif' font-size='24' font-weight='900' fill='%23C9A84C'>S</text><text x='16' y='25' font-family='Arial Black,Arial,sans-serif' font-size='24' font-weight='900' fill='%23F5F3EE'>L</text></svg>">
+<!-- Preconnect to speed up font DNS resolution -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Load fonts async (non-blocking) to fix LCP/FCP -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap"></noscript>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy: #0D1B2A;
+  --navy-mid: #162436;
+  --navy-light: #1E3448;
+  --gold: #C9A84C;
+  --gold-light: #E2C97E;
+  --white: #F5F3EE;
+  --muted: #8A9BB0;
+  --border: rgba(201,168,76,0.2);
+  --border-solid: #1E3040;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--navy); color: var(--white); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.7; font-size: 17px; }
+
+a { color: inherit; text-decoration: none; }
+
+/* NAV */
+nav {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 22px 60px; border-bottom: 0.5px solid var(--border);
+  position: sticky; top: 0; background: var(--navy); z-index: 100;
+}
+.logo { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--gold); letter-spacing: 0.02em; }
+.logo span { color: var(--white); }
+.nav-links { display: flex; gap: 36px; align-items: center; }
+.nav-links a { color: var(--muted); font-size: 12px; letter-spacing: 0.07em; text-transform: uppercase; transition: color 0.2s; }
+.nav-links a:hover { color: var(--white); }
+.btn-nav {
+  background: var(--gold); color: var(--navy); font-size: 11px; font-weight: 500;
+  padding: 10px 24px; text-transform: uppercase; letter-spacing: 0.1em;
+  border: none; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.2s;
+}
+.btn-nav:hover { background: var(--gold-light); }
+
+/* HERO */
+.hero {
+  padding: 100px 60px 90px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+  border-bottom: 0.5px solid var(--border);
+}
+.hero-label {
+  font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 24px; display: flex; align-items: center; gap: 12px;
+}
+.hero-label::before { content: ''; display: block; width: 32px; height: 0.5px; background: var(--gold); }
+h1 { font-family: 'Playfair Display', serif; font-size: 50px; line-height: 1.15; font-weight: 400; margin-bottom: 28px; }
+h1 em { color: var(--gold); font-style: italic; }
+.hero-sub { color: var(--muted); font-size: 18px; line-height: 1.9; margin-bottom: 48px; min-height: 220px; }
+.hero-actions { display: flex; align-items: center; gap: 32px; }
+.btn-primary {
+  background: var(--gold); color: var(--navy); padding: 16px 40px;
+  font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;
+  font-weight: 500; border: none; cursor: pointer; font-family: 'DM Sans', sans-serif;
+  transition: background 0.2s;
+}
+.btn-primary:hover { background: var(--gold-light); }
+.btn-ghost {
+  color: var(--white); font-size: 15px;
+  border-bottom: 0.5px solid var(--muted); padding-bottom: 2px; transition: color 0.2s;
+}
+.btn-ghost:hover { color: var(--gold); }
+
+/* SAMPLE REPORT CARD */
+.report-card {
+  background: var(--navy-mid); border: 0.5px solid var(--border);
+  padding: 40px; position: relative;
+}
+.report-card::before {
+  content: ''; position: absolute; top: -1px; left: 40px; right: 40px;
+  height: 2px; background: var(--gold);
+}
+.status-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(201,168,76,0.08); border: 0.5px solid var(--border);
+  padding: 7px 14px; font-size: 11px; color: var(--gold);
+  letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 28px;
+}
+.status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+.card-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 6px; }
+.card-value { font-family: 'Playfair Display', serif; font-size: 26px; color: var(--white); margin-bottom: 28px; }
+.divider { height: 0.5px; background: var(--border); margin: 16px 0; }
+.check-row { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; font-size: 15px; border-bottom: 0.5px solid rgba(255,255,255,0.04); }
+.check-row span:first-child { color: var(--muted); }
+.ok { color: #4CAF7D; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; }
+.flag { color: #E26B4A; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; }
+.report-footer { margin-top: 20px; font-size: 11px; color: var(--muted); }
+
+/* STATS */
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 0.5px solid var(--border); }
+.stat { padding: 52px 60px; border-right: 0.5px solid var(--border); }
+.stat:last-child { border-right: none; }
+.stat-num { font-family: 'Playfair Display', serif; font-size: 44px; color: var(--gold); margin-bottom: 8px; line-height: 1; }
+.stat-label { font-size: 15px; color: var(--muted); }
+
+/* SERVICES */
+.services { padding: 90px 60px; border-bottom: 0.5px solid var(--border); }
+.section-intro { display: flex; align-items: baseline; gap: 24px; margin-bottom: 64px; }
+.section-num { font-family: 'Playfair Display', serif; font-size: 72px; color: rgba(201,168,76,0.1); line-height: 1; }
+h2 { font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 400; }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border-solid); }
+.service-card {
+  background: var(--navy); padding: 36px 32px;
+  border-top: 2px solid transparent; transition: border-color 0.25s, background 0.25s;
+}
+.service-card:hover { border-top-color: var(--gold); background: var(--navy-mid); }
+.svc-num { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; opacity: 0.7; }
+.svc-name { font-family: 'Playfair Display', serif; font-size: 19px; margin-bottom: 12px; }
+.svc-desc { font-size: 15px; color: var(--muted); line-height: 1.8; }
+
+/* PROCESS */
+.process { padding: 90px 60px; border-bottom: 0.5px solid var(--border); background: var(--navy-mid); }
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-top: 64px; position: relative; }
+.steps::before {
+  content: ''; position: absolute; top: 28px; left: 60px; right: 60px;
+  height: 0.5px; background: var(--border);
+}
+.step { position: relative; }
+.step-num {
+  font-family: 'Playfair Display', serif; font-size: 13px; color: var(--gold);
+  background: var(--navy-mid); display: inline-block; padding-right: 16px;
+  margin-bottom: 24px; position: relative; z-index: 1;
+}
+.step-title { font-size: 17px; font-weight: 500; margin-bottom: 10px; }
+.step-desc { font-size: 15px; color: var(--muted); line-height: 1.75; }
+
+/* WHO IT'S FOR */
+.audience { padding: 90px 60px; border-bottom: 0.5px solid var(--border); }
+.audience-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 64px; background: var(--border-solid); }
+.audience-card { background: var(--navy); padding: 40px 36px; }
+.aud-icon { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+.aud-title { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 12px; }
+.aud-desc { font-size: 15px; color: var(--muted); line-height: 1.8; }
+
+/* CONTACT FORM */
+.contact { padding: 90px 60px; border-bottom: 0.5px solid var(--border); }
+.contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.contact-info h2 { margin-bottom: 20px; }
+.contact-info p { color: var(--muted); font-size: 16px; line-height: 1.9; margin-bottom: 40px; }
+.contact-detail { display: flex; flex-direction: column; gap: 14px; }
+.c-detail { font-size: 15px; }
+.c-detail span { color: var(--muted); display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px; }
+.c-detail a { color: var(--gold-light); border-bottom: 0.5px solid rgba(201,168,76,0.3); }
+.messengers { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.msg-btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  border: 0.5px solid var(--border); padding: 7px 14px;
+  font-size: 12px; color: var(--muted); letter-spacing: 0.04em;
+  transition: color 0.2s, border-color 0.2s; cursor: pointer;
+}
+.msg-btn:hover { color: var(--gold-light); border-color: var(--gold-light); box-shadow: 0 0 0 0.5px var(--gold-light); }
+.msg-btn svg { flex-shrink: 0; }
+
+/* FORM */
+form { display: flex; flex-direction: column; gap: 0; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 2px; }
+.form-group { display: flex; flex-direction: column; margin-bottom: 2px; }
+.form-group label {
+  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--muted); padding: 14px 18px 0; background: var(--navy-mid);
+  border: 0.5px solid var(--border-solid);
+  border-bottom: none;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: var(--navy-mid); border: 0.5px solid var(--border-solid);
+  border-top: none; color: var(--white); font-family: 'DM Sans', sans-serif;
+  font-size: 16px; font-weight: 300; padding: 10px 18px 14px;
+  outline: none; transition: border-color 0.2s; appearance: none; width: 100%;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: var(--gold); }
+.form-group select { cursor: pointer; }
+.form-group select option { background: var(--navy-mid); }
+.form-group textarea { resize: vertical; min-height: 120px; line-height: 1.7; }
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: var(--muted); opacity: 0.5; }
+
+.consent { display: flex; gap: 14px; align-items: flex-start; margin: 16px 0 20px; }
+.consent input[type="checkbox"] {
+  width: 16px; height: 16px; min-width: 16px; margin-top: 3px;
+  background: var(--navy-mid); border: 0.5px solid var(--muted);
+  appearance: none; cursor: pointer; position: relative;
+}
+.consent input[type="checkbox"]:checked::after {
+  content: '✓'; position: absolute; top: -2px; left: 2px;
+  color: var(--gold); font-size: 12px;
+}
+.consent label { font-size: 14px; color: var(--muted); line-height: 1.7; cursor: pointer; }
+.consent a { color: var(--gold); border-bottom: 0.5px solid rgba(201,168,76,0.4); }
+
+.btn-submit {
+  background: var(--gold); color: var(--navy); padding: 18px 40px;
+  font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em;
+  font-weight: 500; border: none; cursor: pointer; font-family: 'DM Sans', sans-serif;
+  transition: background 0.2s; width: 100%;
+}
+.btn-submit:hover { background: var(--gold-light); }
+.btn-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.form-note { font-size: 13px; color: var(--muted); margin-top: 12px; text-align: center; letter-spacing: 0.02em; }
+.form-success {
+  display: none; background: rgba(76,175,125,0.08); border: 0.5px solid rgba(76,175,125,0.3);
+  padding: 24px; text-align: center; font-size: 14px; color: #4CAF7D; margin-top: 16px;
+}
+
+/* CTA BANNER */
+.cta-banner {
+  padding: 90px 60px; text-align: center;
+  background: var(--navy-mid); border-bottom: 0.5px solid var(--border);
+}
+.cta-banner h2 { font-size: 46px; margin-bottom: 18px; }
+.cta-banner p { color: var(--muted); font-size: 16px; margin-bottom: 48px; }
+.price-note { font-size: 12px; color: var(--muted); margin-top: 18px; letter-spacing: 0.04em; }
+
+/* FOOTER */
+footer {
+  padding: 40px 60px;
+  display: flex; justify-content: space-between; align-items: center;
+  border-top: 0.5px solid var(--border);
+}
+.footer-logo { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--gold); }
+.footer-logo span { color: var(--muted); }
+footer p { font-size: 14px; color: var(--muted); }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a { font-size: 14px; color: var(--muted); transition: color 0.2s; }
+.footer-links a:hover { color: var(--gold); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  nav { padding: 18px 24px; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; padding: 60px 24px; gap: 48px; }
+  h1 { font-size: 36px; }
+  .stats { grid-template-columns: 1fr; }
+  .stat { border-right: none; border-bottom: 0.5px solid var(--border); padding: 36px 24px; }
+  .services { padding: 60px 24px; }
+  .services-grid { grid-template-columns: 1fr; }
+  .process { padding: 60px 24px; }
+  .steps { grid-template-columns: 1fr; }
+  .steps::before { display: none; }
+  .audience { padding: 60px 24px; }
+  .audience-grid { grid-template-columns: 1fr; }
+  .contact { padding: 60px 24px; }
+  .contact-inner { grid-template-columns: 1fr; gap: 48px; }
+  .form-row { grid-template-columns: 1fr; }
+  .cta-banner { padding: 60px 24px; }
+  .cta-banner h2 { font-size: 32px; }
+  #notices .notices-grid { grid-template-columns: 1fr; }
+  #notices { padding: 60px 24px; }
+  #pricing { padding: 60px 24px !important; }
+  #pricing > div[style*="grid-template-columns:repeat(3"] { grid-template-columns: 1fr !important; }
+  footer { padding: 32px 24px; flex-direction: column; gap: 20px; text-align: center; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Interpol Check — Status Law",
+  "description": "Professional legal verification of your status in Interpol, international wanted persons lists, and law enforcement databases. Confidential and legally certified.",
+  "url": "https://interpol-check.me",
+  "logo": "https://interpol-check.me/logo.png",
+  "telephone": "+46720246404",
+  "email": "info@status.law",
+  "priceRange": "€€€",
+  "currenciesAccepted": "EUR, USD, SEK",
+  "openingHours": "Mo-Fr 09:00-18:00",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Bygdegatan 313",
+    "addressLocality": "Linköping",
+    "postalCode": "583 31",
+    "addressCountry": "SE"
+  },
+  "areaServed": {
+    "@type": "GeoShape",
+    "name": "Worldwide"
+  },
+  "serviceType": [
+    "Interpol Red Notice Verification",
+    "International Sanctions Screening",
+    "Wanted Persons Database Check",
+    "Travel Risk Assessment",
+    "Interpol Notice Removal"
+  ],
+  "sameAs": [
+    "https://status.law",
+    "https://t.me/Status_Law_firm"
+  ],
+  "parentOrganization": {
+    "@type": "LegalService",
+    "name": "Status Law Juridiska Byrå Aktiebolag",
+    "url": "https://status.law"
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="https://status.law" target="_blank" rel="noopener" style="text-decoration:none; display:flex; flex-direction:column; line-height:1.1;">
+    <span style="font-family:'DM Sans',sans-serif; font-size:22px; font-weight:500; color:#F5F3EE; letter-spacing:0.02em;">Status <span style="color:#C9A84C;">Law</span></span>
+    <span style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#8A9BB0; margin-top:2px;">International Legal Protection</span>
+  </a>
+  <div class="nav-links">
+    <a href="#services">What we check</a>
+    <a href="#how-it-works">How it works</a>
+    <a href="#cases">Our cases</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="#contact"><button class="btn-nav">Check your status</button></a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <div class="hero-label">Interpol & International Database Verification</div>
+    <h1>Are you listed in <em>Interpol Red Notices?</em></h1>
+    <p class="hero-sub">You might be listed in Interpol or international wanted persons databases without ever being notified. <strong style="color:var(--white); font-weight:500;">A single border crossing can change everything.</strong> We verify your status across all INTERPOL notice types, international wanted persons lists, and law enforcement databases — and if a listing is found, we act immediately through INTERPOL's CCF to protect your freedom. Confidential. Legally certified.</p>
+    <div class="hero-actions">
+      <a href="#contact"><button class="btn-primary">Find out if you are listed</button></a>
+      <a href="#services" class="btn-ghost">What we check</a>
+      <a href="#pricing" style="font-size:15px; color:var(--gold); border-bottom:0.5px solid rgba(201,168,76,0.5); padding-bottom:2px; transition:color 0.2s; font-weight:500;" onmouseover="this.style.color='var(--gold-light)'" onmouseout="this.style.color='var(--gold)'">View pricing →</a>
+    </div>
+  </div>
+  <div class="report-card">
+    <div class="status-badge"><div class="status-dot"></div> Sample verification report</div>
+    <div class="card-label">Subject</div>
+    <div class="card-value">John A. Smith</div>
+    <div class="divider"></div>
+    <div class="check-row"><span>Interpol Red Notice</span><span class="ok">✓ Clear</span></div>
+    <div class="check-row"><span>Interpol Diffusion</span><span class="ok">✓ Clear</span></div>
+    <div class="check-row"><span>SIS — Schengen System</span><span class="ok">✓ Clear</span></div>
+    <div class="check-row"><span>CIS Wanted List</span><span class="ok">✓ Clear</span></div>
+    <div class="check-row"><span>National Police Databases</span><span class="ok">✓ Clear</span></div>
+    <div class="check-row"><span>World-Check & PEP</span><span class="flag">⚑ Flagged</span></div>
+    <div class="divider"></div>
+    <div class="report-footer">Verified by Status Law Juridiska Byrå AB · 14 March 2025</div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stat">
+    <div class="stat-num">10+</div>
+    <div class="stat-label">Years of practice</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">100+</div>
+    <div class="stat-label">Red Notices removed</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">196</div>
+    <div class="stat-label">INTERPOL member states covered</div>
+  </div>
+</section>
+
+
+<!-- NOTICES -->
+<section id="services" style="padding:90px 60px 0; border-bottom:none; background:var(--navy);">
+  <div class="section-intro">
+    <div class="section-num" style="font-size:72px; font-family:'Playfair Display',serif; color:rgba(201,168,76,0.1); line-height:1;">01</div>
+    <h2>What we check</h2>
+  </div>
+</section>
+
+<section id="notices" style="padding:40px 60px 90px; border-bottom:0.5px solid var(--border); background:var(--navy);">
+  <p style="color:var(--muted); font-size:15px; max-width:680px; line-height:1.8; margin-bottom:16px; font-size:13px; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold); font-weight:500;">INTERPOL notice types</p>
+  <p style="color:var(--muted); font-size:18px; line-height:1.9; margin-bottom:48px;">INTERPOL issues nine types of notices and diffusions — each with different legal consequences for the person named. Most people are unaware a notice exists until they are stopped at a border, denied a visa, or frozen out of the banking system. Knowing which notice applies to your situation is the first step to protecting your rights and your freedom of movement.</p>
+
+  <!-- Tab buttons -->
+  <div id="notice-tabs" style="display:flex; flex-wrap:wrap; gap:2px; margin-bottom:2px;">
+    <button onclick="showNotice('red')" id="tab-red" class="notice-tab active-tab" style="display:flex;align-items:center;gap:8px;padding:12px 20px;background:var(--navy-mid);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#E57373;border-bottom:2px solid #E53935;transition:all 0.2s;">
+      <span style="width:8px;height:8px;border-radius:50%;background:#E53935;flex-shrink:0;"></span> Red Notice
+    </button>
+    <button onclick="showNotice('diffusion')" id="tab-diffusion" class="notice-tab" style="display:flex;align-items:center;gap:8px;padding:12px 20px;background:var(--navy-mid);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid transparent;transition:all 0.2s;">
+      <span style="width:8px;height:8px;border-radius:50%;background:#FB8C00;flex-shrink:0;"></span> Diffusion
+    </button>
+    <button onclick="showNotice('blue')" id="tab-blue" class="notice-tab" style="display:flex;align-items:center;gap:8px;padding:12px 20px;background:var(--navy-mid);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid transparent;transition:all 0.2s;">
+      <span style="width:8px;height:8px;border-radius:50%;background:#1E88E5;flex-shrink:0;"></span> Blue Notice
+    </button>
+    <button onclick="showNotice('green')" id="tab-green" class="notice-tab" style="display:flex;align-items:center;gap:8px;padding:12px 20px;background:var(--navy-mid);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid transparent;transition:all 0.2s;">
+      <span style="width:8px;height:8px;border-radius:50%;background:#43A047;flex-shrink:0;"></span> Green Notice
+    </button>
+    <button onclick="showNotice('yellow')" id="tab-yellow" class="notice-tab" style="display:flex;align-items:center;gap:8px;padding:12px 20px;background:var(--navy-mid);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid transparent;transition:all 0.2s;">
+      <span style="width:8px;height:8px;border-radius:50%;background:#FDD835;flex-shrink:0;"></span> Yellow Notice
+    </button>
+    <button onclick="showNotice('purple')" id="tab-purple" class="notice-tab" style="display:flex;align-items:center;gap:8px;padding:12px 20px;background:var(--navy-mid);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid transparent;transition:all 0.2s;">
+      <span style="width:8px;height:8px;border-radius:50%;background:#8E24AA;flex-shrink:0;"></span> Purple Notice
+    </button>
+    <button onclick="showNotice('black')" id="tab-black" class="notice-tab" style="display:flex;align-items:center;gap:8px;padding:12px 20px;background:var(--navy-mid);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid transparent;transition:all 0.2s;">
+      <span style="width:8px;height:8px;border-radius:50%;background:#616161;flex-shrink:0;"></span> Black Notice
+    </button>
+    <button onclick="showNotice('orange')" id="tab-orange" class="notice-tab" style="display:flex;align-items:center;gap:8px;padding:12px 20px;background:var(--navy-mid);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid transparent;transition:all 0.2s;">
+      <span style="width:8px;height:8px;border-radius:50%;background:#EF6C00;flex-shrink:0;"></span> Orange Notice
+    </button>
+    <button onclick="showNotice('un')" id="tab-un" class="notice-tab" style="display:flex;align-items:center;gap:8px;padding:12px 20px;background:var(--navy-mid);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid transparent;transition:all 0.2s;">
+      <span style="width:8px;height:8px;border-radius:50%;background:#00ACC1;flex-shrink:0;"></span> UN Special
+    </button>
+  </div>
+
+  <!-- Tab content -->
+  <div style="background:var(--navy-mid);padding:40px 48px;min-height:180px;">
+    <div id="notice-red" class="notice-panel">
+      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#E57373;font-weight:500;margin-bottom:16px;">Red Notice</div>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">When issued:</strong> When a country requests the arrest and extradition of a person suspected or convicted of a serious criminal offence.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Who is affected:</strong> Anyone charged or convicted abroad — including individuals targeted for political or business reasons by governments misusing the system (Russia, China, UAE and others).</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;"><strong style="color:var(--white);font-weight:500;">Consequences:</strong> Detention at any border crossing in 196 countries. Frozen bank accounts. Visa denials. Travel becomes impossible.</p>
+    </div>
+    <div id="notice-diffusion" class="notice-panel" style="display:none;">
+      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#FFB74D;font-weight:500;margin-bottom:16px;">Diffusion</div>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">When issued:</strong> Sent directly by a national police agency to selected member states, bypassing INTERPOL headquarters and its compliance checks.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Who is affected:</strong> Same profile as Red Notice targets — but harder to detect since it doesn't appear in public INTERPOL databases.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;"><strong style="color:var(--white);font-weight:500;">Consequences:</strong> Arrest at borders, covert surveillance, banking restrictions — identical to a Red Notice in practice, but far more difficult to challenge legally.</p>
+    </div>
+    <div id="notice-blue" class="notice-panel" style="display:none;">
+      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#64B5F6;font-weight:500;margin-bottom:16px;">Blue Notice</div>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">When issued:</strong> When a country wants to gather information about a person's identity, location, or criminal activities across borders.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Who is affected:</strong> People under investigation who are not yet formally charged — often unaware they are being monitored.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;"><strong style="color:var(--white);font-weight:500;">Consequences:</strong> Covert cross-border surveillance of movements, contacts, and activities. Frequently a precursor to a Red Notice.</p>
+    </div>
+    <div id="notice-green" class="notice-panel" style="display:none;">
+      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#81C784;font-weight:500;margin-bottom:16px;">Green Notice</div>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">When issued:</strong> To warn law enforcement about individuals considered a potential threat to public safety in other jurisdictions.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Who is affected:</strong> People with prior convictions or investigations — even if they have served their sentence or charges were dropped.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;"><strong style="color:var(--white);font-weight:500;">Consequences:</strong> Complications with visa applications, residency permits, and international background checks. Can affect employment and banking.</p>
+    </div>
+    <div id="notice-yellow" class="notice-panel" style="display:none;">
+      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#FFF176;font-weight:500;margin-bottom:16px;">Yellow Notice</div>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">When issued:</strong> To help locate missing persons, particularly minors and vulnerable individuals.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Who is affected:</strong> People involved in international custody disputes or civil conflicts — including parents falsely accused of child abduction.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;"><strong style="color:var(--white);font-weight:500;">Consequences:</strong> Wrongful detention at borders, travel bans, and forced return proceedings in family law disputes.</p>
+    </div>
+    <div id="notice-purple" class="notice-panel" style="display:none;">
+      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#CE93D8;font-weight:500;margin-bottom:16px;">Purple Notice</div>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">When issued:</strong> To share information about criminal methods, objects, or modus operandi used across jurisdictions.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Who is affected:</strong> Individuals or organisations linked to patterns of criminal activity — even indirectly or by association.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;"><strong style="color:var(--white);font-weight:500;">Consequences:</strong> Increased scrutiny by law enforcement across member states. Can trigger further investigations or more serious notices.</p>
+    </div>
+    <div id="notice-black" class="notice-panel" style="display:none;">
+      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#BDBDBD;font-weight:500;margin-bottom:16px;">Black Notice</div>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">When issued:</strong> To seek information on unidentified human remains found in a member state.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Who is affected:</strong> Not directed at living individuals — issued in connection with unidentified deceased persons.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;"><strong style="color:var(--white);font-weight:500;">Consequences:</strong> No direct legal consequences for living persons. However, in rare cases misuse has caused complications for individuals with similar identities.</p>
+    </div>
+    <div id="notice-orange" class="notice-panel" style="display:none;">
+      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#FFCC80;font-weight:500;margin-bottom:16px;">Orange Notice</div>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">When issued:</strong> To warn of an imminent threat to public safety — such as dangerous persons, objects, or events.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Who is affected:</strong> Individuals identified as posing a credible and immediate risk, or those mistakenly linked to such threats.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;"><strong style="color:var(--white);font-weight:500;">Consequences:</strong> Immediate preventive measures by law enforcement across multiple countries. Can result in detention, asset freezes, or travel restrictions without prior notice.</p>
+    </div>
+    <div id="notice-un" class="notice-panel" style="display:none;">
+      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#80DEEA;font-weight:500;margin-bottom:16px;">UN Special Notice</div>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">When issued:</strong> Jointly by INTERPOL and the UN Security Council against individuals and entities under active UN sanctions.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Who is affected:</strong> Persons and organisations listed by the UN Security Council — including those targeted for political reasons or through flawed designation processes.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;"><strong style="color:var(--white);font-weight:500;">Consequences:</strong> Asset freezes, travel bans, and complete exclusion from the international financial system — enforced simultaneously across all member states.</p>
+    </div>
+  </div>
+
+  <script>
+    const noticeColors = {
+      red: '#E53935', diffusion: '#FB8C00', blue: '#1E88E5',
+      green: '#43A047', yellow: '#FDD835', purple: '#8E24AA',
+      black: '#616161', orange: '#EF6C00', un: '#00ACC1'
+    };
+    const noticeTextColors = {
+      red: '#E57373', diffusion: '#FFB74D', blue: '#64B5F6',
+      green: '#81C784', yellow: '#FFF176', purple: '#CE93D8',
+      black: '#BDBDBD', orange: '#FFCC80', un: '#80DEEA'
+    };
+    function showNotice(id) {
+      document.querySelectorAll('.notice-panel').forEach(p => p.style.display = 'none');
+      document.querySelectorAll('.notice-tab').forEach(t => {
+        t.style.borderBottomColor = 'transparent';
+        t.style.color = 'var(--muted)';
+        t.style.background = 'var(--navy-mid)';
+      });
+      document.getElementById('notice-' + id).style.display = 'block';
+      const tab = document.getElementById('tab-' + id);
+      tab.style.borderBottomColor = noticeColors[id];
+      tab.style.color = noticeTextColors[id];
+      tab.style.background = '#1E3448';
+    }
+  </script>
+</section>
+
+
+<!-- WHAT ELSE WE VERIFY -->
+<section style="padding:90px 60px; border-bottom:0.5px solid var(--border); background:var(--navy-mid);">
+  <div class="section-intro">
+    <div class="section-num" style="font-size:72px; font-family:'Playfair Display',serif; color:rgba(201,168,76,0.1); line-height:1;">02</div>
+    <h2>What else we verify</h2>
+  </div>
+  <p style="color:var(--muted); font-size:18px; line-height:1.9; margin-bottom:48px;">Beyond INTERPOL notices, your name may appear in national police records, regional law enforcement databases, or private risk intelligence systems used by compliance departments worldwide — often without your knowledge.</p>
+
+  <!-- Tab buttons -->
+  <div id="verify-tabs" style="display:flex; flex-wrap:wrap; gap:2px; margin-bottom:2px;">
+    <button onclick="showVerify('national')" id="vtab-national" class="verify-tab" style="display:flex;align-items:center;gap:8px;padding:12px 20px;background:var(--navy);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);border-bottom:2px solid var(--gold);transition:all 0.2s;">
+      National Police Databases
+    </button>
+    <button onclick="showVerify('sis')" id="vtab-sis" class="verify-tab" style="display:flex;align-items:center;gap:8px;padding:12px 20px;background:var(--navy);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid transparent;transition:all 0.2s;">
+      SIS — Schengen System
+    </button>
+    <button onclick="showVerify('cis')" id="vtab-cis" class="verify-tab" style="display:flex;align-items:center;gap:8px;padding:12px 20px;background:var(--navy);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid transparent;transition:all 0.2s;">
+      CIS Wanted List
+    </button>
+    <button onclick="showVerify('worldcheck')" id="vtab-worldcheck" class="verify-tab" style="display:flex;align-items:center;gap:8px;padding:12px 20px;background:var(--navy);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid transparent;transition:all 0.2s;">
+      World-Check & PEP
+    </button>
+  </div>
+
+  <!-- Tab content -->
+  <div style="background:var(--navy);padding:40px 48px;min-height:200px;">
+    <div id="verify-national" class="verify-panel">
+      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:16px;">National Police Databases</div>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">When checked:</strong> When verifying whether a person is listed in national law enforcement records across multiple jurisdictions — including countries with a history of misusing international legal mechanisms.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Who is affected:</strong> Anyone who has faced criminal proceedings, been a subject of investigation, or is involved in business or political disputes in high-risk countries.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;"><strong style="color:var(--white);font-weight:500;">Consequences:</strong> National wanted listings can trigger detention at borders, denial of residency or work permits, and complications with banking and financial services — even without an active Interpol notice.</p>
+    </div>
+    <div id="verify-sis" class="verify-panel" style="display:none;">
+      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:16px;">SIS — Schengen Information System</div>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">When checked:</strong> When assessing the risk of detention or refusal of entry within the Schengen Area — 27 European countries sharing a unified border alert system.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Who is affected:</strong> Anyone planning to travel to or through Europe, apply for a Schengen visa, or relocate to an EU country.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;"><strong style="color:var(--white);font-weight:500;">Consequences:</strong> A SIS alert can result in immediate detention at any Schengen border, refusal of entry, seizure of travel documents, or covert surveillance — without the person being notified in advance.</p>
+    </div>
+    <div id="verify-cis" class="verify-panel" style="display:none;">
+      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:16px;">CIS Interstate Wanted List</div>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">When checked:</strong> When verifying status across the Commonwealth of Independent States law enforcement database — covering Russia, Ukraine, Belarus, Kazakhstan, and 8 other former Soviet states.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Who is affected:</strong> Anyone with legal, business, or personal ties to CIS countries — particularly those who have left due to political pressure or criminal accusations.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;"><strong style="color:var(--white);font-weight:500;">Consequences:</strong> Detention upon entry to any CIS member state. In some cases, extradition to the requesting country even without a formal Interpol notice in place.</p>
+    </div>
+    <div id="verify-worldcheck" class="verify-panel" style="display:none;">
+      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:16px;">World-Check & PEP Databases</div>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">When checked:</strong> When screening for listings in private risk intelligence databases used by compliance departments and institutions worldwide.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Who is affected:</strong> Business owners, executives, public figures, and their family members — anyone flagged as a Politically Exposed Person or associated with financial risk.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.85;"><strong style="color:var(--white);font-weight:500;">Consequences:</strong> Frozen bank accounts, rejected transactions, denied access to financial services, and reputational damage — often without any formal legal proceedings.</p>
+    </div>
+  </div>
+
+  <script>
+    function showVerify(id) {
+      document.querySelectorAll('.verify-panel').forEach(p => p.style.display = 'none');
+      document.querySelectorAll('.verify-tab').forEach(t => {
+        t.style.borderBottomColor = 'transparent';
+        t.style.color = 'var(--muted)';
+        t.style.background = 'var(--navy)';
+      });
+      document.getElementById('verify-' + id).style.display = 'block';
+      const tab = document.getElementById('vtab-' + id);
+      tab.style.borderBottomColor = 'var(--gold)';
+      tab.style.color = 'var(--gold)';
+      tab.style.background = 'var(--navy-light)';
+    }
+  </script>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="how-it-works">
+  <div class="section-intro">
+    <div class="section-num">03</div>
+    <h2>How it works</h2>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">Step 01</div>
+      <div class="step-title">Submit request</div>
+      <div class="step-desc">Fill in the secure form with your details and specify which databases you need checked. All information is protected under attorney-client privilege from the first contact.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">Step 02</div>
+      <div class="step-title">Legal review</div>
+      <div class="step-desc">Our licensed attorneys verify your status across all relevant international and national databases using official legal channels.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">Step 03</div>
+      <div class="step-title">Report issued</div>
+      <div class="step-desc">You receive a certified legal verification report with detailed findings — accepted by banks, embassies, visa authorities, and immigration offices worldwide.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">Step 04</div>
+      <div class="step-title">Legal support</div>
+      <div class="step-desc">If a listing is found, we advise immediately on next steps and can represent you before INTERPOL's CCF, national authorities, the ECHR, or the UN Human Rights Committee.</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="audience" id="audience">
+  <div class="section-intro">
+    <div class="section-num">04</div>
+    <h2>Who needs this</h2>
+  </div>
+  <div class="audience-grid">
+    <div class="audience-card">
+      <div class="aud-icon">— Individual</div>
+      <div class="aud-title">Private persons & families</div>
+      <div class="aud-desc">Individuals who have faced criminal proceedings abroad, are planning international travel, or have left CIS countries due to political pressure or criminal accusations. Know your status before crossing a border.</div>
+    </div>
+    <div class="audience-card">
+      <div class="aud-icon">— Business</div>
+      <div class="aud-title">Executives & entrepreneurs</div>
+      <div class="aud-desc">Business owners, investors, and executives who need a certified legal status certificate for banking, licensing, or corporate transactions. Those flagged in World-Check or PEP databases facing frozen accounts or rejected transactions.</div>
+    </div>
+    <div class="audience-card">
+      <div class="aud-icon">— Legal</div>
+      <div class="aud-title">Law firms & legal counsel</div>
+      <div class="aud-desc">Attorneys and legal professionals who need certified international database checks for clients in extradition defence or asylum proceedings.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section id="cases" style="padding:90px 60px; border-bottom:0.5px solid var(--border); background:var(--navy);">
+  <div style="display:flex; align-items:baseline; gap:24px; margin-bottom:64px;">
+    <div style="font-family:'Playfair Display',serif; font-size:72px; color:rgba(201,168,76,0.1); line-height:1;">05</div>
+    <div>
+      <h2 style="font-family:'Playfair Display',serif; font-size:32px; font-weight:400; color:var(--white); margin-bottom:8px;">Our successful cases</h2>
+      <p style="color:var(--muted); font-size:17px;">Actual cases handled by our attorneys — all outcomes verified by CCF Commission decisions &mdash; <em>names and jurisdictions withheld per INTERPOL confidentiality rules</em></p>
+    </div>
+  </div>
+
+  <!-- Filter buttons -->
+  <div id="cases-filters" style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:40px;">
+    <button class="cf-btn" data-cat="politics" onclick="filterCases('politics')" style="font-family:'DM Sans',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; padding:10px 20px; background:transparent; color:var(--muted); border:0.5px solid var(--border); cursor:pointer; transition:all 0.2s;">Politics</button>
+    <button class="cf-btn cf-active" data-cat="economics" onclick="filterCases('economics')" style="font-family:'DM Sans',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; padding:10px 20px; background:var(--gold); color:var(--navy); border:0.5px solid var(--gold); cursor:pointer; transition:all 0.2s;">Economics</button>
+    <button class="cf-btn" data-cat="family" onclick="filterCases('family')" style="font-family:'DM Sans',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; padding:10px 20px; background:transparent; color:var(--muted); border:0.5px solid var(--border); cursor:pointer; transition:all 0.2s;">Family</button>
+    <button class="cf-btn" data-cat="health" onclick="filterCases('health')" style="font-family:'DM Sans',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; padding:10px 20px; background:transparent; color:var(--muted); border:0.5px solid var(--border); cursor:pointer; transition:all 0.2s;">Health</button>
+    <button class="cf-btn" data-cat="religion" onclick="filterCases('religion')" style="font-family:'DM Sans',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; padding:10px 20px; background:transparent; color:var(--muted); border:0.5px solid var(--border); cursor:pointer; transition:all 0.2s;">Religion</button>
+  </div>
+
+  <!-- Cases grid -->
+  <div id="cases-grid" style="display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:2px; background:var(--border-solid);">
+
+    <div class="cc" data-cat="economics" style="background:var(--navy-mid); padding:36px 32px;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:20px;">
+        <span style="font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); opacity:0.7;">2017</span>
+        <span style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#E57373; border:0.5px solid rgba(229,57,53,0.4); padding:4px 10px;">Deleted</span>
+      </div>
+      <div style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:10px;">Economics · Premature notice</div>
+      <h3 style="font-family:'Playfair Display',serif; font-size:19px; font-weight:400; color:var(--white); margin-bottom:16px; line-height:1.4;">Investigation not yet completed — Red Notice issued prematurely</h3>
+      <p style="color:var(--muted); font-size:15px; line-height:1.8; margin-bottom:12px;">Our client was placed on INTERPOL's wanted list while the investigation was still at an early stage — no formal charges had been filed, and no extradition request had been made. The authorities were attempting to use a mutual legal assistance treaty, an instrument with a completely different purpose.</p>
+      <p style="color:var(--muted); font-size:15px; line-height:1.8;">Our attorneys argued before the CCF that the Red Notice was premature and legally unfounded under RPD Art. 83 and 84. The Commission accepted the argument in full and recommended deletion of all data from INTERPOL's files.</p>
+    </div>
+
+    <div class="cc" data-cat="economics" style="background:var(--navy-mid); padding:36px 32px;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:20px;">
+        <span style="font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); opacity:0.7;">2017</span>
+        <span style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#E57373; border:0.5px solid rgba(229,57,53,0.4); padding:4px 10px;">Deleted</span>
+      </div>
+      <div style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:10px;">Economics · Commercial dispute</div>
+      <h3 style="font-family:'Playfair Display',serif; font-size:19px; font-weight:400; color:var(--white); margin-bottom:16px; line-height:1.4;">Cheque signed on behalf of a company reframed as criminal fraud</h3>
+      <p style="color:var(--muted); font-size:15px; line-height:1.8; margin-bottom:12px;">Our client, a company representative, was wanted in connection with a post-dated cheque signed within a contractual arrangement. When the commercial relationship broke down, the other party filed a criminal complaint — bypassing standard dispute resolution entirely.</p>
+      <p style="color:var(--muted); font-size:15px; line-height:1.8;">Our attorneys demonstrated to the CCF that the conduct was a private commercial dispute, not a criminal act, and that the NCB had provided no evidence of fraudulent intent. The Commission ordered full deletion under RPD Art. 83.1.</p>
+    </div>
+
+    <div class="cc" data-cat="politics" style="background:var(--navy-mid); padding:36px 32px;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:20px;">
+        <span style="font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); opacity:0.7;">2017</span>
+        <span style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#E57373; border:0.5px solid rgba(229,57,53,0.4); padding:4px 10px;">Deleted</span>
+      </div>
+      <div style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:10px;">Politics · Predominant political character</div>
+      <h3 style="font-family:'Playfair Display',serif; font-size:19px; font-weight:400; color:var(--white); margin-bottom:16px; line-height:1.4;">Opposition figure pursued after change of government</h3>
+      <p style="color:var(--muted); font-size:15px; line-height:1.8; margin-bottom:12px;">Following a change of power in his home country, our client — a prominent opposition politician — became the subject of criminal proceedings and an INTERPOL Red Notice. The timing and context pointed strongly to political motivation rather than genuine law enforcement.</p>
+      <p style="color:var(--muted); font-size:15px; line-height:1.8;">Our lawyers assembled decisions from courts in multiple countries and international bodies confirming the political character of linked prosecutions. The Commission found political elements dominant and ordered full deletion.</p>
+    </div>
+
+    <div class="cc" data-cat="politics" style="background:var(--navy-mid); padding:36px 32px;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:20px;">
+        <span style="font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); opacity:0.7;">2018</span>
+        <span style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#E57373; border:0.5px solid rgba(229,57,53,0.4); padding:4px 10px;">Deleted</span>
+      </div>
+      <div style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:10px;">Politics · Evidence obtained under torture</div>
+      <h3 style="font-family:'Playfair Display',serif; font-size:19px; font-weight:400; color:var(--white); margin-bottom:16px; line-height:1.4;">Former MP wanted on basis of a confession obtained under torture</h3>
+      <p style="color:var(--muted); font-size:15px; line-height:1.8; margin-bottom:12px;">Our client, a former minister and MP, was the subject of a Red Notice based almost entirely on a co-accused's confession that had been officially withdrawn — with a detailed account of the torture used to extract it. The NCB itself acknowledged cross-examination was impossible.</p>
+      <p style="color:var(--muted); font-size:15px; line-height:1.8;">Our attorneys argued that evidence obtained under torture cannot form a valid basis for an INTERPOL notice. The Commission ordered full deletion — a rare and significant finding on the inadmissibility of torture-derived evidence before INTERPOL.</p>
+    </div>
+
+    <div class="cc" data-cat="politics" style="background:var(--navy-mid); padding:36px 32px;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:20px;">
+        <span style="font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); opacity:0.7;">2018</span>
+        <span style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#E57373; border:0.5px solid rgba(229,57,53,0.4); padding:4px 10px;">Deleted</span>
+      </div>
+      <div style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:10px;">Politics · Asylum &amp; refugee status</div>
+      <h3 style="font-family:'Playfair Display',serif; font-size:19px; font-weight:400; color:var(--white); margin-bottom:16px; line-height:1.4;">Refugee whose asylum country recognised the political persecution</h3>
+      <p style="color:var(--muted); font-size:15px; line-height:1.8; margin-bottom:12px;">Our client held refugee status precisely because his home country's prosecution was recognised as politically motivated. The requesting NCB nonetheless used INTERPOL channels and imposed absolute restrictions on information disclosure, preventing any effective challenge.</p>
+      <p style="color:var(--muted); font-size:15px; line-height:1.8;">Our lawyers contested both the information restrictions and the substance of the notice. The Commission found the restrictions unjustified and ordered full deletion.</p>
+    </div>
+
+    <div class="cc" data-cat="health" style="background:var(--navy-mid); padding:36px 32px;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:20px;">
+        <span style="font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); opacity:0.7;">2019</span>
+        <span style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#E57373; border:0.5px solid rgba(229,57,53,0.4); padding:4px 10px;">Deleted</span>
+      </div>
+      <div style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:10px;">Health · Human rights</div>
+      <h3 style="font-family:'Playfair Display',serif; font-size:19px; font-weight:400; color:var(--white); margin-bottom:16px; line-height:1.4;">Extradition refused on medical grounds — notice incompatible with human rights</h3>
+      <p style="color:var(--muted); font-size:15px; line-height:1.8; margin-bottom:12px;">Our client suffered from severe chronic lung disease and haematological complications. A court had refused extradition after medical experts testified that any form of transport — by air, road, or sea — carried a high probability of causing irreversible harm to his health.</p>
+      <p style="color:var(--muted); font-size:15px; line-height:1.8;">Our attorneys argued before the CCF that this refusal was grounded in fundamental human rights under ECHR Article 3, not procedure. The Commission agreed and ordered the Red Notice deleted.</p>
+    </div>
+
+    <div class="cc" data-cat="religion politics" data-primary="religion" style="background:var(--navy-mid); padding:36px 32px;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:20px;">
+        <span style="font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); opacity:0.7;">2023</span>
+        <span style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#E57373; border:0.5px solid rgba(229,57,53,0.4); padding:4px 10px;">Deleted</span>
+      </div>
+      <div style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:10px;">Religion · Politics · Refugee</div>
+      <h3 style="font-family:'Playfair Display',serif; font-size:19px; font-weight:400; color:var(--white); margin-bottom:16px; line-height:1.4;">Three independent grounds secured deletion: refugee status, extradition refusal, human rights risk</h3>
+      <p style="color:var(--muted); font-size:15px; line-height:1.8; margin-bottom:12px;">Our client was wanted for alleged large-scale fraud. He held refugee status on religious and political grounds. A court had refused his extradition citing documented torture, unlawful detention, and absence of fair trial guarantees — confirmed by UN, Amnesty International, and Human Rights Watch reports.</p>
+      <p style="color:var(--muted); font-size:15px; line-height:1.8;">Our lawyers presented all three grounds simultaneously before the CCF. The Commission accepted each independently and ordered all data removed from INTERPOL's files.</p>
+    </div>
+
+    <div class="cc" data-cat="economics politics" data-primary="economics" style="background:var(--navy-mid); padding:36px 32px;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:20px;">
+        <span style="font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); opacity:0.7;">2024</span>
+        <span style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#E57373; border:0.5px solid rgba(229,57,53,0.4); padding:4px 10px;">Deleted</span>
+      </div>
+      <div style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:10px;">Economics · Politics · Human rights</div>
+      <h3 style="font-family:'Playfair Display',serif; font-size:19px; font-weight:400; color:var(--white); margin-bottom:16px; line-height:1.4;">VAT fraud accusation — requesting NCB failed to respond to the Commission three times</h3>
+      <p style="color:var(--muted); font-size:15px; line-height:1.8; margin-bottom:12px;">Our client, a company director, was accused of false VAT invoicing. The company that actually benefited was acquitted while our client was pursued. ECHR case law confirmed a real risk of torture in detention in the requesting country.</p>
+      <p style="color:var(--muted); font-size:15px; line-height:1.8;">Our attorneys raised human rights risks and the inconsistency of the prosecution. The requesting NCB failed to respond to the Commission's specific questions on three separate occasions. The Commission treated that silence as an inability to justify the notice and ordered full deletion.</p>
+    </div>
+
+    <div class="cc" data-cat="family" style="background:var(--navy-mid); padding:36px 32px;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:20px;">
+        <span style="font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); opacity:0.7;">2024</span>
+        <span style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#E57373; border:0.5px solid rgba(229,57,53,0.4); padding:4px 10px;">Deleted</span>
+      </div>
+      <div style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:10px;">Family · Due process</div>
+      <h3 style="font-family:'Playfair Display',serif; font-size:19px; font-weight:400; color:var(--white); margin-bottom:16px; line-height:1.4;">Inheritance dispute turned criminal — convicted in absentia with no notification</h3>
+      <p style="color:var(--muted); font-size:15px; line-height:1.8; margin-bottom:12px;">Our client was convicted and sentenced to exactly six months — the bare minimum threshold for a Red Notice — for allegedly mismanaging estate funds. Only two of nine beneficiaries had filed a complaint. He was tried in absentia with no documented evidence he had ever been notified.</p>
+      <p style="color:var(--muted); font-size:15px; line-height:1.8;">Our lawyers argued the case was a family matter excluded from Red Notice eligibility, the offence fell below the required seriousness threshold, and due process was violated. The Commission accepted all three grounds and ordered deletion.</p>
+    </div>
+
+    <div class="cc" data-cat="family" style="background:var(--navy-mid); padding:36px 32px;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:20px;">
+        <span style="font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); opacity:0.7;">2025</span>
+        <span style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#E57373; border:0.5px solid rgba(229,57,53,0.4); padding:4px 10px;">Deleted</span>
+      </div>
+      <div style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:10px;">Family · Red Notice + Yellow Notice</div>
+      <h3 style="font-family:'Playfair Display',serif; font-size:19px; font-weight:400; color:var(--white); margin-bottom:16px; line-height:1.4;">INTERPOL used as a tool in a cross-border custody dispute — all three notices deleted</h3>
+      <p style="color:var(--muted); font-size:15px; line-height:1.8; margin-bottom:12px;">Our client, a father with court-granted sole custody in his country of residence, faced a Red Notice and two Yellow Notices for his children — issued at the request of the mother's country. Both parents had participated in proceedings in both jurisdictions with conflicting outcomes.</p>
+      <p style="color:var(--muted); font-size:15px; line-height:1.8;">Our attorneys demonstrated that INTERPOL rules prohibit notices derived from family matters, and that INTERPOL is not a forum for resolving competing custody decisions. The Commission ordered all three notices deleted simultaneously.</p>
+    </div>
+
+    <div class="cc" data-cat="economics" style="background:var(--navy-mid); padding:36px 32px;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:20px;">
+        <span style="font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); opacity:0.7;">2025</span>
+        <span style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#E57373; border:0.5px solid rgba(229,57,53,0.4); padding:4px 10px;">Deleted</span>
+      </div>
+      <div style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:10px;">Economics · Tax &amp; administrative</div>
+      <h3 style="font-family:'Playfair Display',serif; font-size:19px; font-weight:400; color:var(--white); margin-bottom:16px; line-height:1.4;">Tax underpayment and unlicensed construction — administrative violations do not justify a Red Notice</h3>
+      <p style="color:var(--muted); font-size:15px; line-height:1.8; margin-bottom:12px;">Our client, a commercial director, was wanted for alleged tax evasion and operating without a construction licence. He had no authority over tax filings — those rested with the parent company's board. The licence had in fact been obtained. He received no personal benefit beyond his salary.</p>
+      <p style="color:var(--muted); font-size:15px; line-height:1.8;">Our lawyers argued the conduct fell within INTERPOL's own list of offences ineligible for Red Notices. The NCB could not demonstrate individual criminal intent. The Commission ordered full deletion.</p>
+    </div>
+
+  </div><!-- /grid -->
+</section>
+
+<script>
+function filterCases(cat) {
+  var cards = document.querySelectorAll('#cases-grid .cc');
+  cards.forEach(function(c) {
+    var primary = c.getAttribute('data-primary') || c.getAttribute('data-cat');
+    var show = primary === cat;
+    c.style.display = show ? '' : 'none';
+  });
+  document.querySelectorAll('.cf-btn').forEach(function(b) {
+    var active = b.getAttribute('data-cat') === cat;
+    b.style.background = active ? 'var(--gold)' : 'transparent';
+    b.style.color = active ? 'var(--navy)' : 'var(--muted)';
+    b.style.borderColor = active ? 'var(--gold)' : 'rgba(201,168,76,0.2)';
+  });
+}
+document.addEventListener('DOMContentLoaded', function(){ filterCases('economics'); });
+</script>
+
+<!-- PRICING -->
+<section id="pricing" style="padding:90px 60px; border-bottom:0.5px solid var(--border); background:var(--navy-mid);">
+  <div class="section-intro">
+    <div class="section-num" style="font-size:72px; font-family:'Playfair Display',serif; color:rgba(201,168,76,0.1); line-height:1;">06</div>
+    <h2>Pricing</h2>
+  </div>
+  <p style="color:var(--muted); font-size:18px; line-height:1.9; margin-bottom:64px; max-width:680px;">Our fees are published openly — no hidden costs, no surprises. The right service depends on your situation: whether you need to verify your status, act preventively, or remove an existing notice.</p>
+
+  <!-- Three pricing cards -->
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--border-solid); margin-bottom:32px;">
+
+    <!-- Card 1: Status Check -->
+    <div style="background:var(--navy); padding:40px 36px;">
+      <div style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:20px; opacity:0.7;">— Verification</div>
+      <div style="font-family:'Playfair Display',serif; font-size:22px; margin-bottom:12px;">Status Check</div>
+      <div style="font-size:15px; color:var(--muted); line-height:1.8; margin-bottom:28px;">You want to know if you are listed in INTERPOL or other international databases. No active search confirmed yet — just verified facts.</div>
+      <div style="margin-bottom:28px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:11px 0; border-bottom:0.5px solid rgba(255,255,255,0.05); font-size:15px;">
+          <span style="color:var(--muted);">INTERPOL (CCF)</span>
+          <span style="color:var(--white);">€500</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:11px 0; border-bottom:0.5px solid rgba(255,255,255,0.05); font-size:15px;">
+          <span style="color:var(--muted);">SIS — Schengen</span>
+          <span style="color:var(--white);">€350</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:11px 0; border-bottom:0.5px solid rgba(255,255,255,0.05); font-size:15px;">
+          <span style="color:var(--muted);">CIS Wanted List</span>
+          <span style="color:var(--white);">€150</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:11px 0; font-size:15px;">
+          <span style="color:var(--muted);">World-Check / PEP</span>
+          <span style="color:var(--white);">from €200</span>
+        </div>
+      </div>
+      <button onclick="var d=document.getElementById('details-check');var open=d.style.display!=='none';d.style.display=open?'none':'block';this.textContent=open?'What\'s included \u2193':'Hide \u2191';" style="background:transparent; border:0.5px solid var(--border); color:var(--muted); font-family:'DM Sans',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; padding:12px 20px; cursor:pointer; margin-bottom:16px; transition:all 0.2s; width:100%;" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">What's included ↓</button>
+      <div id="details-check" style="display:none; margin-bottom:20px; padding:24px; background:var(--navy-mid); border-left:2px solid var(--gold);">
+        <div style="font-size:15px; color:var(--muted); line-height:1.9;">
+          <p style="margin-bottom:10px;">Official legal request to INTERPOL's CCF or national police authority — covering <strong style="color:var(--white); font-weight:500;">all notice types</strong>, including non-public Diffusions that do not appear on INTERPOL's public website (which shows only ~3–4% of all active searches).</p>
+          <p style="margin-bottom:10px;">If the requesting country has restricted access to your file, CCF will confirm this fact. All findings are provided in writing.</p>
+          <p style="margin-bottom:0; color:rgba(138,155,176,0.7); font-size:14px;">Timeline: 3–4 months via CCF · days to weeks via national police · Attorney-client confidentiality from first contact</p>
+        </div>
+      </div>
+      <a href="#contact"><button style="background:var(--gold); color:var(--navy); border:none; padding:16px 28px; font-size:12px; text-transform:uppercase; letter-spacing:0.1em; font-weight:500; cursor:pointer; font-family:'DM Sans',sans-serif; transition:background 0.2s; width:100%;" onmouseover="this.style.background='var(--gold-light)'" onmouseout="this.style.background='var(--gold)'">Request verification →</button></a>
+    </div>
+
+    <!-- Card 2: Preventive Request -->
+    <div style="background:var(--navy); padding:40px 36px; border-top:2px solid var(--gold);">
+      <div style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:20px; opacity:0.7;">— Prevention</div>
+      <div style="font-family:'Playfair Display',serif; font-size:22px; margin-bottom:12px;">Preventive Request</div>
+      <div style="font-size:15px; color:var(--muted); line-height:1.8; margin-bottom:28px;">No notice issued yet, but criminal proceedings are underway or a warrant is likely. Acting before the search is filed can block the data entirely.</div>
+      <div style="margin-bottom:28px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:11px 0; border-bottom:0.5px solid rgba(255,255,255,0.05); font-size:15px;">
+          <span style="color:var(--muted);">Preventive filing</span>
+          <span style="color:var(--gold); font-family:'Playfair Display',serif; font-size:20px;">€4,200</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:11px 0; font-size:15px;">
+          <span style="color:var(--muted);">Material analysis</span>
+          <span style="color:var(--white);">included</span>
+        </div>
+      </div>
+      <button onclick="var d=document.getElementById('details-prev');var open=d.style.display!=='none';d.style.display=open?'none':'block';this.textContent=open?'What\'s included \u2193':'Hide \u2191';" style="background:transparent; border:0.5px solid var(--border); color:var(--muted); font-family:'DM Sans',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; padding:12px 20px; cursor:pointer; margin-bottom:16px; transition:all 0.2s; width:100%;" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">What's included ↓</button>
+      <div id="details-prev" style="display:none; margin-bottom:20px; padding:24px; background:var(--navy-mid); border-left:2px solid var(--gold);">
+        <div style="font-size:15px; color:var(--muted); line-height:1.9;">
+          <p style="margin-bottom:10px;"><strong style="color:var(--white); font-weight:500;">Analysis</strong> of case materials and assessment of risk level and optimal timing for filing — not too early, not too late.</p>
+          <p style="margin-bottom:10px;"><strong style="color:var(--white); font-weight:500;">Preparation</strong> of a concise, targeted petition to INTERPOL's CCF and General Secretariat arguing for temporary data blocking. At least one senior attorney works on each filing. Preparation takes approximately 1–2 weeks.</p>
+          <p style="margin-bottom:10px;"><strong style="color:var(--white); font-weight:500;">Review &amp; approval</strong> — you receive the full text before submission, can ask questions and suggest changes. Final version is proof-read by a legal document specialist.</p>
+          <p style="margin-bottom:10px;"><strong style="color:var(--white); font-weight:500;">Filing</strong> — submitted electronically to CCF; original signed power of attorney sent to Lyon by post.</p>
+          <p style="margin-bottom:10px;"><strong style="color:var(--white); font-weight:500;">Follow-up</strong> — we correspond with CCF and advise on any new circumstances throughout the process. If a notice is subsequently issued, the case transitions to a removal procedure while data remains blocked.</p>
+          <p style="margin-bottom:0; color:rgba(138,155,176,0.7); font-size:14px;">Timeline: initial CCF response ~4 months · full process may extend over years depending on when the requesting country files</p>
+        </div>
+      </div>
+      <a href="#contact"><button style="background:var(--gold); color:var(--navy); border:none; padding:16px 28px; font-size:12px; text-transform:uppercase; letter-spacing:0.1em; font-weight:500; cursor:pointer; font-family:'DM Sans',sans-serif; transition:background 0.2s; width:100%;" onmouseover="this.style.background='var(--gold-light)'" onmouseout="this.style.background='var(--gold)'">Request consultation →</button></a>
+    </div>
+
+    <!-- Card 3: Removal -->
+    <div style="background:var(--navy); padding:40px 36px;">
+      <div style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:20px; opacity:0.7;">— Removal</div>
+      <div style="font-family:'Playfair Display',serif; font-size:22px; margin-bottom:12px;">Notice Removal</div>
+      <div style="font-size:15px; color:var(--muted); line-height:1.8; margin-bottom:28px;">A Red Notice or Diffusion is confirmed. We prepare and submit a removal request to INTERPOL's CCF arguing non-compliance with INTERPOL's rules and data processing regulations.</div>
+      <div style="margin-bottom:28px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:11px 0; border-bottom:0.5px solid rgba(255,255,255,0.05); font-size:15px;">
+          <span style="color:var(--muted);">After preventive filing</span>
+          <span style="color:var(--white);">€6,000</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:11px 0; border-bottom:0.5px solid rgba(255,255,255,0.05); font-size:15px;">
+          <span style="color:var(--muted);">Without prior preventive</span>
+          <span style="color:var(--gold); font-family:'Playfair Display',serif; font-size:20px;">€8,000</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:11px 0; font-size:15px;">
+          <span style="color:var(--muted);">Success fee (on removal)</span>
+          <span style="color:var(--white);">€4,500</span>
+        </div>
+      </div>
+      <button onclick="var d=document.getElementById('details-rem');var open=d.style.display!=='none';d.style.display=open?'none':'block';this.textContent=open?'What\'s included \u2193':'Hide \u2191';" style="background:transparent; border:0.5px solid var(--border); color:var(--muted); font-family:'DM Sans',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; padding:12px 20px; cursor:pointer; margin-bottom:16px; transition:all 0.2s; width:100%;" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">What's included ↓</button>
+      <div id="details-rem" style="display:none; margin-bottom:20px; padding:24px; background:var(--navy-mid); border-left:2px solid var(--gold);">
+        <div style="font-size:15px; color:var(--muted); line-height:1.9;">
+          <p style="margin-bottom:10px;"><strong style="color:var(--white); font-weight:500;">Analysis</strong> of all case materials by a minimum of two senior attorneys — identifying the strongest grounds for removal under INTERPOL's Constitution and Rules on the Processing of Data.</p>
+          <p style="margin-bottom:10px;"><strong style="color:var(--white); font-weight:500;">Preparation</strong> of a concise removal petition with supporting exhibits selected from your materials and open sources. Large documents are reduced to relevant excerpts only. Preparation takes approximately 3–5 weeks.</p>
+          <p style="margin-bottom:10px;"><strong style="color:var(--white); font-weight:500;">Review &amp; approval</strong> — you receive the full text before submission, can ask questions and suggest changes. Translation of non-English attachments is coordinated separately. Final version is proof-read by a legal document specialist.</p>
+          <p style="margin-bottom:10px;"><strong style="color:var(--white); font-weight:500;">Filing</strong> — submitted electronically to CCF; original signed power of attorney sent to Lyon by post.</p>
+          <p style="margin-bottom:10px;"><strong style="color:var(--white); font-weight:500;">Follow-up</strong> — we correspond with CCF throughout the review and explain every response. CCF sessions are held four times per year; total process takes approximately 12 months.</p>
+          <p style="margin-bottom:10px;"><strong style="color:var(--white); font-weight:500;">After removal</strong> — a CCF decision cannot be appealed or reversed by the requesting country. If a new notice is filed without new grounds, it is treated as abuse and withdrawn automatically.</p>
+          <p style="margin-bottom:0; color:rgba(138,155,176,0.7); font-size:14px;">If the request is denied: we advise on new or newly discovered circumstances required for a review request</p>
+        </div>
+      </div>
+      <a href="#contact"><button style="background:var(--gold); color:var(--navy); border:none; padding:16px 28px; font-size:12px; text-transform:uppercase; letter-spacing:0.1em; font-weight:500; cursor:pointer; font-family:'DM Sans',sans-serif; transition:background 0.2s; width:100%;" onmouseover="this.style.background='var(--gold-light)'" onmouseout="this.style.background='var(--gold)'">Request consultation →</button></a>
+    </div>
+
+  </div>
+
+  <p style="font-size:13px; color:var(--muted); text-align:center; letter-spacing:0.02em;">Initial consultation is free · All fees are fixed, not hourly · <a href="https://status.law/tariffs-for-services-against-extradition-en/" target="_blank" style="color:var(--gold); border-bottom:0.5px solid rgba(201,168,76,0.4);">Full pricing on status.law →</a></p>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <div class="section-intro" style="margin-bottom:24px;">
+        <div class="section-num" style="font-size:56px;">06</div>
+        <h2>Contact us</h2>
+      </div>
+      <p>Submit your details using the secure form. All inquiries are handled under strict attorney-client confidentiality. We will contact you to confirm the scope and provide a quote.</p>
+      <div class="contact-detail">
+        <div class="c-detail">
+          <span>Firm</span>
+          Status Law Juridiska Byrå Aktiebolag
+        </div>
+        <div class="c-detail">
+          <span>Email</span>
+          info&#64;status.law
+        </div>
+        <div class="c-detail">
+          <span>Phone</span>
+          <a href="tel:+46720246404">+46 72 024 6404</a>
+        </div>
+        <div class="c-detail">
+          <span>Working hours</span>
+          Monday – Friday · 9:00 – 18:00 CET
+        </div>
+        <div class="c-detail">
+          <span>Address</span>
+          Bygdegatan 313, Linköping, 583 31, Sweden
+        </div>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <div>
+      <!-- Messengers -->
+      <p style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:16px;">Write to us in your preferred messenger</p>
+      <div class="messengers" style="margin-bottom:12px;">
+        <a href="https://wa.me/46720246404" target="_blank" class="msg-btn" style="color:var(--gold); border-color:var(--border);">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <a href="https://t.me/Status_Law_firm" target="_blank" class="msg-btn" style="color:var(--gold); border-color:var(--border);">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          Telegram
+        </a>
+        <a href="https://signal.me/#p/46720246404" target="_blank" class="msg-btn" style="color:var(--gold); border-color:var(--border);">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 1 0 0 24A12 12 0 0 0 12 0zm5.5 8.3l-1.2 5.6c-.1.4-.4.6-.7.6-.1 0-.3 0-.4-.1L12 12.7l-1.5 1.4c-.1.1-.3.2-.5.2-.4 0-.6-.3-.6-.6l-.2-2-3.9-1.3c-.4-.1-.4-.7 0-.9l9.4-3.6c.4-.1.8.2.8.4z"/></svg>
+          Signal
+        </a>
+        <a href="https://imo.im?phone=46720246404" target="_blank" class="msg-btn" style="color:var(--gold); border-color:var(--border);">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+          IMO
+        </a>
+      </div>
+      <p style="font-size:13px; color:var(--muted); margin-bottom:32px; padding-bottom:32px; border-bottom:0.5px solid var(--border-solid);">— or fill in the form below</p>
+
+      <form id="contactForm" action="https://formspree.io/f/xbdzndvb" method="POST">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full name *</label>
+            <input type="text" id="name" name="name" placeholder="John Smith" required>
+          </div>
+          <div class="form-group">
+            <label for="country">Country *</label>
+            <select id="country" name="country" required>
+              <option value="" disabled selected>Select country</option>
+              <option>Afghanistan</option><option>Albania</option><option>Algeria</option>
+              <option>Argentina</option><option>Armenia</option><option>Australia</option>
+              <option>Austria</option><option>Azerbaijan</option><option>Bahrain</option>
+              <option>Belarus</option><option>Belgium</option><option>Brazil</option>
+              <option>Bulgaria</option><option>Canada</option><option>China</option>
+              <option>Croatia</option><option>Cyprus</option><option>Czech Republic</option>
+              <option>Denmark</option><option>Egypt</option><option>Estonia</option>
+              <option>Finland</option><option>France</option><option>Georgia</option>
+              <option>Germany</option><option>Greece</option><option>Hungary</option>
+              <option>India</option><option>Indonesia</option><option>Iran</option>
+              <option>Iraq</option><option>Ireland</option><option>Israel</option>
+              <option>Italy</option><option>Jordan</option><option>Kazakhstan</option>
+              <option>Kuwait</option><option>Kyrgyzstan</option><option>Latvia</option>
+              <option>Lebanon</option><option>Libya</option><option>Lithuania</option>
+              <option>Luxembourg</option><option>Malaysia</option><option>Mexico</option>
+              <option>Moldova</option><option>Morocco</option><option>Netherlands</option>
+              <option>New Zealand</option><option>Nigeria</option><option>Norway</option>
+              <option>Oman</option><option>Pakistan</option><option>Poland</option>
+              <option>Portugal</option><option>Qatar</option><option>Romania</option>
+              <option>Russia</option><option>Saudi Arabia</option><option>Serbia</option>
+              <option>Singapore</option><option>Slovakia</option><option>Slovenia</option>
+              <option>South Africa</option><option>South Korea</option><option>Spain</option>
+              <option>Sweden</option><option>Switzerland</option><option>Syria</option>
+              <option>Tajikistan</option><option>Thailand</option><option>Tunisia</option>
+              <option>Turkey</option><option>Turkmenistan</option><option>UAE</option>
+              <option>UK</option><option>Ukraine</option><option>USA</option>
+              <option>Uzbekistan</option><option>Venezuela</option><option>Vietnam</option>
+              <option>Yemen</option><option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone / WhatsApp</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Describe your situation *</label>
+          <textarea id="message" name="message" placeholder="Please briefly describe what you need checked and why. All information is strictly confidential." required></textarea>
+        </div>
+
+        <div class="consent">
+          <input type="checkbox" id="gdpr" name="gdpr" required>
+          <label for="gdpr">I consent to the processing of my personal data in accordance with the <a href="https://status.law/privacy-policy" target="_blank">Privacy Policy</a>. I understand that my data will be used solely to process this request and will be handled under attorney-client confidentiality.</label>
+        </div>
+
+        <!-- Honeypot spam protection -->
+        <input type="text" name="_gotcha" style="display:none">
+        <input type="hidden" name="_subject" value="New Interpol Check request — interpol-check.me">
+
+        <button type="submit" class="btn-submit" id="submitBtn">Check your status now →</button>
+        <p class="form-note">🔒 Encrypted · Confidential · Attorney-client privilege</p>
+      </form>
+
+      <div class="form-success" id="formSuccess">
+        ✓ Your request has been received. We will be in touch shortly.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <h2>Know your status.<br><em>Protect your freedom.</em></h2>
+  <p style="color:var(--muted); font-size:16px; margin-bottom:12px;">Trusted by clients across Europe, the Middle East and CIS. Over 100 Red Notices successfully removed.</p>
+  <p style="color:var(--muted); font-size:15px; margin-bottom:36px;">Our fees are published openly — no hidden costs, no surprises.</p>
+  <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+    <a href="#contact"><button class="btn-primary" style="padding:18px 48px;font-size:13px;">Request verification</button></a>
+    <a href="https://status.law/tariffs-for-services-against-extradition-en/" target="_blank" style="display:inline-flex; align-items:center; background:transparent; border:0.5px solid var(--gold); color:var(--gold); padding:18px 48px; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; transition:all 0.2s; font-family:'DM Sans',sans-serif; font-weight:500;" onmouseover="this.style.background='#C9A84C';this.style.color='#0D1B2A'" onmouseout="this.style.background='transparent';this.style.color='#C9A84C'">View full pricing</a>
+  </div>
+  <p class="price-note" style="margin-top:24px;">Strictly confidential · Licensed attorneys · GDPR compliant</p>
+</section>
+
+<!-- FOOTER -->
+
+<footer style="display:block; padding:40px 60px; background:var(--navy-mid); border-top:0.5px solid var(--border);">
+
+  <!-- Row 1: logo + links -->
+  <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:28px; flex-wrap:wrap; gap:20px;">
+    <a href="https://status.law" target="_blank" rel="noopener" style="text-decoration:none; display:flex; flex-direction:column; line-height:1.1;">
+      <span style="font-family:'DM Sans',sans-serif; font-size:18px; font-weight:500; color:#F5F3EE; letter-spacing:0.02em;">Status <span style="color:#C9A84C;">Law</span></span>
+      <span style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#8A9BB0; margin-top:3px;">International Legal Protection</span>
+    </a>
+    <div style="display:flex; gap:24px; align-items:center; flex-wrap:wrap;">
+      <a href="https://status.law/privacy-policy" target="_blank" style="font-size:13px; color:var(--muted); text-decoration:none; transition:color 0.2s;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='#8A9BB0'">Privacy Policy</a>
+      <a href="https://status.law/cookie-policy" target="_blank" style="font-size:13px; color:var(--muted); text-decoration:none; transition:color 0.2s;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='#8A9BB0'">Cookie Policy</a>
+      <a href="https://status.law/terms-of-service" target="_blank" style="font-size:13px; color:var(--muted); text-decoration:none; transition:color 0.2s;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='#8A9BB0'">Terms</a>
+      <a href="/sitemap.xml" target="_blank" style="font-size:13px; color:var(--muted); text-decoration:none; transition:color 0.2s;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='#8A9BB0'">Sitemap</a>
+    </div>
+  </div>
+
+  <!-- Row 2: description + contact icons -->
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; flex-wrap:wrap; gap:16px;">
+    <p style="font-size:13px; color:var(--muted); margin:0; line-height:1.7;">A service by Status Law Juridiska Byrå Aktiebolag, Sweden<br>Mon–Fri · 9:00–18:00 CET · Bygdegatan 313, Linköping, Sweden</p>
+    <div style="display:flex; align-items:center; gap:14px;">
+      <!-- Phone -->
+      <a href="tel:+46720246404" title="+46 72 024 6404" style="color:var(--muted); transition:color 0.2s; display:flex;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='#8A9BB0'">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      </a>
+      <!-- Email -->
+      <a id="footer-email-link" title="info@status.law" style="color:var(--muted); transition:color 0.2s; display:flex;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='#8A9BB0'">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+      </a>
+      <!-- WhatsApp -->
+      <a href="https://wa.me/46720246404" target="_blank" title="WhatsApp" style="color:var(--muted); transition:color 0.2s; display:flex;" onmouseover="this.style.color='#25D366'" onmouseout="this.style.color='#8A9BB0'">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </a>
+      <!-- Telegram -->
+      <a href="https://t.me/Status_Law_firm" target="_blank" title="Telegram" style="color:var(--muted); transition:color 0.2s; display:flex;" onmouseover="this.style.color='#2AABEE'" onmouseout="this.style.color='#8A9BB0'">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+      </a>
+      <!-- Signal -->
+      <a href="https://signal.me/#p/46720246404" target="_blank" title="Signal" style="color:var(--muted); transition:color 0.2s; display:flex;" onmouseover="this.style.color='#3A76F0'" onmouseout="this.style.color='#8A9BB0'">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 4.5a7.5 7.5 0 110 15 7.5 7.5 0 010-15zm0 2a5.5 5.5 0 100 11 5.5 5.5 0 000-11z"/></svg>
+      </a>
+      <!-- Viber -->
+      <a href="viber://chat?number=46720246404" title="Viber" style="color:var(--muted); transition:color 0.2s; display:flex;" onmouseover="this.style.color='#7360F2'" onmouseout="this.style.color='#8A9BB0'">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.4 0C6.953 0 3.533 1.44 1.267 3.973.427 4.92 0 6.12 0 7.44v2.787c0 3.68 2.56 6.96 6.213 7.84l.347.08-.08.347c-.24.987-.587 1.947-1.04 2.853l-.24.48.533-.107c1.867-.373 3.627-1.173 5.147-2.32l.24-.187.293.053c.32.053.64.08.96.08 4.48 0 8.627-3.307 8.627-8.12V7.44c0-1.32-.427-2.52-1.267-3.467C17.467 1.44 14.047 0 11.4 0zm4.507 15.04c-.48.533-1.173.827-1.92.827-.24 0-.48-.027-.72-.107-1.44-.4-2.773-1.093-3.893-2.027-1.04-.88-1.893-1.947-2.507-3.147-.507-.987-.773-2.053-.773-3.147 0-.72.267-1.387.773-1.893.373-.373.88-.587 1.413-.587.187 0 .373.027.533.107.427.16.773.507.96.933l.72 1.627c.187.427.133.933-.16 1.307l-.4.507c-.107.133-.107.32-.027.48.347.667.827 1.28 1.44 1.76.587.453 1.253.773 1.973.933.187.053.373-.027.48-.187l.373-.56c.32-.48.88-.693 1.413-.56l1.68.427c.507.133.88.533.96 1.04.08.56-.107 1.12-.52 1.467z"/></svg>
+      </a>
+    
+    </div>
+  </div>
+
+  <!-- Row 3: copyright + developer -->
+  <div style="border-top:0.5px solid rgba(255,255,255,0.06); padding-top:16px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+    <span style="font-size:12px; color:#4a5a6a;">© <script>document.write(new Date().getFullYear())</script> Status Law Juridiska Byrå Aktiebolag. All rights reserved.</span>
+    <span style="font-size:12px; color:#4a5a6a;">Site developed by <a href="https://itos.nu" target="_blank" rel="noopener" style="color:#8A9BB0; text-decoration:none; border-bottom:0.5px solid rgba(138,155,176,0.3); transition:color 0.2s;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='#8A9BB0'">itos.nu</a></span>
+  </div>
+
+</footer>
+
+<!-- Кнопка прокрутки вверх -->
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed; bottom:60px; right:28px; width:42px; height:42px; background:var(--navy-mid); border:0.5px solid var(--border); color:var(--gold); cursor:pointer; display:none; align-items:center; justify-content:center; transition:all 0.2s; z-index:99;" onmouseover="this.style.background='var(--gold)';this.style.color='var(--navy)'" onmouseout="this.style.background='var(--navy-mid)';this.style.color='var(--gold)'">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+<script>
+  (function() {
+    var u = 'info'; var d = 'status.law';
+    var el = document.getElementById('footer-email-link');
+    if (el) { el.href = 'mailto:' + u + '@' + d; }
+  })();
+</script>
+<script>
+  window.addEventListener('scroll', () => {
+    const btn = document.getElementById('scrollTop');
+    btn.style.display = window.scrollY > 400 ? 'flex' : 'none';
+  });
+</script>
+
+<script>
+  const form = document.getElementById('contactForm');
+  const btn = document.getElementById('submitBtn');
+  const success = document.getElementById('formSuccess');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        form.style.display = 'none';
+        success.style.display = 'block';
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Send request';
+        alert('Something went wrong. Please try again or contact us directly.');
+      }
+    } catch (err) {
+      btn.disabled = false;
+      btn.textContent = 'Send request';
+      alert('Connection error. Please try again.');
+    }
+  });
+</script>
+
+<!-- Cookie consent -->
+<div id="cookieBanner" style="position:fixed; bottom:0; left:0; right:0; background:#162436; border-top:0.5px solid rgba(201,168,76,0.2); padding:18px 40px; display:flex; align-items:center; justify-content:space-between; gap:24px; z-index:999; flex-wrap:wrap;">
+  <p style="color:#8A9BB0; font-size:13px; line-height:1.6; margin:0; max-width:680px;">
+    We use cookies to ensure the proper functioning of this website. By continuing to browse, you agree to our use of cookies.
+    <a href="https://status.law/privacy-policy" target="_blank" style="color:#C9A84C; border-bottom:0.5px solid rgba(201,168,76,0.4);">Privacy Policy</a>
+  </p>
+  <div style="display:flex; gap:12px; flex-shrink:0;">
+    <button onclick="document.getElementById('cookieBanner').style.display='none'; localStorage.setItem('cookieAccepted','rejected');"
+      style="background:transparent; color:#8A9BB0; border:0.5px solid #8A9BB0; padding:10px 28px; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; font-weight:500; cursor:pointer; white-space:nowrap; font-family:'DM Sans',sans-serif; transition:all 0.2s;"
+      onmouseover="this.style.borderColor='#F5F3EE';this.style.color='#F5F3EE'" onmouseout="this.style.borderColor='#8A9BB0';this.style.color='#8A9BB0'">
+      Reject
+    </button>
+    <button onclick="document.getElementById('cookieBanner').style.display='none'; localStorage.setItem('cookieAccepted','1');"
+      style="background:#C9A84C; color:#0D1B2A; border:none; padding:10px 28px; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; font-weight:500; cursor:pointer; white-space:nowrap; font-family:'DM Sans',sans-serif; transition:background 0.2s;"
+      onmouseover="this.style.background='#E2C97E'" onmouseout="this.style.background='#C9A84C'">
+      Accept
+    </button>
+  </div>
+</div>
+<script>
+  if (localStorage.getItem('cookieAccepted')) {
+    document.getElementById('cookieBanner').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+# Documents (confidential, not for version control)
+*.pdf
+*.docx
+*.doc
+
+# Screenshots
+Screenshot*.png
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+*.swp

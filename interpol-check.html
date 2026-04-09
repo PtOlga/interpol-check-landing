@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interpol Check — International Database Verification | Status Law</title>
+<meta name="description" content="Professional legal verification of your status in Interpol, wanted persons lists, and international law enforcement databases. Confidential. Fast. Legally certified.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy: #0D1B2A;
+  --navy-mid: #162436;
+  --navy-light: #1E3448;
+  --gold: #C9A84C;
+  --gold-light: #E2C97E;
+  --white: #F5F3EE;
+  --muted: #8A9BB0;
+  --border: rgba(201,168,76,0.2);
+  --border-solid: #1E3040;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--navy); color: var(--white); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.7; font-size: 15px; }
+
+a { color: inherit; text-decoration: none; }
+
+/* NAV */
+nav {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 22px 60px; border-bottom: 0.5px solid var(--border);
+  position: sticky; top: 0; background: var(--navy); z-index: 100;
+}
+.logo { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--gold); letter-spacing: 0.02em; }
+.logo span { color: var(--white); }
+.nav-links { display: flex; gap: 36px; align-items: center; }
+.nav-links a { color: var(--muted); font-size: 12px; letter-spacing: 0.07em; text-transform: uppercase; transition: color 0.2s; }
+.nav-links a:hover { color: var(--white); }
+.btn-nav {
+  background: var(--gold); color: var(--navy); font-size: 11px; font-weight: 500;
+  padding: 10px 24px; text-transform: uppercase; letter-spacing: 0.1em;
+  border: none; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.2s;
+}
+.btn-nav:hover { background: var(--gold-light); }
+
+/* HERO */
+.hero {
+  padding: 100px 60px 90px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+  border-bottom: 0.5px solid var(--border);
+}
+.hero-label {
+  font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 24px; display: flex; align-items: center; gap: 12px;
+}
+.hero-label::before { content: ''; display: block; width: 32px; height: 0.5px; background: var(--gold); }
+h1 { font-family: 'Playfair Display', serif; font-size: 50px; line-height: 1.15; font-weight: 400; margin-bottom: 28px; }
+h1 em { color: var(--gold); font-style: italic; }
+.hero-sub { color: var(--muted); font-size: 16px; line-height: 1.9; margin-bottom: 48px; }
+.hero-actions { display: flex; align-items: center; gap: 32px; }
+.btn-primary {
+  background: var(--gold); color: var(--navy); padding: 16px 40px;
+  font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;
+  font-weight: 500; border: none; cursor: pointer; font-family: 'DM Sans', sans-serif;
+  transition: background 0.2s;
+}
+.btn-primary:hover { background: var(--gold-light); }
+.btn-ghost {
+  color: var(--white); font-size: 13px;
+  border-bottom: 0.5px solid var(--muted); padding-bottom: 2px; transition: color 0.2s;
+}
+.btn-ghost:hover { color: var(--gold); }
+
+/* SAMPLE REPORT CARD */
+.report-card {
+  background: var(--navy-mid); border: 0.5px solid var(--border);
+  padding: 40px; position: relative;
+}
+.report-card::before {
+  content: ''; position: absolute; top: -1px; left: 40px; right: 40px;
+  height: 2px; background: var(--gold);
+}
+.status-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(201,168,76,0.08); border: 0.5px solid var(--border);
+  padding: 7px 14px; font-size: 11px; color: var(--gold);
+  letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 28px;
+}
+.status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+.card-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 6px; }
+.card-value { font-family: 'Playfair Display', serif; font-size: 26px; color: var(--white); margin-bottom: 28px; }
+.divider { height: 0.5px; background: var(--border); margin: 16px 0; }
+.check-row { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; font-size: 13px; border-bottom: 0.5px solid rgba(255,255,255,0.04); }
+.check-row span:first-child { color: var(--muted); }
+.ok { color: #4CAF7D; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; }
+.flag { color: #E26B4A; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; }
+.report-footer { margin-top: 20px; font-size: 11px; color: var(--muted); }
+
+/* STATS */
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 0.5px solid var(--border); }
+.stat { padding: 52px 60px; border-right: 0.5px solid var(--border); }
+.stat:last-child { border-right: none; }
+.stat-num { font-family: 'Playfair Display', serif; font-size: 44px; color: var(--gold); margin-bottom: 8px; line-height: 1; }
+.stat-label { font-size: 13px; color: var(--muted); }
+
+/* SERVICES */
+.services { padding: 90px 60px; border-bottom: 0.5px solid var(--border); }
+.section-intro { display: flex; align-items: baseline; gap: 24px; margin-bottom: 64px; }
+.section-num { font-family: 'Playfair Display', serif; font-size: 72px; color: rgba(201,168,76,0.1); line-height: 1; }
+h2 { font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 400; }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border-solid); }
+.service-card {
+  background: var(--navy); padding: 36px 32px;
+  border-top: 2px solid transparent; transition: border-color 0.25s, background 0.25s;
+}
+.service-card:hover { border-top-color: var(--gold); background: var(--navy-mid); }
+.svc-num { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; opacity: 0.7; }
+.svc-name { font-family: 'Playfair Display', serif; font-size: 19px; margin-bottom: 12px; }
+.svc-desc { font-size: 13px; color: var(--muted); line-height: 1.8; }
+
+/* PROCESS */
+.process { padding: 90px 60px; border-bottom: 0.5px solid var(--border); background: var(--navy-mid); }
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-top: 64px; position: relative; }
+.steps::before {
+  content: ''; position: absolute; top: 28px; left: 60px; right: 60px;
+  height: 0.5px; background: var(--border);
+}
+.step { position: relative; }
+.step-num {
+  font-family: 'Playfair Display', serif; font-size: 13px; color: var(--gold);
+  background: var(--navy-mid); display: inline-block; padding-right: 16px;
+  margin-bottom: 24px; position: relative; z-index: 1;
+}
+.step-title { font-size: 15px; font-weight: 500; margin-bottom: 10px; }
+.step-desc { font-size: 13px; color: var(--muted); line-height: 1.75; }
+
+/* WHO IT'S FOR */
+.audience { padding: 90px 60px; border-bottom: 0.5px solid var(--border); }
+.audience-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; margin-top: 64px; background: var(--border-solid); }
+.audience-card { background: var(--navy); padding: 40px 36px; }
+.aud-icon { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+.aud-title { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 12px; }
+.aud-desc { font-size: 13px; color: var(--muted); line-height: 1.8; }
+
+/* CONTACT FORM */
+.contact { padding: 90px 60px; border-bottom: 0.5px solid var(--border); }
+.contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.contact-info h2 { margin-bottom: 20px; }
+.contact-info p { color: var(--muted); font-size: 14px; line-height: 1.9; margin-bottom: 40px; }
+.contact-detail { display: flex; flex-direction: column; gap: 14px; }
+.c-detail { font-size: 13px; }
+.c-detail span { color: var(--muted); display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px; }
+.c-detail a { color: var(--gold-light); border-bottom: 0.5px solid rgba(201,168,76,0.3); }
+
+/* FORM */
+form { display: flex; flex-direction: column; gap: 0; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 2px; }
+.form-group { display: flex; flex-direction: column; margin-bottom: 2px; }
+.form-group label {
+  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--muted); padding: 14px 18px 0; background: var(--navy-mid);
+  border: 0.5px solid var(--border-solid);
+  border-bottom: none;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: var(--navy-mid); border: 0.5px solid var(--border-solid);
+  border-top: none; color: var(--white); font-family: 'DM Sans', sans-serif;
+  font-size: 14px; font-weight: 300; padding: 10px 18px 14px;
+  outline: none; transition: border-color 0.2s; appearance: none; width: 100%;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: var(--gold); }
+.form-group select { cursor: pointer; }
+.form-group select option { background: var(--navy-mid); }
+.form-group textarea { resize: vertical; min-height: 120px; line-height: 1.7; }
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: var(--muted); opacity: 0.5; }
+
+.consent { display: flex; gap: 14px; align-items: flex-start; margin: 16px 0 20px; }
+.consent input[type="checkbox"] {
+  width: 16px; height: 16px; min-width: 16px; margin-top: 3px;
+  background: var(--navy-mid); border: 0.5px solid var(--muted);
+  appearance: none; cursor: pointer; position: relative;
+}
+.consent input[type="checkbox"]:checked::after {
+  content: '✓'; position: absolute; top: -2px; left: 2px;
+  color: var(--gold); font-size: 12px;
+}
+.consent label { font-size: 12px; color: var(--muted); line-height: 1.7; cursor: pointer; }
+.consent a { color: var(--gold); border-bottom: 0.5px solid rgba(201,168,76,0.4); }
+
+.btn-submit {
+  background: var(--gold); color: var(--navy); padding: 18px 40px;
+  font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em;
+  font-weight: 500; border: none; cursor: pointer; font-family: 'DM Sans', sans-serif;
+  transition: background 0.2s; width: 100%;
+}
+.btn-submit:hover { background: var(--gold-light); }
+.btn-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.form-note { font-size: 11px; color: var(--muted); margin-top: 12px; text-align: center; letter-spacing: 0.02em; }
+.form-success {
+  display: none; background: rgba(76,175,125,0.08); border: 0.5px solid rgba(76,175,125,0.3);
+  padding: 24px; text-align: center; font-size: 14px; color: #4CAF7D; margin-top: 16px;
+}
+
+/* CTA BANNER */
+.cta-banner {
+  padding: 90px 60px; text-align: center;
+  background: var(--navy-mid); border-bottom: 0.5px solid var(--border);
+}
+.cta-banner h2 { font-size: 46px; margin-bottom: 18px; }
+.cta-banner p { color: var(--muted); font-size: 16px; margin-bottom: 48px; }
+.price-note { font-size: 12px; color: var(--muted); margin-top: 18px; letter-spacing: 0.04em; }
+
+/* FOOTER */
+footer {
+  padding: 40px 60px;
+  display: flex; justify-content: space-between; align-items: center;
+  border-top: 0.5px solid var(--border);
+}
+.footer-logo { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--gold); }
+.footer-logo span { color: var(--muted); }
+footer p { font-size: 12px; color: var(--muted); }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a { font-size: 12px; color: var(--muted); transition: color 0.2s; }
+.footer-links a:hover { color: var(--gold); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  nav { padding: 18px 24px; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; padding: 60px 24px; gap: 48px; }
+  h1 { font-size: 36px; }
+  .stats { grid-template-columns: 1fr; }
+  .stat { border-right: none; border-bottom: 0.5px solid var(--border); padding: 36px 24px; }
+  .services { padding: 60px 24px; }
+  .services-grid { grid-template-columns: 1fr; }
+  .process { padding: 60px 24px; }
+  .steps { grid-template-columns: 1fr; }
+  .steps::before { display: none; }
+  .audience { padding: 60px 24px; }
+  .audience-grid { grid-template-columns: 1fr; }
+  .contact { padding: 60px 24px; }
+  .contact-inner { grid-template-columns: 1fr; gap: 48px; }
+  .form-row { grid-template-columns: 1fr; }
+  .cta-banner { padding: 60px 24px; }
+  .cta-banner h2 { font-size: 32px; }
+  footer { padding: 32px 24px; flex-direction: column; gap: 20px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">interpol<span>-check.me</span></a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#how-it-works">How it works</a>
+    <a href="#contact">Pricing & Contact</a>
+  </div>
+  <a href="#contact"><button class="btn-nav">Request check</button></a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <div class="hero-label">Interpol & International Database Verification</div>
+    <h1>Are you listed in <em>Interpol</em> databases?</h1>
+    <p class="hero-sub">Professional legal verification of your status in Interpol, international wanted persons lists, and sanctions databases. Confidential. Fast. Legally certified by licensed attorneys.</p>
+    <div class="hero-actions">
+      <a href="#contact"><button class="btn-primary">Request verification</button></a>
+      <a href="#services" class="btn-ghost">What we check</a>
+    </div>
+  </div>
+  <div class="report-card">
+    <div class="status-badge"><div class="status-dot"></div> Sample verification report</div>
+    <div class="card-label">Subject</div>
+    <div class="card-value">John A. Smith</div>
+    <div class="divider"></div>
+    <div class="check-row"><span>Interpol Red Notice</span><span class="ok">✓ Clear</span></div>
+    <div class="check-row"><span>Interpol Diffusion</span><span class="ok">✓ Clear</span></div>
+    <div class="check-row"><span>UN Sanctions List</span><span class="ok">✓ Clear</span></div>
+    <div class="check-row"><span>EU Wanted Persons</span><span class="ok">✓ Clear</span></div>
+    <div class="check-row"><span>US OFAC / SDN</span><span class="flag">⚑ Flagged</span></div>
+    <div class="check-row"><span>UK OFSI Sanctions</span><span class="ok">✓ Clear</span></div>
+    <div class="divider"></div>
+    <div class="report-footer">Verified by Status Law Juridiska Byrå AB · 14 March 2025</div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stat">
+    <div class="stat-num">2,400+</div>
+    <div class="stat-label">Checks completed</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">48h</div>
+    <div class="stat-label">Average turnaround</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">40+</div>
+    <div class="stat-label">Countries covered</div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-intro">
+    <div class="section-num">01</div>
+    <h2>What we check</h2>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="svc-num">01 —</div>
+      <div class="svc-name">Interpol Red Notice</div>
+      <div class="svc-desc">Verification of your status in the Interpol Red Notice and Diffusion database — the primary tool for international arrest requests used by 196 member countries.</div>
+    </div>
+    <div class="service-card">
+      <div class="svc-num">02 —</div>
+      <div class="svc-name">National wanted lists</div>
+      <div class="svc-desc">Cross-check against EU, US, UK, and CIS national wanted persons and law enforcement databases across 40+ jurisdictions.</div>
+    </div>
+    <div class="service-card">
+      <div class="svc-num">03 —</div>
+      <div class="svc-name">Sanctions screening</div>
+      <div class="svc-desc">UN, EU, US OFAC, and UK OFSI sanctions list verification with a certified legal opinion on all findings and implications.</div>
+    </div>
+    <div class="service-card">
+      <div class="svc-num">04 —</div>
+      <div class="svc-name">Travel risk assessment</div>
+      <div class="svc-desc">Pre-travel legal assessment of detention or extradition risk in your destination country, including bilateral treaty analysis.</div>
+    </div>
+    <div class="service-card">
+      <div class="svc-num">05 —</div>
+      <div class="svc-name">Notice removal</div>
+      <div class="svc-desc">Legal representation before Interpol's CCF (Commission for the Control of Files) to challenge and remove unlawful or politically motivated notices.</div>
+    </div>
+    <div class="service-card">
+      <div class="svc-num">06 —</div>
+      <div class="svc-name">Certified legal opinion</div>
+      <div class="svc-desc">A signed legal opinion letter confirming your verified status — accepted by banks, embassies, visa authorities, and immigration offices worldwide.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="how-it-works">
+  <div class="section-intro">
+    <div class="section-num">02</div>
+    <h2>How it works</h2>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">Step 01</div>
+      <div class="step-title">Submit request</div>
+      <div class="step-desc">Fill in the secure form below with your personal details and specify which databases you need checked. All data is protected under attorney-client privilege.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">Step 02</div>
+      <div class="step-title">Legal review</div>
+      <div class="step-desc">Our licensed attorneys conduct a thorough verification across all relevant international and national databases using official legal channels.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">Step 03</div>
+      <div class="step-title">Report issued</div>
+      <div class="step-desc">You receive a certified verification report with detailed findings within 24–72 hours, delivered securely to your email.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">Step 04</div>
+      <div class="step-title">Legal support</div>
+      <div class="step-desc">If a listing is found, we immediately advise on legal steps and can represent you before Interpol or national authorities internationally.</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="audience">
+  <div class="section-intro">
+    <div class="section-num">03</div>
+    <h2>Who needs this</h2>
+  </div>
+  <div class="audience-grid">
+    <div class="audience-card">
+      <div class="aud-icon">— Individual</div>
+      <div class="aud-title">Private persons & families</div>
+      <div class="aud-desc">Individuals who have faced criminal proceedings abroad, are planning international travel, or have reason to believe they may be listed in international databases. Know your status before crossing a border.</div>
+    </div>
+    <div class="audience-card">
+      <div class="aud-icon">— Business</div>
+      <div class="aud-title">Executives & entrepreneurs</div>
+      <div class="aud-desc">Business owners, investors, and executives operating across jurisdictions who require a clean legal status certificate for banking, licensing, or corporate transactions in multiple countries.</div>
+    </div>
+    <div class="audience-card">
+      <div class="aud-icon">— Legal</div>
+      <div class="aud-title">Law firms & legal counsel</div>
+      <div class="aud-desc">Attorneys and legal professionals who need certified international database checks for their clients as part of due diligence, extradition defense, or asylum proceedings.</div>
+    </div>
+    <div class="audience-card">
+      <div class="aud-icon">— Compliance</div>
+      <div class="aud-title">Banks & financial institutions</div>
+      <div class="aud-desc">Compliance officers requiring certified screening of clients, beneficial owners, or counterparties against international sanctions and wanted persons lists for AML/KYC purposes.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <div class="section-intro" style="margin-bottom:24px;">
+        <div class="section-num" style="font-size:56px;">04</div>
+        <h2>Request a check</h2>
+      </div>
+      <p>Submit your details using the secure form. All inquiries are handled under strict attorney-client confidentiality. We will contact you within 24 hours to confirm the scope and provide a quote.</p>
+      <div class="contact-detail">
+        <div class="c-detail">
+          <span>Firm</span>
+          Status Law Juridiska Byrå Aktiebolag
+        </div>
+        <div class="c-detail">
+          <span>Email</span>
+          <a href="/cdn-cgi/l/email-protection#10797e767f506364716465633e7c7167"><span class="__cf_email__" data-cfemail="422b2c242d023136233637316c2e2335">[email&#160;protected]</span></a>
+        </div>
+        <div class="c-detail">
+          <span>Phone / WhatsApp</span>
+          <a href="tel:+46720246404">+46 72 024 6404</a>
+        </div>
+        <div class="c-detail">
+          <span>Working hours</span>
+          Monday – Friday · 9:00 – 18:00 CET
+        </div>
+        <div class="c-detail">
+          <span>Address</span>
+          Bygdegatan 313, Linköping, 583 31, Sweden
+        </div>
+        <div class="c-detail" style="margin-top:8px;">
+          <span>Starting price</span>
+          <span style="color:var(--gold-light);font-size:22px;font-family:'Playfair Display',serif;">From €290</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORM via Formspree — replace YOUR_FORM_ID with ID from formspree.io -->
+    <div>
+      <form id="contactForm" action="https://formspree.io/f/xbdzndvb" method="POST">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full name *</label>
+            <input type="text" id="name" name="name" placeholder="John Smith" required>
+          </div>
+          <div class="form-group">
+            <label for="country">Country *</label>
+            <select id="country" name="country" required>
+              <option value="" disabled selected>Select country</option>
+              <option>Afghanistan</option><option>Albania</option><option>Algeria</option>
+              <option>Argentina</option><option>Armenia</option><option>Australia</option>
+              <option>Austria</option><option>Azerbaijan</option><option>Bahrain</option>
+              <option>Belarus</option><option>Belgium</option><option>Brazil</option>
+              <option>Bulgaria</option><option>Canada</option><option>China</option>
+              <option>Croatia</option><option>Cyprus</option><option>Czech Republic</option>
+              <option>Denmark</option><option>Egypt</option><option>Estonia</option>
+              <option>Finland</option><option>France</option><option>Georgia</option>
+              <option>Germany</option><option>Greece</option><option>Hungary</option>
+              <option>India</option><option>Indonesia</option><option>Iran</option>
+              <option>Iraq</option><option>Ireland</option><option>Israel</option>
+              <option>Italy</option><option>Jordan</option><option>Kazakhstan</option>
+              <option>Kuwait</option><option>Kyrgyzstan</option><option>Latvia</option>
+              <option>Lebanon</option><option>Libya</option><option>Lithuania</option>
+              <option>Luxembourg</option><option>Malaysia</option><option>Mexico</option>
+              <option>Moldova</option><option>Morocco</option><option>Netherlands</option>
+              <option>New Zealand</option><option>Nigeria</option><option>Norway</option>
+              <option>Oman</option><option>Pakistan</option><option>Poland</option>
+              <option>Portugal</option><option>Qatar</option><option>Romania</option>
+              <option>Russia</option><option>Saudi Arabia</option><option>Serbia</option>
+              <option>Singapore</option><option>Slovakia</option><option>Slovenia</option>
+              <option>South Africa</option><option>South Korea</option><option>Spain</option>
+              <option>Sweden</option><option>Switzerland</option><option>Syria</option>
+              <option>Tajikistan</option><option>Thailand</option><option>Tunisia</option>
+              <option>Turkey</option><option>Turkmenistan</option><option>UAE</option>
+              <option>UK</option><option>Ukraine</option><option>USA</option>
+              <option>Uzbekistan</option><option>Venezuela</option><option>Vietnam</option>
+              <option>Yemen</option><option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone / WhatsApp</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Describe your situation *</label>
+          <textarea id="message" name="message" placeholder="Please briefly describe what you need checked and why. All information is strictly confidential." required></textarea>
+        </div>
+
+        <div class="consent">
+          <input type="checkbox" id="gdpr" name="gdpr" required>
+          <label for="gdpr">I consent to the processing of my personal data in accordance with the <a href="https://status.law/privacy-policy" target="_blank">Privacy Policy</a>. I understand that my data will be used solely to process this request and will be handled under attorney-client confidentiality.</label>
+        </div>
+
+        <!-- Honeypot spam protection -->
+        <input type="text" name="_gotcha" style="display:none">
+        <input type="hidden" name="_subject" value="New Interpol Check request — interpol-check.me">
+
+        <button type="submit" class="btn-submit" id="submitBtn">Send request →</button>
+        <p class="form-note">🔒 Encrypted · Confidential · Attorney-client privilege</p>
+      </form>
+
+      <div class="form-success" id="formSuccess">
+        ✓ Your request has been received. We will contact you within 24 hours.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <h2>Know your status.<br><em>Protect your freedom.</em></h2>
+  <p>Trusted by clients in 40+ countries. Results within 48 hours.</p>
+  <a href="#contact"><button class="btn-primary" style="padding:18px 56px;font-size:13px;">Start verification now</button></a>
+  <p class="price-note">From €290 · Strictly confidential · Licensed attorneys · GDPR compliant</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">interpol<span>-check.me</span></div>
+    <p style="margin-top:8px;">A service by Status Law Juridiska Byrå Aktiebolag, Sweden</p>
+  </div>
+  <div class="footer-links">
+    <a href="https://status.law/privacy-policy" target="_blank">Privacy Policy</a>
+    <a href="https://status.law" target="_blank">status.law</a>
+    <a href="/cdn-cgi/l/email-protection#472e29212807343326333234692b2630"><span class="__cf_email__" data-cfemail="87eee9e1e8c7f4f3e6f3f2f4a9ebe6f0">[email&#160;protected]</span></a>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  const form = document.getElementById('contactForm');
+  const btn = document.getElementById('submitBtn');
+  const success = document.getElementById('formSuccess');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        form.style.display = 'none';
+        success.style.display = 'block';
+      } else {
+        btn.di
