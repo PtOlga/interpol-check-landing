@@ -2,6 +2,7 @@
 *.pdf
 *.docx
 *.doc
+doc/
 
 # Screenshots
 Screenshot*.png
