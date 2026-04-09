@@ -412,7 +412,7 @@ footer p { font-size: 14px; color: var(--muted); }
     }
     .flip-front { background: var(--navy-mid); }
     .flip-back  { background: var(--navy); transform: rotateY(180deg); justify-content: flex-start; }
-    .flip-hint  { position: absolute; bottom: 32px; left: 32px; }
+    .flip-hint  { position: absolute; bottom: 32px; left: 32px; font-size: 11px; color: #4a5a6a; letter-spacing: 0.06em; text-transform: uppercase; }
     .flip-label {
       display: flex; align-items: center; gap: 10px; margin-bottom: 16px;
     }
@@ -424,9 +424,6 @@ footer p { font-size: 14px; color: var(--muted); }
     .flip-consequences {
       font-size: 14px; color: var(--muted); line-height: 1.75; flex: 1;
     }
-    .flip-hint {
-      font-size: 11px; color: #4a5a6a; letter-spacing: 0.06em; text-transform: uppercase; margin-top: 16px;
-    }
     .flip-back-title {
       font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; font-weight: 500;
     }
@@ -435,11 +432,11 @@ footer p { font-size: 14px; color: var(--muted); }
     }
     @media (max-width: 900px) {
       .flip-grid { grid-template-columns: repeat(2, 1fr); }
-      .flip-card  { height: 300px; }
+      .flip-card  { height: 320px; }
     }
     @media (max-width: 600px) {
       .flip-grid { grid-template-columns: 1fr; }
-      .flip-card  { height: auto; min-height: 240px; }
+      .flip-card  { height: 315px; }
     }
 </style>
 <script type="application/ld+json">
