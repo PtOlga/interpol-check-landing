@@ -1250,6 +1250,7 @@ document.addEventListener('DOMContentLoaded', function(){ filterCases('economics
       if (res.ok) {
         form.style.display = 'none';
         success.style.display = 'block';
+        if (window.cfBeacon) cfBeacon.sendEvent('form_submitted');
       } else {
         btn.disabled = false;
         btn.textContent = 'Send request';
@@ -1299,5 +1300,9 @@ function closeMenu() {
   document.body.style.overflow = '';
 }
 </script>
+<!-- Cloudflare Web Analytics -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6247e8d41a2d4f2981067084bbe5f920"}'></script>
+<!-- End Cloudflare Web Analytics -->
+
 </body>
 </html>
