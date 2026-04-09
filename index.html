@@ -94,8 +94,16 @@ nav {
   background: var(--gold); color: var(--navy); font-size: 11px; font-weight: 500;
   padding: 10px 24px; text-transform: uppercase; letter-spacing: 0.1em;
   border: none; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.2s;
+  display: inline-block; text-decoration: none;
 }
 .btn-nav:hover { background: var(--gold-light); }
+.btn-pricing {
+  display: inline-block; text-decoration: none; text-align: center; width: 100%;
+  background: var(--gold); color: var(--navy); border: none; padding: 16px 28px;
+  font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500;
+  cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.2s;
+}
+.btn-pricing:hover { background: var(--gold-light); }
 .burger {
   display: none; flex-direction: column; justify-content: center; gap: 5px;
   width: 36px; height: 36px; cursor: pointer; background: none; border: none; padding: 4px;
@@ -122,6 +130,7 @@ nav {
   margin-top: 20px; background: var(--gold); color: var(--navy); font-size: 11px;
   font-weight: 500; padding: 14px 40px; text-transform: uppercase; letter-spacing: 0.1em;
   border: none; cursor: pointer; font-family: 'DM Sans', sans-serif;
+  display: inline-block; text-decoration: none;
 }
 
 /* HERO */
@@ -350,141 +359,13 @@ footer p { font-size: 14px; color: var(--muted); }
   #notices { padding: 60px 24px; }
   #cases { padding: 60px 24px !important; }
   #services { padding: 60px 24px !important; }
+  .hero-sub { min-height: 0; }
   #services > div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
   #services > div[style*="grid-template-columns:1fr 1fr"] > div[style*="display:flex; align-items:center; justify-content:center"] { display: none !important; }
   #pricing { padding: 60px 24px !important; }
   #pricing > div[style*="grid-template-columns:repeat(3"] { grid-template-columns: 1fr !important; }
   footer { padding: 32px 24px; flex-direction: column; gap: 20px; text-align: center; }
 }
-</style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LegalService",
-  "name": "Interpol Check — Status Law",
-  "description": "Professional legal verification of your status in Interpol, international wanted persons lists, and law enforcement databases. Confidential and legally certified.",
-  "url": "https://interpol-check.me",
-  "logo": "https://interpol-check.me/logo.png",
-  "telephone": "+46720246404",
-  "email": "info@status.law",
-  "priceRange": "€€€",
-  "currenciesAccepted": "EUR, USD, SEK",
-  "openingHours": "Mo-Fr 09:00-18:00",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Bygdegatan 313",
-    "addressLocality": "Linköping",
-    "postalCode": "583 31",
-    "addressCountry": "SE"
-  },
-  "areaServed": {
-    "@type": "GeoShape",
-    "name": "Worldwide"
-  },
-  "serviceType": [
-    "Interpol Red Notice Verification",
-    "International Sanctions Screening",
-    "Wanted Persons Database Check",
-    "Travel Risk Assessment",
-    "Interpol Notice Removal"
-  ],
-  "sameAs": [
-    "https://status.law",
-    "https://t.me/Status_Law_firm"
-  ],
-  "parentOrganization": {
-    "@type": "LegalService",
-    "name": "Status Law Juridiska Byrå Aktiebolag",
-    "url": "https://status.law"
-  }
-}
-</script>
-</head>
-<body>
-
-<!-- NAV -->
-<nav>
-  <a href="https://status.law" target="_blank" rel="noopener" style="text-decoration:none; display:flex; flex-direction:column; line-height:1.1;">
-    <span style="font-family:'DM Sans',sans-serif; font-size:22px; font-weight:500; color:#F5F3EE; letter-spacing:0.02em;">Status <span style="color:#C9A84C;">Law</span></span>
-    <span style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#8A9BB0; margin-top:2px;">International Legal Protection</span>
-  </a>
-  <div class="nav-links">
-    <a href="#services">What we check</a>
-    <a href="#how-it-works">How it works</a>
-    <a href="#cases">Our cases</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#contact">Contact</a>
-  </div>
-  <a href="#contact"><button class="btn-nav">Check your status</button></a>
-  <button class="burger" id="burger" aria-label="Open menu" onclick="toggleMenu()">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#services" onclick="closeMenu()">What we check</a>
-  <a href="#how-it-works" onclick="closeMenu()">How it works</a>
-  <a href="#cases" onclick="closeMenu()">Our cases</a>
-  <a href="#pricing" onclick="closeMenu()">Pricing</a>
-  <a href="#contact" onclick="closeMenu()">Contact</a>
-  <a href="#contact" onclick="closeMenu()"><button class="mobile-cta">Check your status</button></a>
-</div>
-
-<!-- HERO -->
-<section class="hero">
-  <div>
-    <div class="hero-label">Interpol & International Database Verification</div>
-    <h1>Are you listed in <em>Interpol Red Notices?</em></h1>
-    <p class="hero-sub">You might be listed in Interpol or international wanted persons databases without ever being notified. <strong style="color:var(--white); font-weight:500;">A single border crossing can change everything.</strong> We verify your status across all INTERPOL notice types, international wanted persons lists, and law enforcement databases — and if a listing is found, we act immediately through INTERPOL's CCF to protect your freedom. Confidential. Legally certified.</p>
-    <div class="hero-actions">
-      <a href="#contact"><button class="btn-primary">Find out if you are listed</button></a>
-      <a href="#services" class="btn-ghost">What we check</a>
-      <a href="#pricing" style="font-size:15px; color:var(--gold); border-bottom:0.5px solid rgba(201,168,76,0.5); padding-bottom:2px; transition:color 0.2s; font-weight:500;" onmouseover="this.style.color='var(--gold-light)'" onmouseout="this.style.color='var(--gold)'">View pricing →</a>
-    </div>
-  </div>
-  <div class="report-card">
-    <div class="status-badge"><div class="status-dot"></div> Sample verification report</div>
-    <div class="card-label">Subject</div>
-    <div class="card-value">John A. Smith</div>
-    <div class="divider"></div>
-    <div class="check-row"><span>Interpol Red Notice</span><span class="ok">✓ Clear</span></div>
-    <div class="check-row"><span>Interpol Diffusion</span><span class="ok">✓ Clear</span></div>
-    <div class="check-row"><span>SIS — Schengen System</span><span class="ok">✓ Clear</span></div>
-    <div class="check-row"><span>CIS Wanted List</span><span class="ok">✓ Clear</span></div>
-    <div class="check-row"><span>National Police Databases</span><span class="ok">✓ Clear</span></div>
-    <div class="check-row"><span>World-Check & PEP</span><span class="flag">⚑ Flagged</span></div>
-    <div class="divider"></div>
-    <div class="report-footer">Verified by Status Law Juridiska Byrå AB · 14 March 2025</div>
-  </div>
-</section>
-
-<!-- STATS -->
-<section class="stats">
-  <div class="stat">
-    <div class="stat-num">10+</div>
-    <div class="stat-label">Years of practice</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num">100+</div>
-    <div class="stat-label">Red Notices removed</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num">196</div>
-    <div class="stat-label">INTERPOL member states covered</div>
-  </div>
-</section>
-
-
-<!-- NOTICES -->
-<section id="services" style="padding:90px 60px; border-bottom:0.5px solid var(--border); background:var(--navy);">
-  <div class="section-intro">
-    <div class="section-num" style="font-size:72px; font-family:'Playfair Display',serif; color:rgba(201,168,76,0.1); line-height:1;">01</div>
-    <h2>What we check</h2>
-  </div>
-  <p style="color:var(--muted); font-size:18px; line-height:1.9; margin-bottom:72px; max-width:720px;">We verify your status across INTERPOL notices and diffusions, regional law enforcement databases, and private risk intelligence systems — and act immediately if a listing is found. National Police Databases are checked as part of every verification.</p>
-
-  <!-- FLIP CARDS GRID -->
-  <style>
     .flip-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -560,8 +441,134 @@ footer p { font-size: 14px; color: var(--muted); }
       .flip-grid { grid-template-columns: 1fr; }
       .flip-card  { height: auto; min-height: 240px; }
     }
-  </style>
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Interpol Check — Status Law",
+  "description": "Professional legal verification of your status in Interpol, international wanted persons lists, and law enforcement databases. Confidential and legally certified.",
+  "url": "https://interpol-check.me",
+  "logo": "https://interpol-check.me/logo.png",
+  "telephone": "+46720246404",
+  "email": "info@status.law",
+  "priceRange": "€€€",
+  "currenciesAccepted": "EUR, USD, SEK",
+  "openingHours": "Mo-Fr 09:00-18:00",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Bygdegatan 313",
+    "addressLocality": "Linköping",
+    "postalCode": "583 31",
+    "addressCountry": "SE"
+  },
+  "areaServed": {
+    "@type": "GeoShape",
+    "name": "Worldwide"
+  },
+  "serviceType": [
+    "Interpol Red Notice Verification",
+    "International Sanctions Screening",
+    "Wanted Persons Database Check",
+    "Travel Risk Assessment",
+    "Interpol Notice Removal"
+  ],
+  "sameAs": [
+    "https://status.law",
+    "https://t.me/Status_Law_firm"
+  ],
+  "parentOrganization": {
+    "@type": "LegalService",
+    "name": "Status Law Juridiska Byrå Aktiebolag",
+    "url": "https://status.law"
+  }
+}
+</script>
+</head>
+<body>
 
+<!-- NAV -->
+<nav>
+  <a href="https://status.law" target="_blank" rel="noopener" style="text-decoration:none; display:flex; flex-direction:column; line-height:1.1;">
+    <span style="font-family:'DM Sans',sans-serif; font-size:22px; font-weight:500; color:#F5F3EE; letter-spacing:0.02em;">Status <span style="color:#C9A84C;">Law</span></span>
+    <span style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#8A9BB0; margin-top:2px;">International Legal Protection</span>
+  </a>
+  <div class="nav-links">
+    <a href="#services">What we check</a>
+    <a href="#how-it-works">How it works</a>
+    <a href="#cases">Our cases</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="#contact" class="btn-nav">Check your status</a>
+  <button class="burger" id="burger" aria-label="Open menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services" onclick="closeMenu()">What we check</a>
+  <a href="#how-it-works" onclick="closeMenu()">How it works</a>
+  <a href="#cases" onclick="closeMenu()">Our cases</a>
+  <a href="#pricing" onclick="closeMenu()">Pricing</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <a href="#contact" onclick="closeMenu()" class="mobile-cta">Check your status</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <div class="hero-label">Interpol &amp; International Database Verification</div>
+    <h1>Are you listed in <em>Interpol Red Notices?</em></h1>
+    <p class="hero-sub">You might be listed in Interpol or international wanted persons databases without ever being notified. <strong style="color:var(--white); font-weight:500;">A single border crossing can change everything.</strong> We verify your status across all INTERPOL notice types, international wanted persons lists, and law enforcement databases — and if a listing is found, we act immediately through INTERPOL's CCF to protect your freedom. Confidential. Legally certified.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Find out if you are listed</a>
+      <a href="#services" class="btn-ghost">What we check</a>
+      <a href="#pricing" style="font-size:15px; color:var(--gold); border-bottom:0.5px solid rgba(201,168,76,0.5); padding-bottom:2px; transition:color 0.2s; font-weight:500;" onmouseover="this.style.color='var(--gold-light)'" onmouseout="this.style.color='var(--gold)'">View pricing →</a>
+    </div>
+  </div>
+  <div class="report-card">
+    <div class="status-badge"><div class="status-dot"></div> Sample verification report</div>
+    <div class="card-label">Subject</div>
+    <div class="card-value">John A. Smith</div>
+    <div class="divider"></div>
+    <div class="check-row"><span>Interpol Red Notice</span><span class="ok">✓ Clear</span></div>
+    <div class="check-row"><span>Interpol Diffusion</span><span class="ok">✓ Clear</span></div>
+    <div class="check-row"><span>SIS — Schengen System</span><span class="ok">✓ Clear</span></div>
+    <div class="check-row"><span>CIS Wanted List</span><span class="ok">✓ Clear</span></div>
+    <div class="check-row"><span>National Police Databases</span><span class="ok">✓ Clear</span></div>
+    <div class="check-row"><span>World-Check &amp; PEP</span><span class="flag">⚑ Flagged</span></div>
+    <div class="divider"></div>
+    <div class="report-footer">Verified by Status Law Juridiska Byrå AB · 14 March 2025</div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stat">
+    <div class="stat-num">10+</div>
+    <div class="stat-label">Years of practice</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">100+</div>
+    <div class="stat-label">Red Notices removed</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">196</div>
+    <div class="stat-label">INTERPOL member states covered</div>
+  </div>
+</section>
+
+
+<!-- NOTICES -->
+<section id="services" style="padding:90px 60px; border-bottom:0.5px solid var(--border); background:var(--navy);">
+  <div class="section-intro">
+    <div class="section-num" style="font-size:72px; font-family:'Playfair Display',serif; color:rgba(201,168,76,0.1); line-height:1;">01</div>
+    <h2>What we check</h2>
+  </div>
+  <p style="color:var(--muted); font-size:18px; line-height:1.9; margin-bottom:72px; max-width:720px;">We verify your status across INTERPOL notices and diffusions, regional law enforcement databases, and private risk intelligence systems — and act immediately if a listing is found. National Police Databases are checked as part of every verification.</p>
+
+  <!-- FLIP CARDS GRID -->
   <div class="flip-grid">
 
     <!-- INTERPOL NOTICES -->
@@ -689,7 +696,7 @@ footer p { font-size: 14px; color: var(--muted); }
           <div>
             <div class="flip-label">
               <span class="flip-dot-sq"></span>
-              <span class="flip-name" style="color:var(--gold);">World-Check & PEP</span>
+              <span class="flip-name" style="color:var(--gold);">World-Check &amp; PEP</span>
             </div>
             <p class="flip-consequences">May lead to rejected transactions, frozen accounts, or denied access to financial services — often without any formal legal proceedings.</p>
           </div>
@@ -698,7 +705,7 @@ footer p { font-size: 14px; color: var(--muted); }
         <div class="flip-back">
           <div class="flip-label" style="margin-bottom:8px;">
             <span class="flip-dot-sq"></span>
-            <span class="flip-name" style="color:var(--gold);">World-Check & PEP</span>
+            <span class="flip-name" style="color:var(--gold);">World-Check &amp; PEP</span>
           </div>
           <p class="flip-back-title">What it is</p>
           <p class="flip-what">Private risk intelligence databases used by banks and compliance departments worldwide. Individuals have the right to challenge and correct inaccurate entries under applicable data protection law, including GDPR.</p>
@@ -716,7 +723,7 @@ footer p { font-size: 14px; color: var(--muted); }
 <!-- PROCESS -->
 <section class="process" id="how-it-works">
   <div class="section-intro">
-    <div class="section-num">03</div>
+    <div class="section-num">02</div>
     <h2>How it works</h2>
   </div>
   <div class="steps">
@@ -746,7 +753,7 @@ footer p { font-size: 14px; color: var(--muted); }
 <!-- WHO IT'S FOR -->
 <section class="audience" id="audience">
   <div class="section-intro">
-    <div class="section-num">04</div>
+    <div class="section-num">03</div>
     <h2>Who needs this</h2>
   </div>
   <div class="audience-grid">
@@ -771,7 +778,7 @@ footer p { font-size: 14px; color: var(--muted); }
 <!-- CASES -->
 <section id="cases" style="padding:90px 60px; border-bottom:0.5px solid var(--border); background:var(--navy);">
   <div style="display:flex; align-items:baseline; gap:24px; margin-bottom:64px;">
-    <div style="font-family:'Playfair Display',serif; font-size:72px; color:rgba(201,168,76,0.1); line-height:1;">05</div>
+    <div style="font-family:'Playfair Display',serif; font-size:72px; color:rgba(201,168,76,0.1); line-height:1;">04</div>
     <div>
       <h2 style="font-family:'Playfair Display',serif; font-size:32px; font-weight:400; color:var(--white); margin-bottom:8px;">Our successful cases</h2>
       <p style="color:var(--muted); font-size:17px;">Actual cases handled by our attorneys — all outcomes verified by CCF Commission decisions &mdash; <em>names and jurisdictions withheld per INTERPOL confidentiality rules</em></p>
@@ -935,7 +942,7 @@ document.addEventListener('DOMContentLoaded', function(){ filterCases('economics
 <!-- PRICING -->
 <section id="pricing" style="padding:90px 60px; border-bottom:0.5px solid var(--border); background:var(--navy-mid);">
   <div class="section-intro">
-    <div class="section-num" style="font-size:72px; font-family:'Playfair Display',serif; color:rgba(201,168,76,0.1); line-height:1;">06</div>
+    <div class="section-num" style="font-size:72px; font-family:'Playfair Display',serif; color:rgba(201,168,76,0.1); line-height:1;">05</div>
     <h2>Pricing</h2>
   </div>
   <p style="color:var(--muted); font-size:18px; line-height:1.9; margin-bottom:64px; max-width:680px;">Our fees are published openly — no hidden costs, no surprises. The right service depends on your situation: whether you need to verify your status, act preventively, or remove an existing notice.</p>
@@ -974,7 +981,7 @@ document.addEventListener('DOMContentLoaded', function(){ filterCases('economics
           <p style="margin-bottom:0; color:rgba(138,155,176,0.7); font-size:14px;">Timeline: 3–4 months via CCF · days to weeks via national police · Attorney-client confidentiality from first contact</p>
         </div>
       </div>
-      <a href="#contact"><button style="background:var(--gold); color:var(--navy); border:none; padding:16px 28px; font-size:12px; text-transform:uppercase; letter-spacing:0.1em; font-weight:500; cursor:pointer; font-family:'DM Sans',sans-serif; transition:background 0.2s; width:100%;" onmouseover="this.style.background='var(--gold-light)'" onmouseout="this.style.background='var(--gold)'">Request verification →</button></a>
+      <a href="#contact" class="btn-pricing">Request verification →</a>
     </div>
 
     <!-- Card 2: Preventive Request -->
@@ -1003,7 +1010,7 @@ document.addEventListener('DOMContentLoaded', function(){ filterCases('economics
           <p style="margin-bottom:0; color:rgba(138,155,176,0.7); font-size:14px;">Timeline: initial CCF response ~4 months · full process may extend over years depending on when the requesting country files</p>
         </div>
       </div>
-      <a href="#contact"><button style="background:var(--gold); color:var(--navy); border:none; padding:16px 28px; font-size:12px; text-transform:uppercase; letter-spacing:0.1em; font-weight:500; cursor:pointer; font-family:'DM Sans',sans-serif; transition:background 0.2s; width:100%;" onmouseover="this.style.background='var(--gold-light)'" onmouseout="this.style.background='var(--gold)'">Request consultation →</button></a>
+      <a href="#contact" class="btn-pricing">Request consultation →</a>
     </div>
 
     <!-- Card 3: Removal -->
@@ -1037,7 +1044,7 @@ document.addEventListener('DOMContentLoaded', function(){ filterCases('economics
           <p style="margin-bottom:0; color:rgba(138,155,176,0.7); font-size:14px;">If the request is denied: we advise on new or newly discovered circumstances required for a review request</p>
         </div>
       </div>
-      <a href="#contact"><button style="background:var(--gold); color:var(--navy); border:none; padding:16px 28px; font-size:12px; text-transform:uppercase; letter-spacing:0.1em; font-weight:500; cursor:pointer; font-family:'DM Sans',sans-serif; transition:background 0.2s; width:100%;" onmouseover="this.style.background='var(--gold-light)'" onmouseout="this.style.background='var(--gold)'">Request consultation →</button></a>
+      <a href="#contact" class="btn-pricing">Request consultation →</a>
     </div>
 
   </div>
@@ -1050,7 +1057,7 @@ document.addEventListener('DOMContentLoaded', function(){ filterCases('economics
   <div class="contact-inner">
     <div class="contact-info">
       <div class="section-intro" style="margin-bottom:24px;">
-        <div class="section-num" style="font-size:56px;">07</div>
+        <div class="section-num" style="font-size:56px;">06</div>
         <h2>Contact us</h2>
       </div>
       <p>Submit your details using the secure form. All inquiries are handled under strict attorney-client confidentiality. We will contact you to confirm the scope and provide a quote.</p>
@@ -1188,7 +1195,7 @@ document.addEventListener('DOMContentLoaded', function(){ filterCases('economics
   <p style="color:var(--muted); font-size:16px; margin-bottom:12px;">Trusted by clients across Europe, the Middle East and CIS. Over 100 Red Notices successfully removed.</p>
   <p style="color:var(--muted); font-size:15px; margin-bottom:36px;">Our fees are published openly — no hidden costs, no surprises.</p>
   <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-    <a href="#contact"><button class="btn-primary" style="padding:18px 48px;font-size:13px;">Request verification</button></a>
+    <a href="#contact" class="btn-primary" style="padding:18px 48px;font-size:13px;">Request verification</a>
     <a href="https://status.law/tariffs-for-services-against-extradition-en/" target="_blank" style="display:inline-flex; align-items:center; background:transparent; border:0.5px solid var(--gold); color:var(--gold); padding:18px 48px; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; transition:all 0.2s; font-family:'DM Sans',sans-serif; font-weight:500;" onmouseover="this.style.background='#C9A84C';this.style.color='#0D1B2A'" onmouseout="this.style.background='transparent';this.style.color='#C9A84C'">View full pricing</a>
   </div>
   <p class="price-note" style="margin-top:24px;">Strictly confidential · Licensed attorneys · GDPR compliant</p>
@@ -1314,7 +1321,7 @@ document.addEventListener('DOMContentLoaded', function(){ filterCases('economics
 <!-- Cookie consent -->
 <div id="cookieBanner" style="position:fixed; bottom:0; left:0; right:0; background:#162436; border-top:0.5px solid rgba(201,168,76,0.2); padding:16px 40px; display:flex; align-items:center; justify-content:space-between; gap:24px; z-index:999; flex-wrap:wrap;">
   <p style="color:#8A9BB0; font-size:13px; line-height:1.6; margin:0; max-width:740px;">
-    This site uses no tracking or analytics. We store only your dismissal of this notice in your browser's local storage.
+    This site uses Cloudflare Web Analytics to measure traffic. No cookies are set. We also store your dismissal of this notice in your browser's local storage.
     <a href="https://status.law/privacy-policy" target="_blank" style="color:#C9A84C; border-bottom:0.5px solid rgba(201,168,76,0.4); white-space:nowrap;">Privacy Policy →</a>
   </p>
   <button onclick="document.getElementById('cookieBanner').style.display='none'; localStorage.setItem('cookieAccepted','1');"
