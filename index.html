@@ -349,6 +349,9 @@ footer p { font-size: 14px; color: var(--muted); }
   #notices .notices-grid { grid-template-columns: 1fr; }
   #notices { padding: 60px 24px; }
   #cases { padding: 60px 24px !important; }
+  #services { padding: 60px 24px !important; }
+  #services > div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
+  #services > div[style*="grid-template-columns:1fr 1fr"] > div[style*="display:flex; align-items:center; justify-content:center"] { display: none !important; }
   #pricing { padding: 60px 24px !important; }
   #pricing > div[style*="grid-template-columns:repeat(3"] { grid-template-columns: 1fr !important; }
   footer { padding: 32px 24px; flex-direction: column; gap: 20px; text-align: center; }
@@ -473,202 +476,242 @@ footer p { font-size: 14px; color: var(--muted); }
 
 
 <!-- NOTICES -->
-<section id="services" style="padding:90px 60px 0; border-bottom:none; background:var(--navy);">
+<section id="services" style="padding:90px 60px; border-bottom:0.5px solid var(--border); background:var(--navy);">
   <div class="section-intro">
     <div class="section-num" style="font-size:72px; font-family:'Playfair Display',serif; color:rgba(201,168,76,0.1); line-height:1;">01</div>
     <h2>What we check</h2>
   </div>
-</section>
+  <p style="color:var(--muted); font-size:18px; line-height:1.9; margin-bottom:72px; max-width:720px;">We verify your status across INTERPOL notices and diffusions, regional law enforcement databases, and private risk intelligence systems — and act immediately if a listing is found. National Police Databases are checked as part of every verification.</p>
 
-<section id="notices" style="padding:40px 60px 90px; border-bottom:0.5px solid var(--border); background:var(--navy);">
-  <p style="color:var(--muted); font-size:15px; max-width:680px; line-height:1.8; margin-bottom:16px; font-size:13px; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold); font-weight:500;">INTERPOL notice types</p>
-  <p style="color:var(--muted); font-size:18px; line-height:1.9; margin-bottom:48px;">INTERPOL issues nine types of notices and diffusions — each with different legal consequences for the person named. Most people are unaware a notice exists until they are stopped at a border, denied a visa, or frozen out of the banking system. Knowing which notice applies to your situation is the first step to protecting your rights and your freedom of movement.</p>
-
-  <!-- Tab buttons -->
-  <div id="notice-tabs" style="display:flex; flex-wrap:wrap; gap:2px; margin-bottom:2px;">
-    <button onclick="showNotice('red')" id="tab-red" class="notice-tab active-tab" style="display:flex;align-items:center;gap:8px;padding:12px 20px;background:var(--navy-mid);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#E57373;border-bottom:2px solid #E53935;transition:all 0.2s;">
-      <span style="width:8px;height:8px;border-radius:50%;background:#E53935;flex-shrink:0;"></span> Red Notice
-    </button>
-    <button onclick="showNotice('diffusion')" id="tab-diffusion" class="notice-tab" style="display:flex;align-items:center;gap:8px;padding:12px 20px;background:var(--navy-mid);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid transparent;transition:all 0.2s;">
-      <span style="width:8px;height:8px;border-radius:50%;background:#FB8C00;flex-shrink:0;"></span> Diffusion
-    </button>
-    <button onclick="showNotice('blue')" id="tab-blue" class="notice-tab" style="display:flex;align-items:center;gap:8px;padding:12px 20px;background:var(--navy-mid);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid transparent;transition:all 0.2s;">
-      <span style="width:8px;height:8px;border-radius:50%;background:#1E88E5;flex-shrink:0;"></span> Blue Notice
-    </button>
-    <button onclick="showNotice('green')" id="tab-green" class="notice-tab" style="display:flex;align-items:center;gap:8px;padding:12px 20px;background:var(--navy-mid);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid transparent;transition:all 0.2s;">
-      <span style="width:8px;height:8px;border-radius:50%;background:#43A047;flex-shrink:0;"></span> Green Notice
-    </button>
-    <button onclick="showNotice('yellow')" id="tab-yellow" class="notice-tab" style="display:flex;align-items:center;gap:8px;padding:12px 20px;background:var(--navy-mid);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid transparent;transition:all 0.2s;">
-      <span style="width:8px;height:8px;border-radius:50%;background:#FDD835;flex-shrink:0;"></span> Yellow Notice
-    </button>
-    <button onclick="showNotice('purple')" id="tab-purple" class="notice-tab" style="display:flex;align-items:center;gap:8px;padding:12px 20px;background:var(--navy-mid);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid transparent;transition:all 0.2s;">
-      <span style="width:8px;height:8px;border-radius:50%;background:#8E24AA;flex-shrink:0;"></span> Purple Notice
-    </button>
-    <button onclick="showNotice('black')" id="tab-black" class="notice-tab" style="display:flex;align-items:center;gap:8px;padding:12px 20px;background:var(--navy-mid);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid transparent;transition:all 0.2s;">
-      <span style="width:8px;height:8px;border-radius:50%;background:#616161;flex-shrink:0;"></span> Black Notice
-    </button>
-    <button onclick="showNotice('orange')" id="tab-orange" class="notice-tab" style="display:flex;align-items:center;gap:8px;padding:12px 20px;background:var(--navy-mid);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid transparent;transition:all 0.2s;">
-      <span style="width:8px;height:8px;border-radius:50%;background:#EF6C00;flex-shrink:0;"></span> Orange Notice
-    </button>
-    <button onclick="showNotice('un')" id="tab-un" class="notice-tab" style="display:flex;align-items:center;gap:8px;padding:12px 20px;background:var(--navy-mid);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid transparent;transition:all 0.2s;">
-      <span style="width:8px;height:8px;border-radius:50%;background:#00ACC1;flex-shrink:0;"></span> UN Special
-    </button>
-  </div>
-
-  <!-- Tab content -->
-  <div style="background:var(--navy-mid);padding:40px 48px;min-height:180px;">
-    <div id="notice-red" class="notice-panel">
-      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#E57373;font-weight:500;margin-bottom:16px;">Red Notice</div>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">When issued:</strong> When a country requests the arrest and extradition of a person suspected or convicted of a serious criminal offence.</p>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Who is affected:</strong> Anyone charged or convicted abroad — including individuals targeted for political or business reasons by governments misusing the system (Russia, China, UAE and others).</p>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;"><strong style="color:var(--white);font-weight:500;">Consequences:</strong> Detention at any border crossing in 196 countries. Frozen bank accounts. Visa denials. Travel becomes impossible.</p>
-    </div>
-    <div id="notice-diffusion" class="notice-panel" style="display:none;">
-      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#FFB74D;font-weight:500;margin-bottom:16px;">Diffusion</div>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">When issued:</strong> Sent directly by a national police agency to selected member states, bypassing INTERPOL headquarters and its compliance checks.</p>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Who is affected:</strong> Same profile as Red Notice targets — but harder to detect since it doesn't appear in public INTERPOL databases.</p>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;"><strong style="color:var(--white);font-weight:500;">Consequences:</strong> Arrest at borders, covert surveillance, banking restrictions — identical to a Red Notice in practice, but far more difficult to challenge legally.</p>
-    </div>
-    <div id="notice-blue" class="notice-panel" style="display:none;">
-      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#64B5F6;font-weight:500;margin-bottom:16px;">Blue Notice</div>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">When issued:</strong> When a country wants to gather information about a person's identity, location, or criminal activities across borders.</p>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Who is affected:</strong> People under investigation who are not yet formally charged — often unaware they are being monitored.</p>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;"><strong style="color:var(--white);font-weight:500;">Consequences:</strong> Covert cross-border surveillance of movements, contacts, and activities. Frequently a precursor to a Red Notice.</p>
-    </div>
-    <div id="notice-green" class="notice-panel" style="display:none;">
-      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#81C784;font-weight:500;margin-bottom:16px;">Green Notice</div>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">When issued:</strong> To warn law enforcement about individuals considered a potential threat to public safety in other jurisdictions.</p>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Who is affected:</strong> People with prior convictions or investigations — even if they have served their sentence or charges were dropped.</p>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;"><strong style="color:var(--white);font-weight:500;">Consequences:</strong> Complications with visa applications, residency permits, and international background checks. Can affect employment and banking.</p>
-    </div>
-    <div id="notice-yellow" class="notice-panel" style="display:none;">
-      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#FFF176;font-weight:500;margin-bottom:16px;">Yellow Notice</div>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">When issued:</strong> To help locate missing persons, particularly minors and vulnerable individuals.</p>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Who is affected:</strong> People involved in international custody disputes or civil conflicts — including parents falsely accused of child abduction.</p>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;"><strong style="color:var(--white);font-weight:500;">Consequences:</strong> Wrongful detention at borders, travel bans, and forced return proceedings in family law disputes.</p>
-    </div>
-    <div id="notice-purple" class="notice-panel" style="display:none;">
-      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#CE93D8;font-weight:500;margin-bottom:16px;">Purple Notice</div>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">When issued:</strong> To share information about criminal methods, objects, or modus operandi used across jurisdictions.</p>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Who is affected:</strong> Individuals or organisations linked to patterns of criminal activity — even indirectly or by association.</p>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;"><strong style="color:var(--white);font-weight:500;">Consequences:</strong> Increased scrutiny by law enforcement across member states. Can trigger further investigations or more serious notices.</p>
-    </div>
-    <div id="notice-black" class="notice-panel" style="display:none;">
-      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#BDBDBD;font-weight:500;margin-bottom:16px;">Black Notice</div>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">When issued:</strong> To seek information on unidentified human remains found in a member state.</p>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Who is affected:</strong> Not directed at living individuals — issued in connection with unidentified deceased persons.</p>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;"><strong style="color:var(--white);font-weight:500;">Consequences:</strong> No direct legal consequences for living persons. However, in rare cases misuse has caused complications for individuals with similar identities.</p>
-    </div>
-    <div id="notice-orange" class="notice-panel" style="display:none;">
-      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#FFCC80;font-weight:500;margin-bottom:16px;">Orange Notice</div>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">When issued:</strong> To warn of an imminent threat to public safety — such as dangerous persons, objects, or events.</p>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Who is affected:</strong> Individuals identified as posing a credible and immediate risk, or those mistakenly linked to such threats.</p>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;"><strong style="color:var(--white);font-weight:500;">Consequences:</strong> Immediate preventive measures by law enforcement across multiple countries. Can result in detention, asset freezes, or travel restrictions without prior notice.</p>
-    </div>
-    <div id="notice-un" class="notice-panel" style="display:none;">
-      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#80DEEA;font-weight:500;margin-bottom:16px;">UN Special Notice</div>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">When issued:</strong> Jointly by INTERPOL and the UN Security Council against individuals and entities under active UN sanctions.</p>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Who is affected:</strong> Persons and organisations listed by the UN Security Council — including those targeted for political reasons or through flawed designation processes.</p>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;"><strong style="color:var(--white);font-weight:500;">Consequences:</strong> Asset freezes, travel bans, and complete exclusion from the international financial system — enforced simultaneously across all member states.</p>
-    </div>
-  </div>
-
-  <script>
-    const noticeColors = {
-      red: '#E53935', diffusion: '#FB8C00', blue: '#1E88E5',
-      green: '#43A047', yellow: '#FDD835', purple: '#8E24AA',
-      black: '#616161', orange: '#EF6C00', un: '#00ACC1'
-    };
-    const noticeTextColors = {
-      red: '#E57373', diffusion: '#FFB74D', blue: '#64B5F6',
-      green: '#81C784', yellow: '#FFF176', purple: '#CE93D8',
-      black: '#BDBDBD', orange: '#FFCC80', un: '#80DEEA'
-    };
-    function showNotice(id) {
-      document.querySelectorAll('.notice-panel').forEach(p => p.style.display = 'none');
-      document.querySelectorAll('.notice-tab').forEach(t => {
-        t.style.borderBottomColor = 'transparent';
-        t.style.color = 'var(--muted)';
-        t.style.background = 'var(--navy-mid)';
-      });
-      document.getElementById('notice-' + id).style.display = 'block';
-      const tab = document.getElementById('tab-' + id);
-      tab.style.borderBottomColor = noticeColors[id];
-      tab.style.color = noticeTextColors[id];
-      tab.style.background = '#1E3448';
+  <!-- FLIP CARDS GRID -->
+  <style>
+    .flip-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--border-solid);
+      margin-bottom: 32px;
     }
-  </script>
-</section>
-
-
-<!-- WHAT ELSE WE VERIFY -->
-<section style="padding:90px 60px; border-bottom:0.5px solid var(--border); background:var(--navy-mid);">
-  <div class="section-intro">
-    <div class="section-num" style="font-size:72px; font-family:'Playfair Display',serif; color:rgba(201,168,76,0.1); line-height:1;">02</div>
-    <h2>What else we verify</h2>
-  </div>
-  <p style="color:var(--muted); font-size:18px; line-height:1.9; margin-bottom:48px;">Beyond INTERPOL notices, your name may appear in national police records, regional law enforcement databases, or private risk intelligence systems used by compliance departments worldwide — often without your knowledge.</p>
-
-  <!-- Tab buttons -->
-  <div id="verify-tabs" style="display:flex; flex-wrap:wrap; gap:2px; margin-bottom:2px;">
-    <button onclick="showVerify('national')" id="vtab-national" class="verify-tab" style="display:flex;align-items:center;gap:8px;padding:12px 20px;background:var(--navy);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);border-bottom:2px solid var(--gold);transition:all 0.2s;">
-      National Police Databases
-    </button>
-    <button onclick="showVerify('sis')" id="vtab-sis" class="verify-tab" style="display:flex;align-items:center;gap:8px;padding:12px 20px;background:var(--navy);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid transparent;transition:all 0.2s;">
-      SIS — Schengen System
-    </button>
-    <button onclick="showVerify('cis')" id="vtab-cis" class="verify-tab" style="display:flex;align-items:center;gap:8px;padding:12px 20px;background:var(--navy);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid transparent;transition:all 0.2s;">
-      CIS Wanted List
-    </button>
-    <button onclick="showVerify('worldcheck')" id="vtab-worldcheck" class="verify-tab" style="display:flex;align-items:center;gap:8px;padding:12px 20px;background:var(--navy);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid transparent;transition:all 0.2s;">
-      World-Check & PEP
-    </button>
-  </div>
-
-  <!-- Tab content -->
-  <div style="background:var(--navy);padding:40px 48px;min-height:200px;">
-    <div id="verify-national" class="verify-panel">
-      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:16px;">National Police Databases</div>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">When checked:</strong> When verifying whether a person is listed in national law enforcement records across multiple jurisdictions — including countries with a history of misusing international legal mechanisms.</p>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Who is affected:</strong> Anyone who has faced criminal proceedings, been a subject of investigation, or is involved in business or political disputes in high-risk countries.</p>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;"><strong style="color:var(--white);font-weight:500;">Consequences:</strong> National wanted listings can trigger detention at borders, denial of residency or work permits, and complications with banking and financial services — even without an active Interpol notice.</p>
-    </div>
-    <div id="verify-sis" class="verify-panel" style="display:none;">
-      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:16px;">SIS — Schengen Information System</div>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">When checked:</strong> When assessing the risk of detention or refusal of entry within the Schengen Area — 27 European countries sharing a unified border alert system.</p>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Who is affected:</strong> Anyone planning to travel to or through Europe, apply for a Schengen visa, or relocate to an EU country.</p>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;"><strong style="color:var(--white);font-weight:500;">Consequences:</strong> A SIS alert can result in immediate detention at any Schengen border, refusal of entry, seizure of travel documents, or covert surveillance — without the person being notified in advance.</p>
-    </div>
-    <div id="verify-cis" class="verify-panel" style="display:none;">
-      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:16px;">CIS Interstate Wanted List</div>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">When checked:</strong> When verifying status across the Commonwealth of Independent States law enforcement database — covering Russia, Ukraine, Belarus, Kazakhstan, and 8 other former Soviet states.</p>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Who is affected:</strong> Anyone with legal, business, or personal ties to CIS countries — particularly those who have left due to political pressure or criminal accusations.</p>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;"><strong style="color:var(--white);font-weight:500;">Consequences:</strong> Detention upon entry to any CIS member state. In some cases, extradition to the requesting country even without a formal Interpol notice in place.</p>
-    </div>
-    <div id="verify-worldcheck" class="verify-panel" style="display:none;">
-      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:16px;">World-Check & PEP Databases</div>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">When checked:</strong> When screening for listings in private risk intelligence databases used by compliance departments and institutions worldwide.</p>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Who is affected:</strong> Business owners, executives, public figures, and their family members — anyone flagged as a Politically Exposed Person or associated with financial risk.</p>
-      <p style="font-size:15px;color:var(--muted);line-height:1.85;"><strong style="color:var(--white);font-weight:500;">Consequences:</strong> Frozen bank accounts, rejected transactions, denied access to financial services, and reputational damage — often without any formal legal proceedings.</p>
-    </div>
-  </div>
-
-  <script>
-    function showVerify(id) {
-      document.querySelectorAll('.verify-panel').forEach(p => p.style.display = 'none');
-      document.querySelectorAll('.verify-tab').forEach(t => {
-        t.style.borderBottomColor = 'transparent';
-        t.style.color = 'var(--muted)';
-        t.style.background = 'var(--navy)';
-      });
-      document.getElementById('verify-' + id).style.display = 'block';
-      const tab = document.getElementById('vtab-' + id);
-      tab.style.borderBottomColor = 'var(--gold)';
-      tab.style.color = 'var(--gold)';
-      tab.style.background = 'var(--navy-light)';
+    .flip-group-label {
+      grid-column: 1 / -1;
+      background: var(--navy-mid);
+      padding: 16px 32px;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      border-top: 0.5px solid var(--border);
     }
-  </script>
+    .flip-card {
+      height: 280px;
+      perspective: 1000px;
+      cursor: pointer;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.55s cubic-bezier(0.4,0,0.2,1);
+      transform-style: preserve-3d;
+    }
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-front, .flip-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .flip-front { background: var(--navy-mid); }
+    .flip-back  { background: var(--navy); transform: rotateY(180deg); justify-content: flex-start; }
+    .flip-hint  { position: absolute; bottom: 32px; left: 32px; }
+    .flip-label {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 16px;
+    }
+    .flip-dot-round { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .flip-dot-sq    { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; background: var(--gold); }
+    .flip-name {
+      font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500;
+    }
+    .flip-consequences {
+      font-size: 14px; color: var(--muted); line-height: 1.75; flex: 1;
+    }
+    .flip-hint {
+      font-size: 11px; color: #4a5a6a; letter-spacing: 0.06em; text-transform: uppercase; margin-top: 16px;
+    }
+    .flip-back-title {
+      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; font-weight: 500;
+    }
+    .flip-what {
+      font-size: 14px; color: var(--muted); line-height: 1.8;
+    }
+    @media (max-width: 900px) {
+      .flip-grid { grid-template-columns: repeat(2, 1fr); }
+      .flip-card  { height: 300px; }
+    }
+    @media (max-width: 600px) {
+      .flip-grid { grid-template-columns: 1fr; }
+      .flip-card  { height: auto; min-height: 240px; }
+    }
+  </style>
+
+  <div class="flip-grid">
+
+    <!-- INTERPOL NOTICES -->
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-front">
+          <div>
+            <div class="flip-label">
+              <span class="flip-dot-round" style="background:#E53935;"></span>
+              <span class="flip-name" style="color:#E57373;">Red Notice</span>
+            </div>
+            <p class="flip-consequences">May result in detention at border crossings and indirect complications with banking and visa applications, subject to each country's domestic law.</p>
+          </div>
+          <span class="flip-hint">Tap to learn more →</span>
+        </div>
+        <div class="flip-back">
+          <div class="flip-label" style="margin-bottom:8px;">
+            <span class="flip-dot-round" style="background:#E53935;"></span>
+            <span class="flip-name" style="color:#E57373;">Red Notice</span>
+          </div>
+          <p class="flip-back-title">What it is</p>
+          <p class="flip-what">Issued when a country requests that INTERPOL member states locate and provisionally arrest a person suspected or convicted of a serious criminal offence, pending extradition proceedings. A Red Notice is not an international arrest warrant — it is a request each member country evaluates according to its own laws.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-front">
+          <div>
+            <div class="flip-label">
+              <span class="flip-dot-round" style="background:#1E88E5;"></span>
+              <span class="flip-name" style="color:#64B5F6;">Blue Notice</span>
+            </div>
+            <p class="flip-consequences">May prompt national authorities in member states to gather information on a person's movements and contacts. May precede a Red Notice.</p>
+          </div>
+          <span class="flip-hint">Tap to learn more →</span>
+        </div>
+        <div class="flip-back">
+          <div class="flip-label" style="margin-bottom:8px;">
+            <span class="flip-dot-round" style="background:#1E88E5;"></span>
+            <span class="flip-name" style="color:#64B5F6;">Blue Notice</span>
+          </div>
+          <p class="flip-back-title">What it is</p>
+          <p class="flip-what">Issued to collect information about a person's identity, location, or activities in connection with a criminal investigation.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-front">
+          <div>
+            <div class="flip-label">
+              <span class="flip-dot-round" style="background:#FDD835;"></span>
+              <span class="flip-name" style="color:#FFF176;">Yellow Notice</span>
+            </div>
+            <p class="flip-consequences">May prompt border authorities to report a person's location or movement. In parental abduction cases, may be issued alongside other enforcement mechanisms.</p>
+          </div>
+          <span class="flip-hint">Tap to learn more →</span>
+        </div>
+        <div class="flip-back">
+          <div class="flip-label" style="margin-bottom:8px;">
+            <span class="flip-dot-round" style="background:#FDD835;"></span>
+            <span class="flip-name" style="color:#FFF176;">Yellow Notice</span>
+          </div>
+          <p class="flip-back-title">What it is</p>
+          <p class="flip-what">Issued to help locate missing persons, including in cross-border parental abduction cases (to locate the missing child). In parental abduction cases, the removing parent is typically subject to separate criminal proceedings.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADDITIONAL CHECKS -->
+    <div class="flip-group-label">Additional database checks</div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-front">
+          <div>
+            <div class="flip-label">
+              <span class="flip-dot-sq"></span>
+              <span class="flip-name" style="color:var(--gold);">SIS — Schengen</span>
+            </div>
+            <p class="flip-consequences">Depending on the type of alert, a SIS entry can result in detention, refusal of entry, or seizure of travel documents at any Schengen border.</p>
+          </div>
+          <span class="flip-hint">Tap to learn more →</span>
+        </div>
+        <div class="flip-back">
+          <div class="flip-label" style="margin-bottom:8px;">
+            <span class="flip-dot-sq"></span>
+            <span class="flip-name" style="color:var(--gold);">SIS — Schengen</span>
+          </div>
+          <p class="flip-back-title">What it is</p>
+          <p class="flip-what">A shared alert database used by 27 European countries at all border crossings.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-front">
+          <div>
+            <div class="flip-label">
+              <span class="flip-dot-sq"></span>
+              <span class="flip-name" style="color:var(--gold);">CIS Wanted List</span>
+            </div>
+            <p class="flip-consequences">Detention upon entry to any participating CIS member state. Extradition may proceed under bilateral CIS agreements without a parallel INTERPOL notice.</p>
+          </div>
+          <span class="flip-hint">Tap to learn more →</span>
+        </div>
+        <div class="flip-back">
+          <div class="flip-label" style="margin-bottom:8px;">
+            <span class="flip-dot-sq"></span>
+            <span class="flip-name" style="color:var(--gold);">CIS Wanted List</span>
+          </div>
+          <p class="flip-back-title">What it is</p>
+          <p class="flip-what">A law enforcement database covering Russia, Belarus, Kazakhstan, and other former Soviet states participating in CIS cooperation mechanisms.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-front">
+          <div>
+            <div class="flip-label">
+              <span class="flip-dot-sq"></span>
+              <span class="flip-name" style="color:var(--gold);">World-Check & PEP</span>
+            </div>
+            <p class="flip-consequences">May lead to rejected transactions, frozen accounts, or denied access to financial services — often without any formal legal proceedings.</p>
+          </div>
+          <span class="flip-hint">Tap to learn more →</span>
+        </div>
+        <div class="flip-back">
+          <div class="flip-label" style="margin-bottom:8px;">
+            <span class="flip-dot-sq"></span>
+            <span class="flip-name" style="color:var(--gold);">World-Check & PEP</span>
+          </div>
+          <p class="flip-back-title">What it is</p>
+          <p class="flip-what">Private risk intelligence databases used by banks and compliance departments worldwide. Individuals have the right to challenge and correct inaccurate entries under applicable data protection law, including GDPR.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <p style="font-size:14px;color:#4a5a6a;line-height:1.8;max-width:800px;font-style:italic;">* The information provided is for general informational purposes only and does not constitute legal advice. The feasibility of removing a record and the consequences of its existence depend on the specific circumstances of the case, the laws of the requesting country, and the policies of the relevant state authority or financial institution.</p>
+
 </section>
+
 
 <!-- PROCESS -->
 <section class="process" id="how-it-works">
