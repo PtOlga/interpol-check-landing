@@ -2,6 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N53MWTVH');</script>
+<!-- End Google Tag Manager -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Interpol Check — International Database Verification | Status Law</title>
 <link rel="canonical" href="https://interpol-check.me/">
@@ -483,6 +490,10 @@ footer p { font-size: 14px; color: var(--muted); }
 </script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N53MWTVH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- NAV -->
 <nav>
@@ -1298,6 +1309,9 @@ document.addEventListener('DOMContentLoaded', function(){ filterCases('economics
         form.style.display = 'none';
         success.style.display = 'block';
         if (window.cfBeacon) cfBeacon.sendEvent('form_submitted');
+        // Google Tag Manager — конверсия форма
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'form_submitted' });
       } else {
         btn.disabled = false;
         btn.textContent = 'Send request';
