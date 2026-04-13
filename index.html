@@ -9,6 +9,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-N53MWTVH');</script>
 <!-- End Google Tag Manager -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17026412757"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-17026412757');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Interpol Check — International Database Verification | Status Law</title>
 <link rel="canonical" href="https://interpol-check.me/">
@@ -1308,8 +1316,12 @@ document.addEventListener('DOMContentLoaded', function(){ filterCases('economics
       if (res.ok) {
         form.style.display = 'none';
         success.style.display = 'block';
+        window.location.hash = 'success';
         if (window.cfBeacon) cfBeacon.sendEvent('form_submitted');
-        // Google Tag Manager — конверсия форма
+        // Google Ads conversion
+        if (typeof gtag === 'function') {
+          gtag('event', 'conversion', { 'send_to': 'AW-17026412757/2roxCJDRuZscENXh6bY_' });
+        }
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({ event: 'form_submitted' });
       } else {
