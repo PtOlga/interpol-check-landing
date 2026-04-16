@@ -34,6 +34,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="twitter:image" content="https://interpol-check.me/images/og-image.png">
 <meta name="description" content="Professional legal verification of your status in Interpol, wanted persons lists, and international law enforcement databases. Confidential. Legally certified.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%230D1B2A'/><text x='1' y='25' font-family='Arial Black,Arial,sans-serif' font-size='24' font-weight='900' fill='%23C9A84C'>S</text><text x='16' y='25' font-family='Arial Black,Arial,sans-serif' font-size='24' font-weight='900' fill='%23F5F3EE'>L</text></svg>">
+<!-- Preload fonts to eliminate render-blocking chain -->
+<link rel="preload" href="fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dm-sans-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dm-sans-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/playfair-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/playfair-display-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
 <!-- Self-hosted fonts — no external requests -->
 <style>
 @font-face {
@@ -464,7 +470,11 @@ footer p { font-size: 14px; color: var(--muted); }
   "name": "Interpol Check — Status Law",
   "description": "Professional legal verification of your status in Interpol, international wanted persons lists, and law enforcement databases. Confidential and legally certified.",
   "url": "https://interpol-check.me",
-  "logo": "https://interpol-check.me/logo.png",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://interpol-check.me/images/logo.png"
+  },
+  "image": "https://interpol-check.me/images/og-image.png",
   "telephone": "+46720246404",
   "email": "info@status.law",
   "priceRange": "€€€",
@@ -486,8 +496,58 @@ footer p { font-size: 14px; color: var(--muted); }
     "International Sanctions Screening",
     "Wanted Persons Database Check",
     "Travel Risk Assessment",
-    "Interpol Notice Removal"
+    "Interpol Notice Removal",
+    "Interpol CCF Petition Filing",
+    "SIS Schengen Database Check",
+    "CIS Wanted List Verification"
   ],
+  "knowsAbout": [
+    "INTERPOL Red Notice",
+    "INTERPOL Blue Notice",
+    "INTERPOL Yellow Notice",
+    "INTERPOL Diffusion",
+    "CCF — Commission for the Control of INTERPOL's Files",
+    "Schengen Information System",
+    "CIS wanted persons database",
+    "International extradition law",
+    "Interpol notice removal"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Interpol Legal Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Status Verification",
+          "description": "Verification of your status across all INTERPOL notice types, Schengen SIS, CIS wanted list, and private risk intelligence databases."
+        },
+        "price": "490",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Preventive CCF Filing",
+          "description": "Preparation and submission of a preventive petition to INTERPOL's CCF to block data before a Red Notice is issued."
+        },
+        "price": "4500",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Red Notice Removal",
+          "description": "Full removal procedure for an existing INTERPOL Red Notice or Diffusion through the CCF."
+        },
+        "price": "8000",
+        "priceCurrency": "EUR"
+      }
+    ]
+  },
   "sameAs": [
     "https://status.law",
     "https://t.me/Status_Law_firm"
@@ -517,6 +577,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="#how-it-works">How it works</a>
     <a href="#cases">Our cases</a>
     <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
   </div>
   <a href="#contact" class="btn-nav">Check your status</a>
@@ -530,6 +591,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="#how-it-works" onclick="closeMenu()">How it works</a>
   <a href="#cases" onclick="closeMenu()">Our cases</a>
   <a href="#pricing" onclick="closeMenu()">Pricing</a>
+  <a href="#faq" onclick="closeMenu()">FAQ</a>
   <a href="#contact" onclick="closeMenu()">Contact</a>
   <a href="#contact" onclick="closeMenu()" class="mobile-cta">Check your status</a>
 </div>
@@ -1071,12 +1133,102 @@ document.addEventListener('DOMContentLoaded', function(){ filterCases('economics
   <p style="font-size:13px; color:var(--muted); text-align:center; letter-spacing:0.02em;">First consultation free — up to 30 minutes · All fees are fixed, not hourly · <a href="https://status.law/tariffs-for-services-against-extradition-en/" target="_blank" style="color:var(--gold); border-bottom:0.5px solid rgba(201,168,76,0.4);">Full pricing on status.law →</a></p>
 </section>
 
+<!-- FAQ -->
+<section id="faq" style="padding:90px 60px; border-bottom:0.5px solid var(--border); background:var(--navy);">
+  <div class="section-intro">
+    <div class="section-num" style="font-size:72px; font-family:'Playfair Display',serif; color:rgba(201,168,76,0.1); line-height:1;">06</div>
+    <h2>Frequently Asked Questions</h2>
+  </div>
+  <p style="color:var(--muted); font-size:18px; line-height:1.9; margin-bottom:64px; max-width:720px;">Answers to the questions we hear most often. If your situation is not covered here, contact us directly — the first consultation is free.</p>
+
+  <div style="max-width:860px;" itemscope itemtype="https://schema.org/FAQPage">
+
+    <!-- Q1 -->
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="border-bottom:0.5px solid var(--border);">
+      <button onclick="toggleFaq(this)" aria-expanded="false" style="width:100%; background:none; border:none; padding:28px 0; display:flex; justify-content:space-between; align-items:center; cursor:pointer; text-align:left; gap:24px;">
+        <span itemprop="name" style="font-family:'Playfair Display',serif; font-size:19px; color:var(--white); line-height:1.4;">Is a Red Notice an international arrest warrant?</span>
+        <span style="color:var(--gold); font-size:20px; flex-shrink:0; transition:transform 0.25s; display:inline-block;">↓</span>
+      </button>
+      <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" style="display:none; padding-bottom:28px;">
+        <p itemprop="text" style="color:var(--muted); font-size:16px; line-height:1.9;">No. A Red Notice is not an international arrest warrant. It is a request circulated through INTERPOL asking member countries to locate and request the provisional arrest of a person, subject to each country's domestic law. The practical effect varies by jurisdiction: some countries may detain on the basis of a notice alone, others require additional legal steps or a court order.</p>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="border-bottom:0.5px solid var(--border);">
+      <button onclick="toggleFaq(this)" aria-expanded="false" style="width:100%; background:none; border:none; padding:28px 0; display:flex; justify-content:space-between; align-items:center; cursor:pointer; text-align:left; gap:24px;">
+        <span itemprop="name" style="font-family:'Playfair Display',serif; font-size:19px; color:var(--white); line-height:1.4;">Can I be detained at the border because of a notice?</span>
+        <span style="color:var(--gold); font-size:20px; flex-shrink:0; transition:transform 0.25s; display:inline-block;">↓</span>
+      </button>
+      <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" style="display:none; padding-bottom:28px;">
+        <p itemprop="text" style="color:var(--muted); font-size:16px; line-height:1.9;">Yes, in some cases. The decision rests with national authorities and depends on local law, the type of notice, and the specific circumstances. In some countries a notice may lead to temporary delay or refusal of entry; in others, to actual detention pending extradition proceedings.</p>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="border-bottom:0.5px solid var(--border);">
+      <button onclick="toggleFaq(this)" aria-expanded="false" style="width:100%; background:none; border:none; padding:28px 0; display:flex; justify-content:space-between; align-items:center; cursor:pointer; text-align:left; gap:24px;">
+        <span itemprop="name" style="font-family:'Playfair Display',serif; font-size:19px; color:var(--white); line-height:1.4;">Can a notice affect my bank accounts?</span>
+        <span style="color:var(--gold); font-size:20px; flex-shrink:0; transition:transform 0.25s; display:inline-block;">↓</span>
+      </button>
+      <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" style="display:none; padding-bottom:28px;">
+        <p itemprop="text" style="color:var(--muted); font-size:16px; line-height:1.9;">It can, indirectly. Financial institutions use international compliance databases and risk intelligence systems that may flag INTERPOL-related risk signals. This can result in enhanced scrutiny, transaction delays, account restrictions, or refusal of services — even without a court order. The extent depends on the institution and jurisdiction.</p>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="border-bottom:0.5px solid var(--border);">
+      <button onclick="toggleFaq(this)" aria-expanded="false" style="width:100%; background:none; border:none; padding:28px 0; display:flex; justify-content:space-between; align-items:center; cursor:pointer; text-align:left; gap:24px;">
+        <span itemprop="name" style="font-family:'Playfair Display',serif; font-size:19px; color:var(--white); line-height:1.4;">Is it safe to request a status check?</span>
+        <span style="color:var(--gold); font-size:20px; flex-shrink:0; transition:transform 0.25s; display:inline-block;">↓</span>
+      </button>
+      <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" style="display:none; padding-bottom:28px;">
+        <p itemprop="text" style="color:var(--muted); font-size:16px; line-height:1.9;">In most cases, requesting a status check is a legitimate legal right and generally does not worsen your situation. However, the appropriate approach depends on your specific circumstances and jurisdiction. We recommend obtaining a legal assessment first to determine the most appropriate course of action.</p>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="border-bottom:0.5px solid var(--border);">
+      <button onclick="toggleFaq(this)" aria-expanded="false" style="width:100%; background:none; border:none; padding:28px 0; display:flex; justify-content:space-between; align-items:center; cursor:pointer; text-align:left; gap:24px;">
+        <span itemprop="name" style="font-family:'Playfair Display',serif; font-size:19px; color:var(--white); line-height:1.4;">How long does notice removal take?</span>
+        <span style="color:var(--gold); font-size:20px; flex-shrink:0; transition:transform 0.25s; display:inline-block;">↓</span>
+      </button>
+      <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" style="display:none; padding-bottom:28px;">
+        <p itemprop="text" style="color:var(--muted); font-size:16px; line-height:1.9;">It varies significantly. The Commission for the Control of INTERPOL's Files (CCF) reviews cases in periodic sessions, and the overall process may take several months to over a year depending on the complexity of the case and the materials involved. Each case is assessed individually, and precise timelines cannot be guaranteed.</p>
+      </div>
+    </div>
+
+    <!-- Q6 -->
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <button onclick="toggleFaq(this)" aria-expanded="false" style="width:100%; background:none; border:none; padding:28px 0; display:flex; justify-content:space-between; align-items:center; cursor:pointer; text-align:left; gap:24px;">
+        <span itemprop="name" style="font-family:'Playfair Display',serif; font-size:19px; color:var(--white); line-height:1.4;">What happens if I have already been detained?</span>
+        <span style="color:var(--gold); font-size:20px; flex-shrink:0; transition:transform 0.25s; display:inline-block;">↓</span>
+      </button>
+      <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" style="display:none; padding-bottom:28px;">
+        <p itemprop="text" style="color:var(--muted); font-size:16px; line-height:1.9;">Exercise your right to legal counsel immediately and avoid making substantive statements without consulting a lawyer. The next steps depend on the country of detention, the legal basis, and the stage of the process — including whether extradition proceedings have been initiated. Prompt legal assistance is critical to assess available options and protect your position.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+function toggleFaq(btn) {
+  var answer = btn.nextElementSibling;
+  var arrow = btn.querySelector('span:last-child');
+  var isOpen = answer.style.display !== 'none';
+  answer.style.display = isOpen ? 'none' : 'block';
+  arrow.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+  btn.setAttribute('aria-expanded', !isOpen);
+}
+</script>
+
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="contact-inner">
     <div class="contact-info">
       <div class="section-intro" style="margin-bottom:24px;">
-        <div class="section-num" style="font-size:56px;">06</div>
+        <div class="section-num" style="font-size:56px;">07</div>
         <h2>Contact us</h2>
       </div>
       <p>Submit your details using the secure form. All inquiries are handled under strict attorney-client confidentiality. We will contact you to confirm the scope and provide a quote.</p>
