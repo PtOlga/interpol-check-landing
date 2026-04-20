@@ -1041,19 +1041,19 @@ document.addEventListener('DOMContentLoaded', function(){ filterCases('economics
       <div style="margin-bottom:28px;">
         <div style="display:flex; justify-content:space-between; align-items:center; padding:11px 0; border-bottom:0.5px solid rgba(255,255,255,0.05); font-size:15px;">
           <span style="color:var(--muted);">INTERPOL (CCF)</span>
-          <span style="color:var(--white);">€500</span>
+          <span style="color:var(--white);" data-price="ccf">€500</span>
         </div>
         <div style="display:flex; justify-content:space-between; align-items:center; padding:11px 0; border-bottom:0.5px solid rgba(255,255,255,0.05); font-size:15px;">
           <span style="color:var(--muted);">SIS — Schengen</span>
-          <span style="color:var(--white);">€350</span>
+          <span style="color:var(--white);" data-price="sis">€350</span>
         </div>
         <div style="display:flex; justify-content:space-between; align-items:center; padding:11px 0; border-bottom:0.5px solid rgba(255,255,255,0.05); font-size:15px;">
           <span style="color:var(--muted);">CIS Wanted List</span>
-          <span style="color:var(--white);">€150</span>
+          <span style="color:var(--white);" data-price="cis">€150</span>
         </div>
         <div style="display:flex; justify-content:space-between; align-items:center; padding:11px 0; font-size:15px;">
           <span style="color:var(--muted);">World-Check / PEP</span>
-          <span style="color:var(--white);">from €200</span>
+          <span style="color:var(--white);" data-price="pep">from €200</span>
         </div>
       </div>
       <button onclick="var d=document.getElementById('details-check');var open=d.style.display!=='none';d.style.display=open?'none':'block';this.textContent=open?'What\'s included \u2193':'Hide \u2191';" style="background:transparent; border:0.5px solid var(--border); color:var(--muted); font-family:'DM Sans',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; padding:12px 20px; cursor:pointer; margin-bottom:16px; transition:all 0.2s; width:100%;" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">What's included ↓</button>
@@ -1075,7 +1075,7 @@ document.addEventListener('DOMContentLoaded', function(){ filterCases('economics
       <div style="margin-bottom:28px;">
         <div style="display:flex; justify-content:space-between; align-items:center; padding:11px 0; border-bottom:0.5px solid rgba(255,255,255,0.05); font-size:15px;">
           <span style="color:var(--muted);">Preventive filing</span>
-          <span style="color:var(--gold); font-family:'Playfair Display',serif; font-size:20px;">€4,200</span>
+          <span style="color:var(--gold); font-family:'Playfair Display',serif; font-size:20px;" data-price="preventive">€4,200</span>
         </div>
         <div style="display:flex; justify-content:space-between; align-items:center; padding:11px 0; font-size:15px;">
           <span style="color:var(--muted);">Material analysis</span>
@@ -1104,15 +1104,15 @@ document.addEventListener('DOMContentLoaded', function(){ filterCases('economics
       <div style="margin-bottom:28px;">
         <div style="display:flex; justify-content:space-between; align-items:center; padding:11px 0; border-bottom:0.5px solid rgba(255,255,255,0.05); font-size:15px;">
           <span style="color:var(--muted);">After preventive filing</span>
-          <span style="color:var(--white);">€6,000</span>
+          <span style="color:var(--white);" data-price="removal_after">€6,000</span>
         </div>
         <div style="display:flex; justify-content:space-between; align-items:center; padding:11px 0; border-bottom:0.5px solid rgba(255,255,255,0.05); font-size:15px;">
           <span style="color:var(--muted);">Without prior preventive</span>
-          <span style="color:var(--gold); font-family:'Playfair Display',serif; font-size:20px;">€8,000</span>
+          <span style="color:var(--gold); font-family:'Playfair Display',serif; font-size:20px;" data-price="removal_without">€8,000</span>
         </div>
         <div style="display:flex; justify-content:space-between; align-items:center; padding:11px 0; font-size:15px;">
           <span style="color:var(--muted);">Success fee (on removal)</span>
-          <span style="color:var(--white);">€4,500</span>
+          <span style="color:var(--white);" data-price="success_fee">€4,500</span>
         </div>
       </div>
       <button onclick="var d=document.getElementById('details-rem');var open=d.style.display!=='none';d.style.display=open?'none':'block';this.textContent=open?'What\'s included \u2193':'Hide \u2191';" style="background:transparent; border:0.5px solid var(--border); color:var(--muted); font-family:'DM Sans',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; padding:12px 20px; cursor:pointer; margin-bottom:16px; transition:all 0.2s; width:100%;" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">What's included ↓</button>
@@ -1530,8 +1530,49 @@ function closeMenu() {
   document.body.style.overflow = '';
 }
 </script>
+<!-- Regional Pricing -->
+<script>
+(function () {
+  var ASIA = [
+    'AF','AM','AZ','BH','BD','BT','BN','KH','CN','CY','GE','HK','IN','ID',
+    'IR','IQ','IL','JP','JO','KZ','KW','KG','LA','LB','MO','MY','MV','MN',
+    'MM','NP','KP','OM','PK','PS','PH','QA','SA','SG','LK','SY','TW','TJ',
+    'TH','TL','TR','TM','AE','UZ','VN','YE'
+  ];
+
+  function applyPrices(prices) {
+    document.querySelectorAll('[data-price]').forEach(function (el) {
+      var key = el.getAttribute('data-price');
+      if (prices[key] !== undefined) el.textContent = prices[key];
+    });
+  }
+
+  function loadAndApply(region) {
+    fetch('/prices.json')
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        var prices = data[region] || data['eu'];
+        applyPrices(prices);
+      })
+      .catch(function () {});
+  }
+
+  // Cloudflare /cdn-cgi/trace — работает через Cloudflare proxy
+  fetch('/cdn-cgi/trace')
+    .then(function (r) { return r.text(); })
+    .then(function (text) {
+      var match = text.match(/loc=([A-Z]{2})/);
+      var country = match ? match[1] : '';
+      var region = ASIA.indexOf(country) !== -1 ? 'asia' : 'eu';
+      loadAndApply(region);
+    })
+    .catch(function () {});
+}());
+</script>
+<!-- End Regional Pricing -->
+
 <!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6247e8d41a2d4f2981067084bbe5f920"}'></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;6247e8d41a2d4f2981067084bbe5f920&quot;}"></script>
 <!-- End Cloudflare Web Analytics -->
 
 

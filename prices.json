@@ -1,0 +1,22 @@
+{
+  "eu": {
+    "ccf":             "€500",
+    "sis":             "€350",
+    "cis":             "€150",
+    "pep":             "from €200",
+    "preventive":      "€4,200",
+    "removal_after":   "€6,000",
+    "removal_without": "€8,000",
+    "success_fee":     "€4,500"
+  },
+  "asia": {
+    "ccf":             "€750",
+    "sis":             "€525",
+    "cis":             "€225",
+    "pep":             "from €300",
+    "preventive":      "€6,300",
+    "removal_after":   "€9,000",
+    "removal_without": "€12,000",
+    "success_fee":     "€6,750"
+  }
+}
