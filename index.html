@@ -1321,6 +1321,7 @@ function toggleFaq(btn) {
               <option>UK</option><option>Ukraine</option><option>USA</option>
               <option>Uzbekistan</option><option>Venezuela</option><option>Vietnam</option>
               <option>Yemen</option><option>Other</option>
+              <option>Hong Kong</option>
             </select>
           </div>
         </div>
@@ -1557,6 +1558,44 @@ function closeMenu() {
       .catch(function () {});
   }
 
+  // Country code → select option text
+  var COUNTRY_NAMES = {
+    'AF':'Afghanistan','AL':'Albania','DZ':'Algeria','AR':'Argentina',
+    'AM':'Armenia','AU':'Australia','AT':'Austria','AZ':'Azerbaijan',
+    'BH':'Bahrain','BY':'Belarus','BE':'Belgium','BR':'Brazil',
+    'BG':'Bulgaria','CA':'Canada','CN':'China','HR':'Croatia',
+    'CY':'Cyprus','CZ':'Czech Republic','DK':'Denmark','EG':'Egypt',
+    'EE':'Estonia','FI':'Finland','FR':'France','GE':'Georgia',
+    'DE':'Germany','GR':'Greece','HU':'Hungary','HK':'Hong Kong',
+    'IN':'India','ID':'Indonesia','IR':'Iran','IQ':'Iraq',
+    'IE':'Ireland','IL':'Israel','IT':'Italy','JP':'Japan',
+    'JO':'Jordan','KZ':'Kazakhstan','KW':'Kuwait','KG':'Kyrgyzstan',
+    'LV':'Latvia','LB':'Lebanon','LY':'Libya','LT':'Lithuania',
+    'LU':'Luxembourg','MY':'Malaysia','MX':'Mexico','MD':'Moldova',
+    'MA':'Morocco','NL':'Netherlands','NZ':'New Zealand','NG':'Nigeria',
+    'NO':'Norway','OM':'Oman','PK':'Pakistan','PL':'Poland',
+    'PT':'Portugal','QA':'Qatar','RO':'Romania','RU':'Russia',
+    'SA':'Saudi Arabia','RS':'Serbia','SG':'Singapore','SK':'Slovakia',
+    'SI':'Slovenia','ZA':'South Africa','KR':'South Korea','ES':'Spain',
+    'SE':'Sweden','CH':'Switzerland','SY':'Syria','TJ':'Tajikistan',
+    'TH':'Thailand','TN':'Tunisia','TR':'Turkey','TM':'Turkmenistan',
+    'AE':'UAE','GB':'UK','UA':'Ukraine','US':'USA',
+    'UZ':'Uzbekistan','VE':'Venezuela','VN':'Vietnam','YE':'Yemen'
+  };
+
+  function prefillCountry(code) {
+    var name = COUNTRY_NAMES[code];
+    if (!name) return;
+    var sel = document.getElementById('country');
+    if (!sel) return;
+    for (var i = 0; i < sel.options.length; i++) {
+      if (sel.options[i].text === name) {
+        sel.selectedIndex = i;
+        break;
+      }
+    }
+  }
+
   // Cloudflare /cdn-cgi/trace — работает через Cloudflare proxy
   fetch('/cdn-cgi/trace')
     .then(function (r) { return r.text(); })
@@ -1565,6 +1604,7 @@ function closeMenu() {
       var country = match ? match[1] : '';
       var region = ASIA.indexOf(country) !== -1 ? 'asia' : 'eu';
       loadAndApply(region);
+      prefillCountry(country);
     })
     .catch(function () {});
 }());
