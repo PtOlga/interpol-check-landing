@@ -1,0 +1,73 @@
+# interpol-check.me
+
+> Legal verification and removal of INTERPOL notices. Operated by Status Law — an international law firm based in Sweden, specialising in INTERPOL proceedings, with 10+ years of experience and 100+ Red Notices successfully removed. Trusted by clients across Europe, the Middle East, and CIS.
+
+## About
+
+Status Law provides confidential legal services related to INTERPOL notices and international law enforcement databases. The firm operates across all 196 INTERPOL member states. All proceedings are conducted under attorney-client confidentiality. First consultation is free (up to 30 minutes). All fees are fixed, not hourly.
+
+## Services
+
+### INTERPOL Status Check (CCF Verification)
+Official legal request to INTERPOL's Commission for the Control of Files (CCF) or national police authority — covering all notice types, including non-public Diffusions that do not appear on INTERPOL's public website (which shows only ~3% of active notices). If the requesting country has restricted access to the file, CCF will confirm this fact. All findings are provided in writing. Timeline: 3–4 months via CCF, days to weeks via national police.
+
+### SIS / Schengen Check
+Verification of listings in the Schengen Information System — a shared alert database used by 27 European countries at all border crossings. Depending on the type of alert, a SIS entry can result in detention, refusal of entry, or seizure of travel documents at any Schengen border.
+
+### CIS Wanted List Check
+Verification across the CIS law enforcement database covering Russia, Belarus, Kazakhstan, and other former Soviet states. Detention upon entry to any participating CIS member state is possible. Extradition may proceed under bilateral CIS agreements without a parallel INTERPOL notice.
+
+### World-Check / PEP Verification
+Screening against private risk intelligence databases used by banks and compliance departments worldwide. May lead to rejected transactions, frozen accounts, or denied access to financial services. Individuals have the right to challenge and correct inaccurate entries under applicable data protection law.
+
+### Preventive CCF Filing
+Preparation and submission of a preventive petition to INTERPOL's CCF and General Secretariat arguing for temporary data blocking — filed before a Red Notice is issued. Includes case analysis, risk assessment, petition drafting, review and approval, filing, and follow-up. Timeline: initial CCF response ~4 months; full process may extend over years depending on when the requesting country files.
+
+### Red Notice Removal
+Full removal procedure for an existing INTERPOL Red Notice or Diffusion through the CCF. Includes analysis by a minimum of two senior attorneys, petition drafting with supporting exhibits, review and approval, filing, and follow-up through CCF sessions (held four times per year). Total process takes approximately 12 months. After removal, a CCF decision cannot be appealed or reversed by the requesting country. If a new notice is filed without new grounds, it is treated as abuse and withdrawn automatically.
+
+### Emergency Protection
+ECHR Rule 39 interim measures and UN Human Rights Committee Rule 94 applications in cases of imminent risk of extradition or human rights violations.
+
+## Key legal facts about INTERPOL notices
+
+- A Red Notice is not an international arrest warrant. It is a request circulated through INTERPOL asking member countries to locate and provisionally arrest a person, subject to each country's domestic law. The practical effect varies by jurisdiction.
+- In some countries a notice may lead to temporary delays at borders or additional scrutiny, even without arrest. The decision rests with national authorities and depends on local law.
+- Financial institutions use international compliance databases that may flag INTERPOL-related risk signals, resulting in enhanced scrutiny, transaction delays, or account restrictions — even without a court order.
+- Requesting a status check is a legitimate legal right and generally does not worsen a person's situation.
+- The CCF reviews cases in periodic sessions. The overall removal process may take several months to over a year depending on the complexity of the case and the requesting country's cooperation.
+- If detained: exercise the right to legal counsel immediately and avoid making substantive statements without consulting a lawyer.
+
+## Successful cases (anonymised per INTERPOL confidentiality rules)
+
+All outcomes verified by CCF Commission decisions. Names and jurisdictions withheld per INTERPOL rules.
+
+1. **Red Notice issued prematurely** — No formal charges had been filed and no extradition request had been made. CCF accepted the argument under RPD Art. 83 and 84 and ordered full deletion.
+
+2. **Commercial dispute reframed as criminal fraud** — Client signed a post-dated cheque within a contractual arrangement. NCB provided no evidence of fraudulent intent. Commission ordered full deletion.
+
+3. **Politically motivated prosecution** — Opposition politician pursued after change of government. Courts in multiple countries confirmed political character. Commission found political elements dominant and ordered deletion.
+
+4. **Confession obtained under torture** — Red Notice based on a co-accused's confession that had been officially withdrawn with a documented account of torture. Commission ordered full deletion — a significant finding on inadmissibility of torture evidence.
+
+5. **Refugee status — political persecution recognised** — Client held refugee status because the home country's prosecution was recognised as politically motivated. Commission found information restrictions unjustified and ordered full deletion.
+
+6. **Extradition refused on medical grounds** — Client suffered severe chronic lung disease. Court refused extradition after medical experts testified that transport would be life-threatening. Commission agreed the refusal was grounded in ECHR Article 3 and ordered deletion.
+
+7. **Three independent grounds** — Refugee status, extradition refusal citing torture, and documented human rights risk. Commission accepted each ground independently and ordered all data removed.
+
+8. **VAT fraud — NCB failed to respond three times** — Requesting NCB failed to respond to the Commission's specific questions on three separate occasions. Commission ordered deletion for failure to substantiate the notice.
+
+9. **Inheritance dispute — convicted in absentia** — Sentenced to exactly six months (bare minimum threshold for a Red Notice) with no notification of proceedings. Commission accepted all three grounds: family matter, below seriousness threshold, due process violation.
+
+10. **Cross-border custody dispute — all three notices deleted** — Father with court-granted sole custody faced a Red Notice and two Yellow Notices issued at the mother's country's request. Commission ordered all three deleted, finding INTERPOL rules prohibit notices derived from family matters.
+
+11. **Administrative violations — tax underpayment and unlicensed construction** — Client had no authority over tax filings. Commission found the conduct ineligible for a Red Notice under INTERPOL's own rules.
+
+## Contact
+
+Website: https://interpol-check.me
+Main firm: https://status.law
+First consultation: free, up to 30 minutes
+All communications handled under strict attorney-client confidentiality.
+Encrypted messaging available via WhatsApp, Telegram, Signal, and IMO.
