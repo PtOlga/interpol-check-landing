@@ -9,9 +9,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-N53MWTVH');</script>
 <!-- End Google Tag Manager -->
-<!-- Ahrefs Web Analytics -->
-<script src="https://analytics.ahrefs.com/analytics.js" data-key="btnsghq/wZNpB/dqlsLVng" async></script>
-<!-- End Ahrefs Web Analytics -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17026412757"></script>
 <script>
@@ -89,7 +86,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 :root {
   --navy: #0D1B2A;
   --navy-mid: #162436;
-  --navy-light: #1E3448;
   --gold: #C9A84C;
   --gold-light: #E2C97E;
   --white: #F5F3EE;
@@ -353,9 +349,6 @@ footer {
 .footer-logo { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--gold); }
 .footer-logo span { color: var(--muted); }
 footer p { font-size: 14px; color: var(--muted); }
-.footer-links { display: flex; gap: 24px; }
-.footer-links a { font-size: 14px; color: var(--muted); transition: color 0.2s; }
-.footer-links a:hover { color: var(--gold); }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
@@ -379,8 +372,6 @@ footer p { font-size: 14px; color: var(--muted); }
   .form-row { grid-template-columns: 1fr; }
   .cta-banner { padding: 60px 24px; }
   .cta-banner h2 { font-size: 32px; }
-  #notices .notices-grid { grid-template-columns: 1fr; }
-  #notices { padding: 60px 24px; }
   #cases { padding: 60px 24px !important; }
   #services { padding: 60px 24px !important; }
   .hero-sub { min-height: 0; }
@@ -525,7 +516,7 @@ footer p { font-size: 14px; color: var(--muted); }
           "name": "Status Verification",
           "description": "Verification of your status across all INTERPOL notice types, Schengen SIS, CIS wanted list, and private risk intelligence databases."
         },
-        "price": "490",
+        "price": "500",
         "priceCurrency": "EUR"
       },
       {
@@ -535,7 +526,7 @@ footer p { font-size: 14px; color: var(--muted); }
           "name": "Preventive CCF Filing",
           "description": "Preparation and submission of a preventive petition to INTERPOL's CCF to block data before a Red Notice is issued."
         },
-        "price": "4500",
+        "price": "4200",
         "priceCurrency": "EUR"
       },
       {
@@ -561,8 +552,6 @@ footer p { font-size: 14px; color: var(--muted); }
   }
 }
 </script>
-<!-- Microsoft Clarity -->
-<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","weqxoxs5fj");</script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -583,6 +572,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="#pricing">Pricing</a>
     <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
+    <a href="ccf-checker.html" style="color:var(--gold); border:0.5px solid rgba(201,168,76,0.4); padding:6px 14px; border-radius:2px; transition:background 0.2s;" onmouseover="this.style.background='rgba(201,168,76,0.1)'" onmouseout="this.style.background='transparent'">Check grounds</a>
   </div>
   <a href="#contact" class="btn-nav">Check your status</a>
   <button class="burger" id="burger" aria-label="Open menu" onclick="toggleMenu()">
@@ -597,6 +587,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="#pricing" onclick="closeMenu()">Pricing</a>
   <a href="#faq" onclick="closeMenu()">FAQ</a>
   <a href="#contact" onclick="closeMenu()">Contact</a>
+  <a href="ccf-checker.html" onclick="closeMenu()" style="color:var(--gold);">Check grounds →</a>
   <a href="#contact" onclick="closeMenu()" class="mobile-cta">Check your status</a>
 </div>
 
@@ -878,6 +869,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <button class="cf-btn" data-cat="health" onclick="filterCases('health')" style="font-family:'DM Sans',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; padding:10px 20px; background:transparent; color:var(--muted); border:0.5px solid var(--border); cursor:pointer; transition:all 0.2s;">Health</button>
     <button class="cf-btn" data-cat="religion" onclick="filterCases('religion')" style="font-family:'DM Sans',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; padding:10px 20px; background:transparent; color:var(--muted); border:0.5px solid var(--border); cursor:pointer; transition:all 0.2s;">Religion</button>
   </div>
+
+  <!-- CCF Checker CTA -->
+  <a href="ccf-checker.html" style="display:flex; align-items:center; justify-content:space-between; padding:20px 28px; margin-bottom:40px; border:0.5px solid rgba(201,168,76,0.35); background:rgba(201,168,76,0.05); border-radius:2px; text-decoration:none; transition:background 0.2s;" onmouseover="this.style.background='rgba(201,168,76,0.09)'" onmouseout="this.style.background='rgba(201,168,76,0.05)'">
+    <div>
+      <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:6px;">Free self-assessment</div>
+      <div style="font-family:'Playfair Display',serif; font-size:18px; font-weight:400; color:var(--white);">Not sure if you have grounds for removal? Take our 6-question quiz →</div>
+    </div>
+    <div style="font-size:13px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold); white-space:nowrap; margin-left:24px; flex-shrink:0;">Check grounds</div>
+  </a>
 
   <!-- Cases grid -->
   <div id="cases-grid" style="display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:2px; background:var(--border-solid);">
@@ -1341,7 +1341,8 @@ function toggleFaq(btn) {
 
         <div class="form-group">
           <label for="message">Describe your situation *</label>
-          <textarea id="message" name="message" placeholder="Please briefly describe what you need checked and why. All information is strictly confidential." required></textarea>
+          <textarea id="message" name="message" minlength="50" placeholder="Please briefly describe what you need checked and why. All information is strictly confidential." required></textarea>
+          <span id="messageError" style="display:none; font-size:12px; color:#E57373; padding:6px 18px 8px; background:var(--navy-mid);">Please describe your situation in more detail (at least 50 characters).</span>
         </div>
 
         <div class="consent">
@@ -1430,7 +1431,7 @@ function toggleFaq(btn) {
 
   <!-- Row 3: copyright + developer -->
   <div style="border-top:0.5px solid rgba(255,255,255,0.06); padding-top:16px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <span style="font-size:12px; color:#4a5a6a;">© <script>document.write(new Date().getFullYear())</script> Status Law Juridiska Byrå Aktiebolag. All rights reserved.</span>
+    <span style="font-size:12px; color:#4a5a6a;">© <span id="footer-year"></span> Status Law Juridiska Byrå Aktiebolag. All rights reserved.</span>
     <span style="font-size:12px; color:#4a5a6a;">Site developed by <a href="https://itos.nu" target="_blank" rel="noopener" style="color:#8A9BB0; text-decoration:none; border-bottom:0.5px solid rgba(138,155,176,0.3); transition:color 0.2s;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='#8A9BB0'">itos.nu</a></span>
   </div>
 
@@ -1445,6 +1446,8 @@ function toggleFaq(btn) {
     var u = 'info'; var d = 'status.law';
     var el = document.getElementById('footer-email-link');
     if (el) { el.href = 'mailto:' + u + '@' + d; }
+    var yr = document.getElementById('footer-year');
+    if (yr) { yr.textContent = new Date().getFullYear(); }
   })();
 </script>
 <script>
@@ -1461,6 +1464,22 @@ function toggleFaq(btn) {
 
   form.addEventListener('submit', async function(e) {
     e.preventDefault();
+
+    // Honeypot check — bots fill hidden fields, humans don't
+    if (form.elements['_gotcha'] && form.elements['_gotcha'].value !== '') {
+      return;
+    }
+
+    // Message length check
+    var msgEl = document.getElementById('message');
+    var msgError = document.getElementById('messageError');
+    if (msgEl.value.trim().length < 50) {
+      msgError.style.display = 'block';
+      msgEl.focus();
+      return;
+    }
+    msgError.style.display = 'none';
+
     btn.disabled = true;
     btn.textContent = 'Sending...';
 
@@ -1474,10 +1493,33 @@ function toggleFaq(btn) {
       });
 
       if (res.ok) {
+        (function() {
+          var pName    = data.get('name')    || '';
+          var pEmail   = data.get('email')   || '';
+          var pPhone   = data.get('phone')   || '';
+          var pCountry = data.get('country') || '';
+          var pMessage = data.get('message') || '';
+          var taskTitle = 'New lead: ' + pName + (pCountry ? ' (' + pCountry + ')' : '');
+          var taskDesc  = 'Email: ' + pEmail + '\nPhone: ' + pPhone + '\nCountry: ' + pCountry + '\nMessage:\n' + pMessage + '\n\nSource: interpol-check.me';
+          fetch('https://l-s.planfix.com/rest/task', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': 'Bearer 984fdc7fb465974ee46e4e10e3d06e8a'
+            },
+            body: JSON.stringify({
+              name: taskTitle,
+              description: taskDesc,
+              project: { id: 804 },
+              counterparty: { id: 306 }
+            })
+          }).catch(function(){});
+        })();
+
         form.style.display = 'none';
         success.style.display = 'block';
         window.location.hash = 'success';
-        if (window.cfBeacon) cfBeacon.sendEvent('form_submitted');
+        if (window.cfBeacon) window.cfBeacon.sendEvent('form_submitted');
         // Google Ads conversion
         if (typeof gtag === 'function') {
           gtag('event', 'conversion', { 'send_to': 'AW-17026412757/2roxCJDRuZscENXh6bY_' });
@@ -1486,14 +1528,14 @@ function toggleFaq(btn) {
         window.dataLayer.push({ event: 'form_submitted' });
       } else {
         btn.disabled = false;
-        btn.textContent = 'Send request';
+        btn.textContent = 'Check your status now →';
         const err = document.getElementById('formError');
         err.textContent = 'Something went wrong. Please try again or contact us directly.';
         err.style.display = 'block';
       }
     } catch (e) {
       btn.disabled = false;
-      btn.textContent = 'Send request';
+      btn.textContent = 'Check your status now →';
       const err = document.getElementById('formError');
       err.textContent = 'Connection error. Please try again.';
       err.style.display = 'block';
@@ -1548,16 +1590,6 @@ function closeMenu() {
       var key = el.getAttribute('data-price');
       if (prices[key] !== undefined) el.textContent = prices[key];
     });
-  }
-
-  function loadAndApply(region) {
-    fetch('/prices.json')
-      .then(function (r) { return r.json(); })
-      .then(function (data) {
-        var prices = data[region] || data['eu'];
-        applyPrices(prices);
-      })
-      .catch(function () {});
   }
 
   // Country code → select option text
@@ -1629,28 +1661,71 @@ function closeMenu() {
     }
   }
 
-  // Cloudflare /cdn-cgi/trace — работает через Cloudflare proxy
-  fetch('/cdn-cgi/trace')
-    .then(function (r) { return r.text(); })
-    .then(function (text) {
-      var match = text.match(/loc=([A-Z]{2})/);
-      var country = match ? match[1] : '';
-      var region = ASIA.indexOf(country) !== -1 ? 'asia' : 'eu';
-      loadAndApply(region);
-      prefillCountry(country);
-      prefillPhone(country);
-      updateSubject(country);
-    })
-    .catch(function () {});
+  // Параллельный запрос trace + prices.json
+  Promise.all([
+    fetch('/cdn-cgi/trace').then(function(r) { return r.text(); }),
+    fetch('/prices.json').then(function(r) { return r.json(); })
+  ]).then(function(results) {
+    var traceText  = results[0];
+    var priceData  = results[1];
+    var match      = traceText.match(/loc=([A-Z]{2})/);
+    var country    = match ? match[1] : '';
+    var region     = ASIA.indexOf(country) !== -1 ? 'asia' : 'eu';
+    var prices     = priceData[region] || priceData['eu'];
+    applyPrices(prices);
+    prefillCountry(country);
+    prefillPhone(country);
+    updateSubject(country);
+  }).catch(function () {});
 }());
 </script>
 <!-- End Regional Pricing -->
+
+<!-- Microsoft Clarity — lazy load after page is interactive -->
+<script>
+(function() {
+  function loadClarity() {
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)
+    })(window,document,"clarity","script","weqxoxs5fj");
+  }
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(loadClarity, { timeout: 3000 });
+  } else {
+    setTimeout(loadClarity, 3000);
+  }
+})();
+</script>
+<!-- End Microsoft Clarity -->
 
 <!-- Cloudflare Web Analytics -->
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;6247e8d41a2d4f2981067084bbe5f920&quot;}"></script>
 <!-- End Cloudflare Web Analytics -->
 
 
+
+<!-- Sticky CCF Checker button -->
+<a href="ccf-checker.html" id="sticky-checker" style="position:fixed; bottom:28px; left:28px; z-index:999; display:flex; align-items:center; gap:10px; padding:13px 20px; background:var(--navy2,#112236); border:0.5px solid rgba(201,168,76,0.5); border-radius:2px; text-decoration:none; font-family:'DM Sans',sans-serif; font-size:12px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold,#C9A84C); box-shadow:0 4px 24px rgba(0,0,0,0.4); transition:opacity 0.2s, transform 0.2s; opacity:0; pointer-events:none;" onmouseover="this.style.background='#1a3050'" onmouseout="this.style.background='var(--navy2,#112236)'">
+  <span style="font-size:15px; line-height:1;">⚖</span>
+  Check my grounds
+</a>
+<script>
+(function(){
+  var btn = document.getElementById('sticky-checker');
+  var shown = false;
+  window.addEventListener('scroll', function(){
+    var past = window.scrollY > 600;
+    if(past !== shown){
+      shown = past;
+      btn.style.opacity = past ? '1' : '0';
+      btn.style.pointerEvents = past ? 'auto' : 'none';
+      btn.style.transform = past ? 'translateY(0)' : 'translateY(8px)';
+    }
+  });
+})();
+</script>
+<!-- End sticky CCF Checker button -->
 
 </body>
 </html>

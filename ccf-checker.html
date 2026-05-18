@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Do I Have Grounds to Remove My INTERPOL Notice? | Status Law</title>
+<meta name="description" content="Answer 6 questions and find out whether your situation matches real CCF Commission decisions that led to INTERPOL Red Notice deletion. Free self-assessment by Status Law.">
+<meta property="og:title" content="INTERPOL Red Notice Removal — Self-Assessment Quiz">
+<meta property="og:description" content="Find out if you have legal grounds to remove your INTERPOL notice. Based on 60+ verified CCF decisions.">
+<meta property="og:url" content="https://interpol-check.me/ccf-checker">
+<link rel="canonical" href="https://interpol-check.me/ccf-checker">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+:root{--navy:#0D1B2A;--navy2:#112236;--gold:#C9A84C;--gold-dim:rgba(201,168,76,0.15);--gold-faint:rgba(201,168,76,0.07);--white:#F5F3EE;--muted:#8A9BB0;--border:rgba(138,155,176,0.18);--card:#112236;--green:#5BAF7A;--green-bg:rgba(91,175,122,0.08);--amber:#E8A838;--amber-bg:rgba(232,168,56,0.08);--red:#D05A5A;--red-bg:rgba(208,90,90,0.08)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--white);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.65;min-height:100vh}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 60px;background:rgba(13,27,42,0.96);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border)}
+.nav-logo{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.nav-logo .nm{font-size:20px;font-weight:500;color:var(--white)}
+.nav-logo .sb{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.nav-right{display:flex;align-items:center;gap:24px}
+.nav-back{font-size:13px;color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-back:hover{color:var(--gold)}
+.nav-cta{font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--navy);background:var(--gold);padding:9px 20px;border-radius:2px;transition:opacity .2s}
+.nav-cta:hover{opacity:.85}
+.hero{padding:72px 60px 56px;border-bottom:0.5px solid var(--border);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:0;right:0;width:500px;height:350px;background:radial-gradient(ellipse at top right,rgba(201,168,76,.07) 0%,transparent 70%);pointer-events:none}
+.hero-tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(30px,3.8vw,50px);font-weight:400;line-height:1.15;max-width:680px;margin-bottom:18px}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{color:var(--muted);font-size:16px;max-width:580px;margin-bottom:40px}
+.hero-stats{display:flex;gap:44px;flex-wrap:wrap}
+.stat-n{font-family:'Playfair Display',serif;font-size:36px;color:var(--gold);line-height:1}
+.stat-l{font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
+.tabs-wrap{padding:0 60px;border-bottom:0.5px solid var(--border);background:var(--navy2)}
+.tabs{display:flex;gap:0}
+.tab-btn{font-family:'DM Sans',sans-serif;font-size:14px;font-weight:400;padding:18px 28px;background:none;border:none;border-bottom:2px solid transparent;color:var(--muted);cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:8px}
+.tab-btn:hover:not(.locked){color:var(--white)}
+.tab-btn.active{color:var(--gold);border-bottom-color:var(--gold)}
+.tab-btn.locked{cursor:not-allowed;opacity:.45}
+.panel{display:none;padding:48px 60px 80px}
+.panel.active{display:block}
+.quiz-wrap{max-width:680px}
+.progress-track{height:3px;background:var(--border);border-radius:2px;margin-bottom:40px;overflow:hidden}
+.progress-fill{height:100%;background:var(--gold);border-radius:2px;transition:width .4s ease}
+.q-counter{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.q-text{font-family:'Playfair Display',serif;font-size:22px;font-weight:400;line-height:1.4;margin-bottom:28px}
+.opts{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
+.opt{font-family:'DM Sans',sans-serif;font-size:15px;font-weight:300;text-align:left;padding:14px 20px;background:transparent;border:0.5px solid var(--border);color:var(--white);border-radius:3px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover:not(:disabled){border-color:rgba(201,168,76,.5);background:var(--gold-faint)}
+.opt.correct{border-color:var(--green);background:var(--green-bg);color:var(--green)}
+.opt.wrong{border-color:var(--red);background:var(--red-bg);color:var(--red)}
+.opt.reveal{border-color:var(--green);background:var(--green-bg);color:var(--green);opacity:.5}
+.feedback{padding:16px 20px;border-radius:3px;font-size:14px;line-height:1.65;margin-bottom:16px}
+.feedback.yes{border-left:2px solid var(--green);background:var(--green-bg);color:#9ED4B0}
+.feedback.maybe{border-left:2px solid var(--amber);background:var(--amber-bg);color:#E8C07A}
+.feedback.no{border-left:2px solid var(--border);background:rgba(138,155,176,.06);color:var(--muted)}
+.feedback strong{font-weight:500;color:inherit}
+.mini-bar-wrap{margin-top:12px;padding-top:12px;border-top:0.5px solid rgba(255,255,255,.07)}
+.mini-bar-label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.65;margin-bottom:7px}
+.mini-bar-track{height:5px;background:rgba(255,255,255,.08);border-radius:3px;overflow:hidden;margin-bottom:5px}
+.mini-bar-fill{height:100%;border-radius:3px;width:0%;transition:width .8s ease}
+.mini-bar-fill.yes{background:var(--green)}
+.mini-bar-fill.maybe{background:var(--amber)}
+.mini-bar-stat{font-size:12px;opacity:.55}
+.next-btn{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:12px 28px;background:var(--gold);color:var(--navy);border:none;border-radius:2px;cursor:pointer;transition:opacity .2s}
+.next-btn:hover{opacity:.85}
+.result-wrap{max-width:720px}
+.report-header{margin-bottom:32px;padding-bottom:24px;border-bottom:0.5px solid var(--border)}
+.report-label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.report-title{font-family:'Playfair Display',serif;font-size:28px;font-weight:400;margin-bottom:6px}
+.report-title.yes{color:var(--green)}
+.report-title.maybe{color:var(--amber)}
+.report-title.no{color:var(--muted)}
+.report-date{font-size:12px;color:var(--muted)}
+.result-summary{padding:24px;border-radius:3px;margin-bottom:28px;font-size:15px;line-height:1.7;color:var(--muted)}
+.result-summary.yes{border:0.5px solid var(--green);background:var(--green-bg)}
+.result-summary.maybe{border:0.5px solid var(--amber);background:var(--amber-bg)}
+.result-summary.no{border:0.5px solid var(--border);background:var(--card)}
+.result-summary strong{color:var(--white);font-weight:400}
+.grounds-found{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
+.ground-tag{font-size:12px;padding:5px 12px;border:0.5px solid var(--green);color:var(--green);border-radius:2px;letter-spacing:.04em}
+.stats-section{margin-bottom:32px}
+.stats-section-title{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:20px;padding-bottom:10px;border-bottom:0.5px solid var(--border)}
+.rbar-row{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.rbar-left{width:220px;flex-shrink:0}
+.rbar-name{font-size:13px;color:var(--white)}
+.rbar-verdict{font-size:11px;color:var(--muted);margin-top:2px}
+.rbar-track{flex:1;height:7px;background:rgba(138,155,176,.1);border-radius:3px;overflow:hidden}
+.rbar-fill{height:100%;border-radius:3px;width:0%;transition:width .9s ease}
+.rbar-fill.strong{background:var(--green)}
+.rbar-fill.maybe{background:var(--amber)}
+.rbar-fill.none{background:rgba(138,155,176,.25)}
+.rbar-n{font-size:12px;color:var(--muted);width:64px;text-align:right;white-space:nowrap;flex-shrink:0}
+.email-box{padding:28px 32px;background:var(--navy2);border:0.5px solid var(--border);border-radius:3px;margin-bottom:20px}
+.email-box h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;margin-bottom:8px}
+.email-box p{color:var(--muted);font-size:14px;margin-bottom:20px;line-height:1.6}
+.email-row{display:flex;gap:10px;flex-wrap:wrap}
+.email-input{flex:1;min-width:200px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:300;padding:12px 16px;background:rgba(255,255,255,.04);border:0.5px solid var(--border);color:var(--white);border-radius:2px;outline:none;transition:border-color .2s}
+.email-input:focus{border-color:rgba(201,168,76,.5)}
+.email-input::placeholder{color:var(--muted)}
+.email-send{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;padding:12px 24px;background:var(--gold);color:var(--navy);border:none;border-radius:2px;cursor:pointer;white-space:nowrap;transition:opacity .2s}
+.email-send:hover{opacity:.85}
+.email-note{font-size:12px;color:var(--muted);margin-top:10px;line-height:1.5}
+.email-success{font-size:14px;color:var(--green);margin-top:10px;display:none}
+.cta-consult{padding:28px 32px;background:rgba(201,168,76,.06);border:0.5px solid rgba(201,168,76,.3);border-radius:3px;margin-bottom:20px;text-align:center}
+.cta-consult h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;margin-bottom:8px}
+.cta-consult p{color:var(--muted);font-size:14px;margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto;line-height:1.6}
+.cta-primary{display:inline-block;font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--navy);background:var(--gold);padding:14px 32px;border-radius:2px;transition:opacity .2s}
+.cta-primary:hover{opacity:.85}
+.retry-btn{display:block;font-size:13px;color:var(--muted);cursor:pointer;text-decoration:underline;text-underline-offset:3px;border:none;background:none;padding:0;margin:16px auto 0;transition:color .2s}
+.retry-btn:hover{color:var(--white)}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-bottom:48px}
+.metric{background:var(--card);border:0.5px solid var(--border);border-radius:3px;padding:24px 20px}
+.metric-n{font-family:'Playfair Display',serif;font-size:32px;color:var(--gold);line-height:1}
+.metric-l{font-size:11px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:6px;line-height:1.4}
+.section-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+.yr-filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:24px}
+.yr-btn{font-family:'DM Sans',sans-serif;font-size:12px;padding:5px 14px;border:0.5px solid var(--border);background:transparent;color:var(--muted);border-radius:20px;cursor:pointer;transition:all .15s}
+.yr-btn:hover{border-color:var(--gold);color:var(--gold)}
+.yr-btn.active{border-color:var(--gold);background:var(--gold-dim);color:var(--gold)}
+.bar-row{display:flex;align-items:center;gap:12px;margin-bottom:9px}
+.bar-label{font-size:13px;color:var(--muted);width:210px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar-track{flex:1;height:6px;background:rgba(138,155,176,.12);border-radius:3px;overflow:hidden}
+.bar-fill{height:100%;border-radius:3px;background:var(--gold);transition:width .5s ease}
+.bar-n{font-size:12px;color:var(--muted);width:24px;text-align:right}
+.chart-inner{position:relative;width:100%;height:200px}
+.footnote{padding:28px 60px;border-top:0.5px solid var(--border);font-size:12px;color:var(--muted);line-height:1.7}
+.footnote a{color:var(--gold);text-decoration:none}
+@media(max-width:768px){
+  nav{padding:14px 20px}
+  .hero,.tabs-wrap,.panel,.footnote{padding-left:20px;padding-right:20px}
+  .hero{padding-top:48px;padding-bottom:40px}
+  .hero-stats{gap:24px}
+  .tabs-wrap{padding:0 20px}
+  .q-text{font-size:18px}
+  .rbar-left{width:140px}
+  .rbar-name{font-size:12px}
+  .email-row{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="https://interpol-check.me" class="nav-logo">
+    <span class="nm">Status <span style="color:var(--gold)">Law</span></span>
+    <span class="sb">International Legal Protection</span>
+  </a>
+  <div class="nav-right">
+    <a href="https://interpol-check.me" class="nav-back">← Main site</a>
+    <a href="https://interpol-check.me#contact" class="nav-cta">Get Legal Help</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-tag">CCF Self-Assessment · Based on 60 Verified Decisions</div>
+  <h1>Do you have grounds to remove<br>your <em>INTERPOL notice</em>?</h1>
+  <p class="hero-sub">Answer 6 questions and see whether your situation matches real CCF Commission decisions that resulted in notice deletion. Free, confidential, no registration.</p>
+  <div class="hero-stats">
+    <div><div class="stat-n">60</div><div class="stat-l">Verified CCF decisions</div></div>
+    <div><div class="stat-n">100%</div><div class="stat-l">Resulted in deletion</div></div>
+    <div><div class="stat-n">2017–2025</div><div class="stat-l">Case archive</div></div>
+  </div>
+  <p style="margin-top:28px;font-size:13px;color:var(--muted);max-width:580px;border-left:2px solid rgba(201,168,76,0.3);padding-left:14px;line-height:1.6;">This database reflects cases where clients consented to anonymised publication. Status Law has handled over 100 successful INTERPOL matters in total — the remaining cases are not listed here at the client's request for full confidentiality.</p>
+</section>
+
+<div class="tabs-wrap">
+  <div class="tabs">
+    <button class="tab-btn active" id="tab-quiz" onclick="switchTab('quiz')">Self-assessment quiz</button>
+    <button class="tab-btn locked" id="tab-stats" onclick="tryStats()">CCF decisions database &nbsp;🔒</button>
+  </div>
+</div>
+
+<div id="panel-quiz" class="panel active">
+  <div class="quiz-wrap" id="quizWrap"></div>
+</div>
+
+<div id="panel-stats" class="panel">
+  <div id="statsContent"></div>
+</div>
+
+<div class="footnote">
+  These case excerpts are derived from official CCF Commission decisions and published for educational purposes only. They do not constitute legal advice. Each case is unique — outcomes depend on the specific facts and circumstances. &nbsp;·&nbsp; Status Law &nbsp;·&nbsp; <a href="https://interpol-check.me">interpol-check.me</a>
+</div>
+
+<script>
+const CASES=[{year:2017,tags:["No Evidentiary Basis","No Extradition Action","Procedural Irregularities"]},{year:2017,tags:["Due Process","Human Rights","No Extradition Action","Political Character"]},{year:2017,tags:["No Extradition Action","Political Character","Right to Travel"]},{year:2017,tags:["Due Process","No Evidentiary Basis","Private / Civil Matter"]},{year:2017,tags:["Accuracy & Quality","Due Process","Human Rights","Political Character"]},{year:2017,tags:["Re-examination"]},{year:2017,tags:["Re-examination"]},{year:2017,tags:["Private / Civil Matter"]},{year:2017,tags:["Ne bis in idem","Right to Travel"]},{year:2017,tags:["No Extradition Action","Re-examination"]},{year:2017,tags:["Due Process","Political Character","Right to Travel"]},{year:2017,tags:["Human Rights","Political Character","Private / Civil Matter"]},{year:2017,tags:["No Evidentiary Basis","No Extradition Action","Political Character","Procedural Irregularities"]},{year:2017,tags:["No Evidentiary Basis","Political Character"]},{year:2017,tags:["Due Process","Human Rights","Invalid Proceedings","Private / Civil Matter"]},{year:2017,tags:["Due Process","Human Rights","Invalid Proceedings","No Evidentiary Basis"]},{year:2018,tags:["Due Process","No Extradition Action","Private / Civil Matter","Purpose of Data","Seriousness"]},{year:2018,tags:["Due Process","Private / Civil Matter","Seriousness"]},{year:2018,tags:["Invalid Proceedings","Political Character","Purpose of Data"]},{year:2018,tags:["Due Process","Political Character","Purpose of Data"]},{year:2018,tags:["Human Rights","Political Character"]},{year:2018,tags:["Access to Files","Political Character"]},{year:2018,tags:["Political Character"]},{year:2018,tags:["Private / Civil Matter"]},{year:2018,tags:["Misuse of INTERPOL","Political Character","Status of Person"]},{year:2018,tags:["Invalid Proceedings","Misuse of INTERPOL","Status of Person"]},{year:2018,tags:["Access to Files","Political Character"]},{year:2018,tags:["Accuracy & Quality","Due Process","Political Character"]},{year:2018,tags:["Human Rights","No Evidentiary Basis","Political Character"]},{year:2018,tags:["Human Rights","No Extradition Action"]},{year:2018,tags:["Purpose of Data"]},{year:2018,tags:["Access to Files","Human Rights"]},{year:2018,tags:["Access to Files","Invalid Proceedings","Political Character"]},{year:2019,tags:["Private / Civil Matter"]},{year:2019,tags:["No Extradition Action","Human Rights"]},{year:2019,tags:["No Extradition Action","Private / Civil Matter"]},{year:2019,tags:["Purpose of Data"]},{year:2019,tags:["Human Rights"]},{year:2019,tags:["Human Rights","Ne bis in idem"]},{year:2019,tags:["Accuracy & Quality","Seriousness"]},{year:2019,tags:["No Extradition Action","Seriousness"]},{year:2019,tags:["Political Character","Private / Civil Matter"]},{year:2019,tags:["Due Process","Right to Travel"]},{year:2023,tags:["Description of Criminal Activities","No Extradition Action"]},{year:2023,tags:["Description of Criminal Activities","Ne bis in idem","No Extradition Action"]},{year:2023,tags:["Description of Criminal Activities","No Extradition Action"]},{year:2023,tags:["Description of Criminal Activities","Political Character","Purpose of Data"]},{year:2023,tags:["Asylum / Refugee Status","Description of Criminal Activities","Due Process","No Extradition Action"]},{year:2023,tags:["Purpose of Data"]},{year:2023,tags:["Invalid Proceedings"]},{year:2023,tags:["Invalid Proceedings"]},{year:2024,tags:["Private / Civil Matter","Purpose of Data","Seriousness"]},{year:2024,tags:["Description of Criminal Activities","Due Process","Human Rights"]},{year:2024,tags:["Misuse of INTERPOL","Political Character"]},{year:2024,tags:["Accuracy & Quality","Purpose of Data"]},{year:2024,tags:["Accuracy & Quality","Human Rights","Private / Civil Matter","Seriousness"]},{year:2025,tags:["Ne bis in idem","Private / Civil Matter","Purpose of Data","Seriousness"]},{year:2025,tags:["Due Process","Invalid Proceedings","No Extradition Action"]},{year:2025,tags:["Accuracy & Quality","Purpose of Data"]},{year:2025,tags:["Human Rights","Accuracy & Quality"]}];
+
+const GC=(()=>{const c={};CASES.forEach(x=>x.tags.forEach(t=>{c[t]=(c[t]||0)+1}));return c;})();
+const TOTAL=60;
+
+const QUESTIONS=[
+  {q:"Has the country that issued the notice actually requested your extradition?",opts:["No — no extradition request has ever been made","Yes, extradition proceedings are ongoing","I don't know"],ground:"No Extradition Action",verdicts:["strong","none","maybe"],fb:{strong:"<strong>Strong ground found.</strong> Lack of extradition action is one of the most consistently cited grounds in our archive. The Commission has held that a notice serving no extradition purpose violates INTERPOL's rules.",maybe:"This needs clarification. If no formal extradition request exists, this is one of the most commonly cited grounds for deletion.",none:"This ground likely doesn't apply — but other grounds may still be relevant."}},
+  {q:"Is the case related to politics, business disputes, or private civil matters — rather than a genuine criminal offense?",opts:["Yes — the case has a clear political dimension","Yes — it stems from a business or civil dispute","No — it involves genuine criminal charges"],ground:"Political Character",verdicts:["strong","strong","none"],fb:{strong:"<strong>Strong ground found.</strong> Political character is the single most common ground in our database. Private and civil matters are also frequently cited. The CCF applies a 'predominance test' weighing all relevant factors.",none:"This ground likely doesn't apply in your case."}},
+  {q:"Was your trial held in absentia, or were your due process rights violated during the proceedings?",opts:["Yes — I was convicted without being present or properly notified","Yes — there were serious procedural violations","No — the process followed standard procedures"],ground:"Due Process",verdicts:["strong","strong","none"],fb:{strong:"<strong>Strong ground found.</strong> Due process violations are among the most frequently cited grounds. Trial in absentia without proper notification is specifically addressed in multiple CCF decisions.",none:"No due process ground identified on this question."}},
+  {q:"Have you already been prosecuted or tried for the same facts in another country?",opts:["Yes — in another jurisdiction","There may have been parallel proceedings","No — this is the only prosecution"],ground:"Ne bis in idem",verdicts:["strong","maybe","none"],fb:{strong:"<strong>Ground found.</strong> The ne bis in idem (double jeopardy) principle appears in several CCF decisions. If you were already tried elsewhere for the same acts, INTERPOL rules may prohibit a new notice.",maybe:"This may apply — it depends on the nature and outcome of the parallel proceedings.",none:"This ground likely doesn't apply."}},
+  {q:"Are the criminal proceedings themselves invalid — expired, based on retroactive law, or legally void?",opts:["Yes — proceedings are time-barred, expired, or legally void","Possibly — the legal basis is questionable","No — proceedings appear legally valid"],ground:"Invalid Proceedings",verdicts:["strong","maybe","none"],fb:{strong:"<strong>Ground found.</strong> Invalidity of underlying proceedings is cited in multiple decisions — statutes of limitation, retroactive application of criminal law, and procedural nullity all qualify.",maybe:"This may be a ground — a full legal review would be needed to assess the validity.",none:"This ground doesn't appear to apply."}},
+  {q:"Is there actual evidence supporting the charges, or are they based on unsubstantiated allegations?",opts:["The charges have no real evidentiary basis","The evidence is weak or fabricated","Evidence appears genuine and substantial"],ground:"No Evidentiary Basis",verdicts:["strong","strong","none"],fb:{strong:"<strong>Strong ground found.</strong> Lack of evidentiary basis is cited across multiple CCF decisions. The Commission has deleted notices where charges lacked any factual foundation.",none:"No evidentiary ground identified on this question."}}
+];
+
+let qIdx=0,answers=[],statsUnlocked=false,activeYear=0;
+
+function renderQuiz(){
+  const w=document.getElementById('quizWrap');
+  if(qIdx>=QUESTIONS.length){renderResult();return;}
+  const q=QUESTIONS[qIdx];
+  w.innerHTML=`
+    <div class="progress-track"><div class="progress-fill" style="width:${Math.round(qIdx/QUESTIONS.length*100)}%"></div></div>
+    <p class="q-counter">Question ${qIdx+1} of ${QUESTIONS.length}</p>
+    <div class="q-text">${q.q}</div>
+    <div class="opts" id="opts">${q.opts.map((o,i)=>`<button class="opt" onclick="answer(${i})">${o}</button>`).join('')}</div>
+    <div id="fb"></div>`;
+}
+
+function answer(i){
+  const q=QUESTIONS[qIdx];
+  const v=q.verdicts[i];
+  answers.push({ground:q.ground,verdict:v});
+  document.querySelectorAll('.opt').forEach((o,j)=>{
+    o.disabled=true;
+    if(j===i) o.classList.add(v==='none'?'wrong':'correct');
+    else if(v==='none'&&q.verdicts[j]==='strong') o.classList.add('reveal');
+  });
+  const fbCls=v==='strong'?'yes':v==='maybe'?'maybe':'no';
+  const cnt=GC[q.ground]||0;
+  const pct=Math.round(cnt/TOTAL*100);
+  const miniBar=v!=='none'?`
+    <div class="mini-bar-wrap">
+      <div class="mini-bar-label">In our case database — ${q.ground}</div>
+      <div class="mini-bar-track"><div class="mini-bar-fill ${fbCls}" id="mb${qIdx}" style="width:0%"></div></div>
+      <div class="mini-bar-stat">Cited in ${cnt} of ${TOTAL} verified CCF decisions (${pct}%)</div>
+    </div>`:'';
+  document.getElementById('fb').innerHTML=`
+    <div class="feedback ${fbCls}">${q.fb[v]||q.fb.none}${miniBar}</div>
+    <button class="next-btn" onclick="nextQ()">${qIdx===QUESTIONS.length-1?'See my full assessment →':'Next question →'}</button>`;
+  setTimeout(()=>{const el=document.getElementById('mb'+qIdx);if(el)el.style.width=pct+'%';},80);
+}
+
+function nextQ(){qIdx++;renderQuiz();}
+
+function renderResult(){
+  const w=document.getElementById('quizWrap');
+  w.className='result-wrap';
+  const strong=answers.filter(a=>a.verdict==='strong');
+  const maybe=answers.filter(a=>a.verdict==='maybe');
+  const grounds=[...new Set(strong.map(a=>a.ground))];
+  let cls,title,summary;
+  if(strong.length>=3){cls='yes';title='Strong grounds identified';summary=`You identified <strong>${strong.length} legal grounds</strong> that appear across our verified CCF decisions. Each has directly contributed to INTERPOL notice deletion in documented cases. This level of alignment with successful outcomes is significant.`;}
+  else if(strong.length>=1||maybe.length>=2){cls='maybe';title='Potential grounds identified';summary=`You identified <strong>${strong.length} confirmed ground${strong.length!==1?'s':''}</strong>${maybe.length?' and '+maybe.length+' possible ground'+(maybe.length!==1?'s':''):''}. Whether these apply in full depends on the specific facts of your case. A legal review is the recommended next step.`;}
+  else{cls='no';title='No obvious standard grounds — expert review still advisable';summary='The quiz did not surface obvious standard grounds. However, CCF filings can succeed on more technical or case-specific arguments — accuracy of data, purpose of the notice, or access-to-files violations — that require a full document review.';}
+
+  const statsRows=answers.map((a,i)=>{
+    const cnt=GC[a.ground]||0;
+    const pct=Math.round(cnt/TOTAL*100);
+    const vLabel=a.verdict==='strong'?'Ground identified':a.verdict==='maybe'?'Possible ground':'Not applicable';
+    return `<div class="rbar-row">
+      <div class="rbar-left"><div class="rbar-name">${a.ground}</div><div class="rbar-verdict">${vLabel}</div></div>
+      <div class="rbar-track"><div class="rbar-fill ${a.verdict}" id="rb${i}" style="width:0%"></div></div>
+      <div class="rbar-n">${cnt} / ${TOTAL} cases</div>
+    </div>`;
+  }).join('');
+
+  const today=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+  w.innerHTML=`
+    <div class="progress-track"><div class="progress-fill" style="width:100%"></div></div>
+    <div class="report-header">
+      <div class="report-label">Your CCF Assessment Report</div>
+      <div class="report-title ${cls}">${title}</div>
+      <div class="report-date">Generated ${today} &nbsp;·&nbsp; Status Law &nbsp;·&nbsp; interpol-check.me</div>
+    </div>
+    <div class="result-summary ${cls}">${summary}${grounds.length?`<div class="grounds-found">${grounds.map(g=>`<span class="ground-tag">${g}</span>`).join('')}</div>`:''}</div>
+    <div class="stats-section">
+      <div class="stats-section-title">How your answers compare to our case database</div>
+      ${statsRows}
+      <p style="font-size:12px;color:var(--muted);margin-top:16px;line-height:1.6;">Each bar shows how many of the 60 verified CCF decisions cited that legal ground. All 60 decisions resulted in notice deletion.</p>
+    </div>
+    <div class="email-box">
+      <h3>Receive this report by email</h3>
+      <p>We'll send you a copy of this assessment with an overview of the applicable CCF legal grounds. One email, no spam.</p>
+      <div class="email-row">
+        <input type="email" class="email-input" id="emailInput" placeholder="your@email.com">
+        <button class="email-send" onclick="sendReport()">Send report</button>
+      </div>
+      <div class="email-note">By submitting, you agree to be contacted by Status Law regarding your INTERPOL matter.</div>
+      <div class="email-success" id="emailSuccess">✓ Report sent — please check your inbox.</div>
+    </div>
+    <div class="cta-consult">
+      <h3>Get a confidential case assessment</h3>
+      <p>Our lawyers will review your situation against all 60+ CCF decisions in our archive and identify every applicable ground.</p>
+      <a href="https://interpol-check.me#contact" class="cta-primary">Request a Consultation</a>
+    </div>
+    <div style="text-align:center"><button class="retry-btn" onclick="retake()">Retake the quiz</button></div>`;
+
+
+
+  setTimeout(()=>{
+    answers.forEach((_,i)=>{
+      const el=document.getElementById('rb'+i);
+      if(el){const cnt=GC[answers[i].ground]||0;el.style.width=Math.round(cnt/TOTAL*100)+'%';}
+    });
+  },120);
+}
+
+function sendReport(){
+  const inp=document.getElementById('emailInput');
+  if(!inp.value.trim()||!inp.value.includes('@')){inp.style.borderColor='var(--red)';return;}
+  inp.style.borderColor='var(--green)';
+  document.getElementById('emailSuccess').style.display='block';
+  document.querySelector('.email-send').disabled=true;
+  document.querySelector('.email-send').style.opacity='.4';
+  // TODO: connect to Planfix API or backend endpoint
+}
+
+function retake(){qIdx=0;answers=[];document.getElementById('quizWrap').className='quiz-wrap';renderQuiz();}
+
+function tryStats(){
+  if(!statsUnlocked){
+    const t=document.getElementById('tab-quiz');
+    t.style.borderBottomColor='var(--gold)';
+    setTimeout(()=>{t.style.borderBottomColor='';},700);
+    return;
+  }
+  switchTab('stats');
+}
+
+function switchTab(t){
+  document.getElementById('tab-quiz').classList.toggle('active',t==='quiz');
+  document.getElementById('tab-stats').classList.toggle('active',t==='stats');
+  document.getElementById('panel-quiz').classList.toggle('active',t==='quiz');
+  document.getElementById('panel-stats').classList.toggle('active',t==='stats');
+  if(t==='stats') buildFullStats();
+}
+
+let statsBuilt=false;
+let activeYr=0;
+function buildFullStats(){
+  if(statsBuilt) return;
+  statsBuilt=true;
+  document.getElementById('statsContent').innerHTML=`
+    <p style="font-size:15px;color:var(--muted);margin-bottom:40px;max-width:600px">All 60 decisions in our archive resulted in deletion or removal of the INTERPOL notice. Breakdown of legal grounds cited — filterable by year.</p>
+    <div class="metrics">
+      <div class="metric"><div class="metric-n">60</div><div class="metric-l">Total decisions</div></div>
+      <div class="metric"><div class="metric-n">100%</div><div class="metric-l">Notice deleted</div></div>
+      <div class="metric"><div class="metric-n">15+</div><div class="metric-l">Legal grounds</div></div>
+      <div class="metric"><div class="metric-n">8 years</div><div class="metric-l">2017 – 2025</div></div>
+    </div>
+    <p class="section-label">Grounds by frequency</p>
+    <div class="yr-filters" id="yrBtns"></div>
+    <div id="groundBars"></div>
+    <div style="margin-top:48px">
+      <p class="section-label">Decisions by year</p>
+      <div class="chart-inner"><canvas id="yearChart" role="img" aria-label="Bar chart CCF decisions per year">2017:16, 2018:17, 2019:10, 2023:8, 2024:5, 2025:4</canvas></div>
+    </div>
+    <div style="margin-top:48px;padding:28px;background:var(--navy2);border:0.5px solid var(--border);border-radius:3px;text-align:center">
+      <p style="color:var(--muted);font-size:15px;margin-bottom:20px">Names and jurisdictions withheld per INTERPOL confidentiality rules.</p>
+      <a href="https://interpol-check.me#contact" class="cta-primary">Request a Case Assessment</a>
+    </div>`;
+
+  const YEARS=[0,2017,2018,2019,2023,2024,2025];
+  const wrap=document.getElementById('yrBtns');
+  YEARS.forEach(y=>{
+    const b=document.createElement('button');
+    b.className='yr-btn'+(y===activeYr?' active':'');
+    b.textContent=y||'All years';
+    b.onclick=()=>{activeYr=y;wrap.querySelectorAll('.yr-btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderBars();};
+    wrap.appendChild(b);
+  });
+  renderBars();
+
+  const by={};CASES.forEach(c=>{by[c.year]=(by[c.year]||0)+1});
+  const labels=Object.keys(by).sort();
+  new Chart(document.getElementById('yearChart'),{type:'bar',data:{labels,datasets:[{label:'Decisions',data:labels.map(y=>by[y]),backgroundColor:'rgba(201,168,76,0.7)',borderColor:'rgba(201,168,76,1)',borderWidth:1,borderRadius:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false},ticks:{color:'#8A9BB0'}},y:{grid:{color:'rgba(138,155,176,0.1)'},ticks:{color:'#8A9BB0',stepSize:5},border:{display:false}}}}});
+}
+
+function renderBars(){
+  const c={};
+  CASES.filter(x=>!activeYr||x.year===activeYr).forEach(x=>x.tags.forEach(t=>{c[t]=(c[t]||0)+1}));
+  const data=Object.entries(c).sort((a,b)=>b[1]-a[1]);
+  const max=data[0]?.[1]||1;
+  document.getElementById('groundBars').innerHTML=data.slice(0,14).map(([l,n])=>`
+    <div class="bar-row">
+      <div class="bar-label" title="${l}">${l}</div>
+      <div class="bar-track"><div class="bar-fill" style="width:${Math.round(n/max*100)}%"></div></div>
+      <div class="bar-n">${n}</div>
+    </div>`).join('');
+}
+
+renderQuiz();
+</script>
+</body>
+</html>
